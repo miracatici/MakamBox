@@ -3,7 +3,7 @@ package test;
 public class VampUtil {
 
 	public static void main(String[] args) {
-		String airair;
+		String airair1;
 //		Plugin p = null;
 //		try {
 //			p = PluginLoader.getInstance().loadPlugin("mtg-melodia:melodia", 44100,PluginLoader.AdapterFlags.ADAPT_NONE);
