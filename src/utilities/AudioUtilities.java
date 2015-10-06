@@ -52,8 +52,14 @@ import javazoom.jl.decoder.JavaLayerException;
 /**
  * Static audio utility methods.
  */
-public abstract class AudioUtilities {
+public class AudioUtilities {
 	
+	/**
+	 *  Divide array into the chunks that length of chunks are defined by chunkSize
+	 * @param array Main array (ex. Pitch Track)
+	 * @param chunkSize User defined length of one chunk
+	 * @return 2D array 
+	 */
 	public static float[][] chunkArray(float[] array, int chunkSize) {
         int numOfChunks = (array.length/chunkSize)+1;
         float[][] out = new float[numOfChunks][];
