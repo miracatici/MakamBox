@@ -99,7 +99,7 @@ public class PitchDetection {
 	}
 	public float[][] chunkPitchTrack(){
 		float[][] chunkedPitch = null;
-		
+		chunkedPitch = new float[2048][256];
 		return chunkedPitch; 			
 	}
 
