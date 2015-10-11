@@ -97,4 +97,10 @@ public class PitchDetection {
 	public String getName() {
 		return name;
 	}
+	public float[][] chunkPitchTrack(){
+		float[][] chunkedPitch = null;
+		
+		return chunkedPitch; 			
+	}
+
 }
