@@ -2,13 +2,12 @@ package test;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.io.File;
 
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
-import org.apache.commons.math3.random.EmpiricalDistribution;
-
+import backEnd.MakamBox;
+import backEnd.PitchDetection;
 import utilities.Plot;
 
 public class Test13 {
@@ -25,14 +24,11 @@ public class Test13 {
 			fr.getContentPane().add(pane);
 			fr.pack();
 			
-			EmpiricalDistribution ed = new EmpiricalDistribution();
-			ed.load(new File("08_huseyni_K.txt"));
-			float[] d = new float[636];
-			
-			for (int i = 0; i < d.length; i++) {
-				d[i] = (float)ed.sample();
-			}
-			Plot.plot(d);
+			MakamBox mb = new MakamBox("test1.wav", null);
+			PitchDetection pd = mb.getPitchDetection();
+			float[] pr = pd.getPitchResult();
+			float[][] prc = pd.chunkPitchTrack(pr);
+			Plot.plot(prc);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

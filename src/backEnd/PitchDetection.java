@@ -38,6 +38,9 @@ package backEnd;
  */
 
 import java.io.File;
+import java.util.ArrayList;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 import utilities.AudioUtilities;
 
@@ -97,9 +100,27 @@ public class PitchDetection {
 	public String getName() {
 		return name;
 	}
-	public float[][] chunkPitchTrack(){
-		float[][] chunkedPitch = null;
-		chunkedPitch = new float[2048][256];
+	public float[][] chunkPitchTrack(float[] pitchTrack){
+		
+		float bottom_limit = 0.7f; float upper_limit = 1.3f;
+		ArrayList<ArrayList<Float>> tempChunk = new ArrayList<ArrayList<Float>>();
+		int index = 0;
+		for (int i = 0; i < pitchTrack.length; i++) {
+			if (pitchTrack[i] !=0 && pitchTrack[i+1]!=0){
+				float interval = pitchTrack[i+1]/pitchTrack[i];
+				if (bottom_limit<interval && interval<upper_limit){
+					tempChunk.get(index).add(pitchTrack[i]);
+				} else {
+					index++;
+					tempChunk.get(index).add(pitchTrack[i]);
+				}
+			}
+		}
+		
+		float[][] chunkedPitch = new float[tempChunk.size()][];
+		for (int i = 0; i < chunkedPitch.length; i++) {
+			chunkedPitch[i] = ArrayUtils.toPrimitive(tempChunk.get(i).toArray(new Float[tempChunk.get(i).size()]));
+		}
 		return chunkedPitch; 			
 	}
 
