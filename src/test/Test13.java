@@ -27,7 +27,9 @@ public class Test13 {
 			MakamBox mb = new MakamBox("test1.wav", null);
 			PitchDetection pd = mb.getPitchDetection();
 			float[] pr = pd.getPitchResult();
+			Plot.plot(pr);
 			float[][] prc = pd.chunkPitchTrack(pr);
+			Plot.addBar(pd.getChunkPosition());
 			Plot.plot(prc);
 		} catch (Exception e) {
 			e.printStackTrace();

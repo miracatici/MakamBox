@@ -24,9 +24,12 @@
 
 package utilities;
 
+import java.awt.Font;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.annotations.XYTextAnnotation;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -37,6 +40,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class Plot {
 	private static float [][] datas;
 	private static String[] names;
+	private static XYTextAnnotation[] annotation;
 	
 	public static void setNames(String... v){
 		names = v;
@@ -44,6 +48,14 @@ public class Plot {
 	
 	public static void plot(float[]... arrays){
 		new Plot().createFrame(arrays);
+	}
+	public static void addBar(int[] barPos){
+		annotation = new XYTextAnnotation[barPos.length];
+		for (int i = 1; i < barPos.length; i++) {
+				annotation[i] = new XYTextAnnotation(String.valueOf(Math.round(barPos[i]))+" SEP", barPos[i], 550);
+				annotation[i].setFont(new Font("Lucida Grande", Font.PLAIN, 11));
+				annotation[i].setRotationAngle(200); 
+		}
 	}
 	private void createFrame(float[]... data) {	 
 		datas = data;
@@ -66,6 +78,11 @@ public class Plot {
 		renderer.setBaseLinesVisible(true);
 		XYPlot plot = (XYPlot) chart.getPlot();
 	    plot.setRenderer(renderer);  
+	    if(annotation != null){
+	    	for (int i = 1; i < annotation.length; i++) {
+				plot.addAnnotation(annotation[i]);
+		    }
+	    }
 	    ChartFrame frame = new ChartFrame("Multiple Plot", chart);
 	    frame.getChartPanel().setRangeZoomable(false);
 	    frame.setVisible(true);
@@ -94,5 +111,6 @@ public class Plot {
 		}
         return tempResult;
     }
+	
 	
 }
