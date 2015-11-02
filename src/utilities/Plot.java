@@ -84,7 +84,7 @@ public class Plot {
 		    }
 	    }
 	    ChartFrame frame = new ChartFrame("Multiple Plot", chart);
-	    frame.getChartPanel().setRangeZoomable(false);
+//	    frame.getChartPanel().setRangeZoomable(false);
 	    frame.setVisible(true);
 	    frame.pack();
 	}

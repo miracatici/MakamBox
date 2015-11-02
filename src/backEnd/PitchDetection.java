@@ -39,8 +39,8 @@ package backEnd;
 
 import java.io.File;
 import java.util.ArrayList;
-
-import org.apache.commons.lang3.ArrayUtils;
+import java.util.Arrays;
+import java.util.Comparator;
 
 import utilities.AudioUtilities;
 
@@ -110,71 +110,42 @@ public class PitchDetection {
 		}
 		return chunkPos;
 	}
-	public float[][] chunkPitchTrack(float[] pitchTrack){
-		float bottom_limit = 0.7f; float upper_limit = 1.3f;
-		ArrayList<ArrayList<Float>> tempChunkList = new ArrayList<ArrayList<Float>>();
+	public Float[][] chunkPitchTrack(float[] pitchTrack){
+		float bottom_limit = 0.97f; float upper_limit = 1.033f;
+		ArrayList<Float[]> chunkList = new ArrayList<Float[]>();
 		ArrayList<Float> tempChunk = new ArrayList<Float>();
-		ArrayList<Integer> chunkPosition = new ArrayList<Integer>();
-	
 		tempChunk.add(pitchTrack[0]);
-		for (int i = 1; i < pitchTrack.length-1; i++) {
-			if (pitchTrack[i]==0){
-				if (pitchTrack[i+1]==0){
-					tempChunk.add(pitchTrack[i+1]);
-				} else {
-					tempChunk.add(pitchTrack[i]);
-					if (tempChunk.size()>0){
-						tempChunkList.add(tempChunk);
-					}
-					chunkPosition.add(i);
-					tempChunk.clear();
-				}
+		for (int i = 1; i < pitchTrack.length; i++) {
+			float interval = pitchTrack[i] / pitchTrack[i-1];		
+			if (bottom_limit < interval && interval < upper_limit){
+				tempChunk.add(pitchTrack[i]);
 			} else {
-				float interval = pitchTrack[i+1]/pitchTrack[i];
-				if (bottom_limit<interval && interval<upper_limit){
-					tempChunk.add(pitchTrack[i]);
-				} else {
-					tempChunk.add(pitchTrack[i]);
-					if (tempChunk.size()>0){
-						tempChunkList.add(tempChunk);
-					}
-					chunkPosition.add(i);
-					tempChunk.clear();
-				}
+				System.out.println("Temp Chunk at " + i + " size " + tempChunk.size());
+				chunkList.add(tempChunk.toArray(new Float[tempChunk.size()]));
+				tempChunk.clear();
+				tempChunk.add(pitchTrack[i]);
+				chunkPosition.add(i);
 			}
 		}
-		if (tempChunk.size()>0){
-			tempChunkList.add(tempChunk);
+		chunkList.add(tempChunk.toArray(new Float[tempChunk.size()]));
+		Float[][] chunkedPitch = new Float[chunkList.size()][];
+		for (int i = 0; i < chunkList.size(); i++) {
+			chunkedPitch[i] = new Float[chunkList.get(i).length];
+			for (int j = 0; j < chunkedPitch[i].length; j++) {
+				chunkedPitch[i][j] = (float) chunkList.get(i)[j];
+			}
 		}
-//		tempChunk.add(pitchTrack[0]);
-//		for (int i = 0; i < pitchTrack.length-1; i++) {
-//			if (pitchTrack[i] !=0 && pitchTrack[i+1]!=0){
-//				float interval = pitchTrack[i+1]/pitchTrack[i];
-//				System.out.println(interval);
-//				if (bottom_limit<interval && interval<upper_limit){
-//					tempChunk.add(pitchTrack[i+1]);
-//				} else {
-//					tempChunkList.add(tempChunk);
-//					tempChunk.clear();
-//					chunkPosition.add(i);
-//					tempChunk.add(pitchTrack[i+1]);
-//				}
-//			}
-//		}
-//		tempChunkList.add(tempChunk);
-//		
-		for (int i = 0; i < chunkPosition.size(); i++) {
-			System.out.println(chunkPosition.get(i));
-		}
-		System.out.println("====");
-		for (int i = 0; i < tempChunkList.size(); i++) {
-			System.out.println(tempChunkList.get(i).size());
-		}
-		float[][] chunkedPitch = new float[tempChunkList.size()][];
-		for (int i = 0; i < chunkedPitch.length; i++) {
-			chunkedPitch[i] = ArrayUtils.toPrimitive(tempChunkList.get(i).toArray(new Float[tempChunkList.get(i).size()]));
-		}
+		Arrays.sort(chunkedPitch, new Comparator<Float[]>() {
+			@Override
+            public int compare(final Float[] entry1, final Float[] entry2) {
+                final Float time1 = (float) entry1.length;
+                final Float time2 = (float) entry2.length;
+                return time2.compareTo(time1);
+            }
+		});
 		return chunkedPitch; 			
 	}
-
+	public void pickLongChunks(float[][] chunkedArray,int chunkNumber){
+		
+	}
 }

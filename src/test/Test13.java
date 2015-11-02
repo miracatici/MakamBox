@@ -1,38 +1,33 @@
 package test;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
+import java.io.File;
 
 import backEnd.MakamBox;
 import backEnd.PitchDetection;
 import utilities.Plot;
 
 public class Test13 {
-	public static void main(String[] args){
-		try {
-			JFrame fr = new JFrame();
-			fr.setPreferredSize(new Dimension(100,25));
-			fr.setLayout(new BorderLayout());
-			fr.setVisible(true);
-			fr.setTitle("deneme");
-			JTextArea pane = new JTextArea();
-			pane.setAutoscrolls(true);
-			pane.setPreferredSize(new Dimension(70,140));
-			fr.getContentPane().add(pane);
-			fr.pack();
+	public static void main(String[] args) throws Exception{
 			
-			MakamBox mb = new MakamBox("test1.wav", null);
-			PitchDetection pd = mb.getPitchDetection();
-			float[] pr = pd.getPitchResult();
-			Plot.plot(pr);
-			float[][] prc = pd.chunkPitchTrack(pr);
-			Plot.addBar(pd.getChunkPosition());
-			Plot.plot(prc);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+			File dir = new File("/Users/miracatici/Documents/workspace/testDataSets/tetTestData/min");
+			File[] list = dir.listFiles();
+			
+			for (int i = 0; i < list.length; i++) {
+				MakamBox mb = new MakamBox(list[i], null);
+				PitchDetection pd = mb.getPitchDetection();
+				float[] pr = pd.getPitchResult();
+				float[] prnew = new float[pr.length];
+				Float[][] prc = pd.chunkPitchTrack(pr);
+				int k=0;
+				for (int t = 0; t < prc.length; t++) {
+					for (int j = 0; j < prc[t].length; j++) {
+						prnew[k] = prc[t][j];
+						k++;
+					}
+				}
+				Plot.addBar(pd.getChunkPosition());
+				Plot.plot(pr, prnew);
+				System.out.println("======");
+			}
 	}
 }
