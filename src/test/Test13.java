@@ -12,13 +12,14 @@ public class Test13 {
 			File dir = new File("/Users/miracatici/Documents/workspace/testDataSets/tetTestData/min");
 			File[] list = dir.listFiles();
 			
-			for (int i = 0; i < list.length; i++) {
-				MakamBox mb = new MakamBox(list[i], null);
+//			for (int i = 0; i < list.length; i++) {
+				MakamBox mb = new MakamBox(list[0], null);
 				PitchDetection pd = mb.getPitchDetection();
 				float[] pr = pd.getPitchResult();
 				float[] prnew = new float[pr.length];
-				Float[][] prc = pd.chunkPitchTrack(pr);
+				float[][] prc = pd.chunkPitchTrack(pr);
 				int k=0;
+				float[][] prcl = pd.pickLongChunks(prc, 5);
 				for (int t = 0; t < prc.length; t++) {
 					for (int j = 0; j < prc[t].length; j++) {
 						prnew[k] = prc[t][j];
@@ -28,6 +29,7 @@ public class Test13 {
 				Plot.addBar(pd.getChunkPosition());
 				Plot.plot(pr, prnew);
 				System.out.println("======");
+				Plot.plot(prcl);
 			}
-	}
+//	}
 }

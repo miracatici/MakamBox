@@ -42,6 +42,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import utilities.AudioUtilities;
 
 
@@ -110,7 +112,7 @@ public class PitchDetection {
 		}
 		return chunkPos;
 	}
-	public Float[][] chunkPitchTrack(float[] pitchTrack){
+	public float[][] chunkPitchTrack(float[] pitchTrack){
 		float bottom_limit = 0.97f; float upper_limit = 1.033f;
 		ArrayList<Float[]> chunkList = new ArrayList<Float[]>();
 		ArrayList<Float> tempChunk = new ArrayList<Float>();
@@ -143,9 +145,17 @@ public class PitchDetection {
                 return time2.compareTo(time1);
             }
 		});
-		return chunkedPitch; 			
+		float[][] chunkedPitchPri = new float[chunkedPitch.length][];
+		for (int i = 0; i < chunkedPitchPri.length; i++) {
+			chunkedPitchPri[i] = ArrayUtils.toPrimitive(chunkedPitch[i]);
+		}
+		return chunkedPitchPri; 			
 	}
-	public void pickLongChunks(float[][] chunkedArray,int chunkNumber){
-		
+	public float[][] pickLongChunks(float[][] chunkedArray,int chunkNumber){
+		float[][] longChunks = new float[chunkNumber][];
+		for (int i = 0; i < longChunks.length; i++) {
+			longChunks[i] = chunkedArray[i];
+		}
+		return longChunks;
 	}
 }
