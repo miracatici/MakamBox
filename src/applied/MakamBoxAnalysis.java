@@ -66,6 +66,7 @@ import backEnd.SineSynth;
 import datas.Ahenk;
 import datas.Makam;
 import graphics.About;
+import utilities.Plot;
 
 public class MakamBoxAnalysis {
 	public static ResourceBundle LANG = ResourceBundle.getBundle("applied.language_en"); //$NON-NLS-1$
@@ -78,7 +79,7 @@ public class MakamBoxAnalysis {
 	private JMenuItem mntmSelectFile,mntmTuning,btnShowHistogram,
 	btnShowSongWith,btnShowIntervals,btnShowRecordWithtemplate,
 	btnSongRecordTemp,btnShowTuningChart,btnShowHistogramWith,
-	btnShowRecordHistogram,btnShowSetting;
+	btnShowRecordHistogram,btnShowSetting, btnShowRecordPT;
 	private JMenuBar menuBar;
 	private JMenu mnShowHistogram,mnCulturespecificSettings;
 	private JPanel pitchComp,waveComp;
@@ -590,6 +591,20 @@ public class MakamBoxAnalysis {
 		lblVolume.setBackground(Color.WHITE);
 		menuBar.add(mntmSelectFile);
 		menuBar.add(mnShowHistogram);
+		
+		btnShowRecordPT = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowRecordPT.text")); //$NON-NLS-1$
+		btnShowRecordPT.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		btnShowRecordPT.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					Plot.plot(recBox.getPitchTrackData());
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null,"Please make a record");
+				}
+			}			
+		});
+		mnShowHistogram.add(btnShowRecordPT);
 		
 		mntmTuning = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmTuning.text")); //$NON-NLS-1$
 		mntmTuning.addActionListener(new ActionListener() {

@@ -43,71 +43,57 @@ import javax.swing.JButton;
 
 public class AudioInput{
 
-	private AudioFormat format;  		// Recording format
-	private DataLine.Info info; 		// Defining format and creating TargetDataLine
-	private TargetDataLine recLine ; 	// Getting mixer line for recording
-	private ByteArrayOutputStream out; 	// Stream for byte array output
-	private Runnable runner; 			// Runner for new thread
-	private Thread captureThread; 		// New thread for audio capture
-	private int bufferSize; 			// Sample size of recorded package (buffer)
-	private Wavefile af; 				// Wave file object for recorded audio. Create after stopping record
-	private MakamBox recordedBox; 		// MakamBox object that created with 'af' Wavefile object
-	private byte[] buffer,buff;  		// Buffer for recorded package
-	public boolean running; 			// For draining capture method.
+	private AudioFormat format;  														// Recording format
+	private TargetDataLine recLine ; 													// Getting mixer line for recording
+	private ByteArrayOutputStream out; 													// Stream for byte array output
 	 
-	public AudioInput(AudioFormat af) { //Passing audio format 
+	public AudioInput(AudioFormat af) { 												//Passing audio format 
 		format = af;
 	}
-	public void runner(){
-		runner = new Runnable() {									// Create new runner
-			@Override
-			public void run() {
-				out = new ByteArrayOutputStream();					// Creating stream to able to write buffer pack
-				running = true;										// Is recording?
-				try {
-					while (running) {
-						int count = recLine.read(buffer, 			// Reading samples to buffer
-												 0, 
-												 buffer.length);
-						if (count > 0) {							// If reading is true, write to output stream
-							out.write(buffer, 0, count);
-						}
-					}
-					out.close();									// When stopped, close the stream
-				} catch (IOException e) {
-					System.err.println("I/O problems: " + e);
-					System.exit(-1);
-				}
-			}
-		}; 
-	}
+	
 	public void captureAudio() {									
 		try {														
-			bufferSize = 256;  											// Define Buffer size
-			buffer = new byte[bufferSize];								// Buffer array
-			info = new DataLine.Info(TargetDataLine.class, format);		// Dataline info
-			recLine = (TargetDataLine) AudioSystem.getLine(info);		// Getting mixer line from driver (system selected)
-			recLine.open(format);										// Opening recording line (make connection)
-			recLine.start();											// Start draining line
-			runner();													// Create new runner for thread
-			captureThread = new Thread(runner);							// Define new thread
-			captureThread.start();										// Start for capture, invoke thread
+			DataLine.Info info = new DataLine.Info(TargetDataLine.class, format);		// Dataline info Defining format and creating TargetDataLine
+			recLine = (TargetDataLine) AudioSystem.getLine(info);						// Getting mixer line from driver (system selected)
+			recLine.open(format);														// Opening recording line (make connection)
+			recLine.start();															// Start draining line
+			Thread captureThread = new Thread(new Runnable() {							// Create new runner Define new thread New thread for audio capture
+				@Override
+				public void run() {
+					out = new ByteArrayOutputStream();									// Creating stream to able to write buffer pack
+					boolean running = true;												// Is recording? For draining capture method.
+					byte[] buffer = new byte[256];										// Buffer array Buffer for recorded package
+					try {
+						while (running) {
+							int count = recLine.read(buffer, 							// Reading samples to buffer
+													 0, 
+													 buffer.length);
+							if (count > 0) {											// If reading is true, write to output stream
+								out.write(buffer, 0, count);
+							}
+						}
+						out.close();													// When stopped, close the stream
+					} catch (IOException e) {
+						System.err.println("I/O problems: " + e);
+						System.exit(-1);
+					}
+				}
+			}); 						
+			captureThread.start();														// Start for capture, invoke thread
 		} catch (LineUnavailableException e) {
 			System.err.println("Line unavailable: " + e);
 			System.exit(-2);
 		}
 	}
-	public void stopCapture() throws Exception{							// Stop recording method
-		recLine.stop();													// Stop recording from line	
-		recLine.close();												// Close the line got from system
+	public void stopCapture() throws Exception{											// Stop recording method
+		recLine.stop();																	// Stop recording from line	
+		recLine.close();																// Close the line got from system
 	}
-	public MakamBox getRecordedBox(JButton b) throws Exception {		// Create MakamBox object to use everywhere :)
-		if(recordedBox==null){											// Check if it's created before				
-			buff = out.toByteArray();									// Write stream to array
-			af = new Wavefile(format, buff, 							// Create wave file object with given parameter
-					String.valueOf(System.currentTimeMillis()));
-			recordedBox = new MakamBox(af,b);							// Create MakamBox object that created Wave file
-		}
+	public MakamBox getRecordedBox(JButton b) throws Exception {						// Create MakamBox object to use everywhere :)
+		byte[] buff = out.toByteArray();												// Write stream to array
+		Wavefile af = new Wavefile(format, buff, 										// Create wave file object with given parameter
+				String.valueOf(System.currentTimeMillis()));
+		MakamBox recordedBox = new MakamBox(af,b);										// Create MakamBox object that created Wave file
 		return recordedBox;
 	}
 }
