@@ -384,6 +384,15 @@ public class AudioUtilities {
 		}
 		return x;	
 	}
+	public static float findMedian(float[] array){				// Finding median of given array
+		float x = 0f;
+		if(array.length%2==0){
+			x = (float) ((array[array.length/2] + array[(array.length/2)-1])/2);
+		} else {
+			x = (float) (array[(array.length-1)/2]);
+		}
+		return x;	
+	}
 	public static byte[] floatToByteArray(float[] in_buff, byte[] out_buff) {
         int ox = 0;
         int len = in_buff.length;

@@ -56,8 +56,6 @@ public class PitchDetection {
 	private float[] floatData,pitchResult;
 	ArrayList<Integer> chunkPosition = new ArrayList<Integer>();
 
-	
-
 	public PitchDetection(Wavefile afs) throws Exception{
 		audio = afs ;
 		name = audio.getName();
@@ -122,7 +120,7 @@ public class PitchDetection {
 			if (bottom_limit < interval && interval < upper_limit){
 				tempChunk.add(pitchTrack[i]);
 			} else {
-				System.out.println("Temp Chunk at " + i + " size " + tempChunk.size());
+//				System.out.println("Temp Chunk at " + i + " size " + tempChunk.size());
 				chunkList.add(tempChunk.toArray(new Float[tempChunk.size()]));
 				tempChunk.clear();
 				tempChunk.add(pitchTrack[i]);

@@ -79,7 +79,7 @@ public class MakamBoxAnalysis {
 	private JMenuItem mntmSelectFile,mntmTuning,btnShowHistogram,
 	btnShowSongWith,btnShowIntervals,btnShowRecordWithtemplate,
 	btnSongRecordTemp,btnShowTuningChart,btnShowHistogramWith,
-	btnShowRecordHistogram,btnShowSetting, btnShowRecordPT;
+	btnShowRecordHistogram,btnShowSetting, btnShowRecordPT,btnShowSongPT;
 	private JMenuBar menuBar;
 	private JMenu mnShowHistogram,mnCulturespecificSettings;
 	private JPanel pitchComp,waveComp;
@@ -605,6 +605,20 @@ public class MakamBoxAnalysis {
 			}			
 		});
 		mnShowHistogram.add(btnShowRecordPT);
+		
+		btnShowSongPT = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowSongPT.text")); //$NON-NLS-1$
+		btnShowSongPT.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		btnShowSongPT.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					Plot.plot(box.getPitchTrackData());
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+		mnShowHistogram.add(btnShowSongPT);
 		
 		mntmTuning = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmTuning.text")); //$NON-NLS-1$
 		mntmTuning.addActionListener(new ActionListener() {
