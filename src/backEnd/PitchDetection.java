@@ -120,7 +120,6 @@ public class PitchDetection {
 			if (bottom_limit < interval && interval < upper_limit){
 				tempChunk.add(pitchTrack[i]);
 			} else {
-//				System.out.println("Temp Chunk at " + i + " size " + tempChunk.size());
 				chunkList.add(tempChunk.toArray(new Float[tempChunk.size()]));
 				tempChunk.clear();
 				tempChunk.add(pitchTrack[i]);
