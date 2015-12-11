@@ -1,7 +1,6 @@
 package test;
 
 import java.io.File;
-import java.util.Arrays;
 
 import backEnd.PitchDetection;
 import backEnd.Wavefile;
