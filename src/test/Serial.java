@@ -9,18 +9,24 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
-import javax.swing.JOptionPane;
+import dataAndroid.ClipData;
 
 public class Serial {
-	private HashMap<String, float[]> results;
-	int noteContain = 4 ;
+	private HashMap<String, ClipData> results;
+	int noteContain = 2 ;
 	String type = "n";
+	String[] opt = new String[]{"Minor Second","Major Second","Minor Third","Major Third"};
+	int sira = 0;
+	File folder = new File("/Users/miracatici/Documents/workspace/MakamDroid/assets/audio/n/2/");
+	File[] files = folder.listFiles();
+	
 	public Serial(){
-		results = new HashMap<String, float[]>();
+		results = new HashMap<String, ClipData>();
+		process();
+		toString();
 	}
 	public void process(){
-		File folder = new File("/Users/miracatici/Documents/workspace/MakamDroid/assets/audio/n/4/");
-		File[] files = folder.listFiles();
+		
 		System.out.println(files.length);
 		for (int i = 0; i < files.length; i++) {
 			String name = files[i].getName();
@@ -30,7 +36,19 @@ public class Serial {
 			for (int j = 0; j < noteContain; j++) {
 				tempRes[j] = Float.valueOf(nameSplit[j+2]);
 			}
-			results.put(name, tempRes);
+			if(sira == 0){
+				results.put(name, new ClipData(name,"Minor Second",tempRes,opt));	
+				sira++;				
+			} else if(sira == 1){
+				results.put(name, new ClipData(name,"Major Second",tempRes,opt));	
+				sira++;				
+			} else if(sira == 2){
+				results.put(name, new ClipData(name,"Minor Third",tempRes,opt));	
+				sira++;				
+			} else if(sira == 3){
+				results.put(name, new ClipData(name,"Major Third",tempRes,opt));	
+				sira = 0;
+			}	
 		}
 		serialize(type+"_"+String.valueOf(noteContain),results);
 	}
@@ -51,25 +69,41 @@ public class Serial {
 			System.out.println("Error2");	
 		}
 	}
-	@SuppressWarnings("unchecked")
-	public static HashMap<String, float[]> deserialize(String path){
+	public Object deserialize(String path){
 		FileInputStream fileIn;
         ObjectInputStream in;
-        HashMap<String, float[]> newCulture = null;
+        Object newCulture = null;
 		try {	        
 			fileIn = new FileInputStream(path);
 	        in = new ObjectInputStream(fileIn);
-	        newCulture = (HashMap<String, float[]> ) in.readObject();
+	        newCulture = in.readObject();
 	        in.close();
 	        fileIn.close();
-			JOptionPane.showMessageDialog(null, "Object data file is read");
 		}
 		catch(Exception ex){
-			JOptionPane.showMessageDialog(null,"Object data isn't read");
+			ex.printStackTrace();
 		}
 		return newCulture;
 	}
+	@SuppressWarnings("unchecked")
+	public String toString(){
+		String print = "";
+		HashMap<String, ClipData>  data = (HashMap<String, ClipData> ) deserialize("/Users/miracatici/Documents/workspace/MakamBox/n_2.ser");
+		for (int i = 0; i < data.size(); i++) {
+			System.out.println(data.get(files[i].getName()).getName());
+			System.out.println(data.get(files[i].getName()).getTheoryAnswer());
+			float[] temp = data.get(files[i].getName()).getFreqAnswer();
+			for (int j = 0; j < temp.length; j++) {
+				System.out.print(temp[j] + " ");
+			}
+			System.out.println("");
+		}
+		return print;
+		
+	}
 	public static void main (String[] args){
-		new Serial().process();
+		Serial s = new Serial();
+		s.process();
+		s.toString();
 	}
 }
