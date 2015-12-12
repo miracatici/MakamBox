@@ -38,8 +38,8 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
-import utilities.AudioUtilities;
 import backEnd.MakamBox;
+import utilities.AudioUtilities;
 
 public class HistogramChart {
 	private int mincent,shift,ind;

@@ -36,8 +36,8 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
 
-import utilities.AudioUtilities;
 import applied.Tuner;
+import utilities.AudioUtilities;
 
 public class PitchTracking{
 

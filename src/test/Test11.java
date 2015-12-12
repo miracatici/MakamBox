@@ -8,11 +8,11 @@ import javax.sound.sampled.AudioFormat;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
-import javazoom.jl.converter.Converter;
-import utilities.AudioUtilities;
 import backEnd.MakamBox;
 import backEnd.WaveWriter;
 import backEnd.Wavefile;
+import javazoom.jl.converter.Converter;
+import utilities.AudioUtilities;
 
 public class Test11 {
 	public Converter converter;

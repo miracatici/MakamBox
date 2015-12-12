@@ -46,9 +46,9 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.math3.util.FastMath;
 
-import utilities.Plot;
 import applied.HistogramExtractor;
 import datas.Makam;
+import utilities.Plot;
 
 public class TemplateCreate {
 	private int maxFiles;

@@ -8,11 +8,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
-import utilities.AudioUtilities;
-import utilities.Plot;
 import backEnd.MakamBox;
 import backEnd.PitchDetection;
 import backEnd.Wavefile;
+import utilities.AudioUtilities;
+import utilities.Plot;
 
 
 public class Test6 {

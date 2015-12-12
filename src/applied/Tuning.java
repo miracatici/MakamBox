@@ -23,9 +23,6 @@
  */
 package applied;
 
-import graphics.MakamChart;
-import graphics.TonicChart;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -63,6 +60,8 @@ import javax.swing.filechooser.FileFilter;
 import backEnd.MakamBox;
 import datas.Makam;
 import datas.TuningSystem;
+import graphics.MakamChart;
+import graphics.TonicChart;
 
 public class Tuning {
 	//private static final ResourceMakamBoxAnalysis.LANG MakamBoxAnalysis.LANG = MakamBoxAnalysis.LANG; //ResourceMakamBoxAnalysis.LANG.getMakamBoxAnalysis.LANG("applied.tuning"); //$NON-NLS-1$

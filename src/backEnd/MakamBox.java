@@ -23,6 +23,13 @@
  */
 package backEnd;
 
+import java.io.File;
+
+import javax.sound.sampled.Clip;
+import javax.swing.JButton;
+
+import org.jfree.chart.ChartPanel;
+
 /**
  * MakamBox is an implementation of MakamToolBox Turkish Makam music analysis tool which is developed by Baris Bozkurt
  * The main class to get together all of features of framework that is created for master thesis
@@ -39,13 +46,6 @@ import graphics.TuneChart;
 import graphics.TwoHistAllign;
 import graphics.TwoHistChart;
 import graphics.WaveChart;
-
-import java.io.File;
-
-import javax.sound.sampled.Clip;
-import javax.swing.JButton;
-
-import org.jfree.chart.ChartPanel;
 
 public class MakamBox {
 	private Wavefile audio;

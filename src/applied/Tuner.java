@@ -24,8 +24,6 @@
 
 package applied;
 
-import graphics.DialChart;
-
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -39,6 +37,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import backEnd.PitchTracking;
+import graphics.DialChart;
 
 public class Tuner extends JFrame {
 

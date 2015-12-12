@@ -40,8 +40,8 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.entity.XYItemEntity;
 
-import utilities.AudioUtilities;
 import backEnd.MakamBox;
+import utilities.AudioUtilities;
 
 public class TonicChart{
 	/**

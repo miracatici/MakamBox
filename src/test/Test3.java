@@ -15,10 +15,10 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
-import utilities.Plot;
 import backEnd.MakamBox;
 import datas.Makam;
 import datas.TuningSystem;
+import utilities.Plot;
 
 public class Test3 {
 

@@ -14,8 +14,8 @@ import java.text.DecimalFormat;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
-import utilities.Plot;
 import backEnd.MakamBox;
+import utilities.Plot;
 
 public class RW {
 	private float[] data,data2;
