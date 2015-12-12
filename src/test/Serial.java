@@ -9,18 +9,21 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
-import dataAndroid.ClipData;
+import org.example.trainear.data.ClipData;
 
 public class Serial {
 	private HashMap<String, ClipData> results;
 	int noteContain = 2 ;
 	String type = "n";
-	String[] opt = new String[]{"Minor Second","Major Second","Minor Third","Major Third"};
 	int sira = 0;
-	File folder = new File("/Users/miracatici/Documents/workspace/MakamDroid/assets/audio/n/2/");
-	File[] files = folder.listFiles();
+	String[] opt ;
+	File folder;
+	File[] files;
 	
 	public Serial(){
+		opt = new String[]{"Minor Second","Major Second","Minor Third","Major Third"};
+		folder = new File("/Users/mirac/Documents/workspace/TrainEar/assets/audio/n/2");
+		files = folder.listFiles();
 		results = new HashMap<String, ClipData>();
 		process();
 		toString();
@@ -88,7 +91,7 @@ public class Serial {
 	@SuppressWarnings("unchecked")
 	public String toString(){
 		String print = "";
-		HashMap<String, ClipData>  data = (HashMap<String, ClipData> ) deserialize("/Users/miracatici/Documents/workspace/MakamBox/n_2.ser");
+		HashMap<String, ClipData>  data = (HashMap<String, ClipData> ) deserialize("/Users/mirac/Documents/workspace/MakamBox/n_2.ser");
 		for (int i = 0; i < data.size(); i++) {
 			System.out.println(data.get(files[i].getName()).getName());
 			System.out.println(data.get(files[i].getName()).getTheoryAnswer());
@@ -103,7 +106,5 @@ public class Serial {
 	}
 	public static void main (String[] args){
 		Serial s = new Serial();
-		s.process();
-		s.toString();
 	}
 }
