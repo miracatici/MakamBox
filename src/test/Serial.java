@@ -25,11 +25,8 @@ public class Serial {
 		folder = new File("/Users/mirac/Documents/workspace/TrainEar/assets/audio/n/2");
 		files = folder.listFiles();
 		results = new HashMap<String, ClipData>();
-		process();
-		toString();
 	}
 	public void process(){
-		
 		System.out.println(files.length);
 		for (int i = 0; i < files.length; i++) {
 			String name = files[i].getName();
@@ -71,6 +68,7 @@ public class Serial {
 		} catch (IOException e) {
 			System.out.println("Error2");	
 		}
+		toString();
 	}
 	public Object deserialize(String path){
 		FileInputStream fileIn;
@@ -106,5 +104,6 @@ public class Serial {
 	}
 	public static void main (String[] args){
 		Serial s = new Serial();
+		s.process();
 	}
 }
