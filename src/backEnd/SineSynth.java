@@ -79,19 +79,19 @@ public class SineSynth {
 		fadeIn = new float[(int)frameLenSamp];
 		fadeOut = new float[(int)frameLenSamp];
 		for(int i=0;i<frameLenSamp;i++){
-			fadeIn[i]=i/(frameLenSamp-1);
+			fadeIn[i]= (float)( i/(frameLenSamp-1));
 		}
 		//RE-CODE THIS!!!!
 		for(int i=0;i>fadeOut.length;i++){
-			fadeOut[i]=fadeIn[fadeIn.length-1-i];
+			fadeOut[i]= (float) (frameLenSamp-1-i) / (frameLenSamp-1);
 		}	
 	}
 	public void synthSine(float freq){
-		frame = new float[441];
+		frame = new float[44100];
 		twoPiF = (float) (2 * Math.PI * freq);
 		for(int i = 0 ; i < frame.length ; i++){
 			time = i / fSample;
-			frame[i] += (float) (gain * Math.sin(twoPiF * time + phase));
+			frame[i] = (float) (gain * Math.sin(twoPiF * time));
 		}
 		phase = twoPiF * frame.length / fSample + phase;
 		/* Creating fade ins and outs*/
@@ -110,12 +110,12 @@ public class SineSynth {
 			
 			/*Creating sine wave frame */
 			for(int i=0;i<frameLenSamp;i++){
-				frame[i]=((float) (Math.cos(2.0*Math.PI*f0track[k]*timeAr[i]+phase)));
+				frame[i]=((float) (Math.sin(2.0*Math.PI*f0track[k]*timeAr[i]+phase)));
 			}
 	
 			/* Phase Correction */
-			float first =(float) Math.acos(frame[frame.length-2]);
-			float last =(float) Math.acos(frame[frame.length-1]);
+			float first =(float) Math.asin(frame[frame.length-2]);
+			float last =(float) Math.asin(frame[frame.length-1]);
 			if(first>last){
 				phase = (-1f)*last;
 			} else {

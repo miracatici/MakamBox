@@ -74,6 +74,7 @@ public class TuneChart {
 							panel.getScreenDataArea(), 
 							chart.getXYPlot().getDomainAxisEdge());	
 					sineWave.synthSine((float) chartX);
+					System.out.println(chartX);
 					try {
 						sinePlayer.setPlayer(sineWave.getSineWave());
 					} catch (Exception e) {
