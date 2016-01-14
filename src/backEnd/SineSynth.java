@@ -35,6 +35,8 @@ package backEnd;
 
 import javax.sound.sampled.AudioFormat;
 
+import utilities.Write;
+
 
 public class SineSynth {
 	private AudioFormat af;
@@ -86,6 +88,30 @@ public class SineSynth {
 			fadeOut[i]= (float) (frameLenSamp-1-i) / (frameLenSamp-1);
 		}	
 	}
+	public SineSynth(float[] arr){
+		name = "from array";
+		phase = 0f;
+		af = new AudioFormat(44100,16,1,true,false);
+		f0track = arr;
+		fSample = 44100;
+		frameLenSamp = 441;
+		timeAr = new float[(int)frameLenSamp];
+		fadeIn = new float[(int)frameLenSamp];
+		fadeOut = new float[(int)frameLenSamp];
+		frame = new float[(int)frameLenSamp];
+		output = new float[(int)frameLenSamp*f0track.length];
+		
+		for(int i=0;i<frameLenSamp;i++){
+			timeAr[i]=(i/fSample);
+		}
+		for(int i=0;i<frameLenSamp;i++){
+			fadeIn[i]=i/(frameLenSamp-1);
+		}
+		//RE-CODE THIS!!!!
+		for(int i=0;i>fadeOut.length;i++){
+			fadeOut[i]=fadeIn[fadeIn.length-1-i];
+		}	
+	}
 	public void synthSine(float freq){
 		frame = new float[44100];
 		twoPiF = (float) (2 * Math.PI * freq);
@@ -106,16 +132,16 @@ public class SineSynth {
 	public void synth(){
 		System.out.println("Start loops");
 		for(int k=0;k<f0track.length;k++){	
-			start = k*((int)frameLenSamp-1);
+			start = k*((int)frameLenSamp);
 			
 			/*Creating sine wave frame */
 			for(int i=0;i<frameLenSamp;i++){
-				frame[i]=((float) (Math.sin(2.0*Math.PI*f0track[k]*timeAr[i]+phase)));
+				frame[i]=((float) (Math.cos(2.0*Math.PI*f0track[k]*timeAr[i]+phase)));
 			}
 	
 			/* Phase Correction */
-			float first =(float) Math.asin(frame[frame.length-2]);
-			float last =(float) Math.asin(frame[frame.length-1]);
+			float first =(float) Math.acos(frame[frame.length-2]);
+			float last =(float) Math.acos(frame[frame.length-1]);
 			if(first>last){
 				phase = (-1f)*last;
 			} else {
@@ -153,6 +179,7 @@ public class SineSynth {
 		for(int i=0;i<output.length;i++){
 			output[i]=(output[i]*gain);    
 		}
+		Write.writeText("output.txt", output);
 	}
 	public AudioFormat getAudioFormat() {
 		return af;

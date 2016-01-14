@@ -48,7 +48,7 @@ public class Histogram{
 	private String name;
 	private int minCentF0,maxCentF0,medianCent;
 	private int[] sortedCentF0;
-	private float[] f0track,sortedf0,histData;
+	private float[] f0track,sortedf0,histData, f0YIN;
 	private float commaCent;
 	
 	public Histogram(){												// Constructor to access other methods without creating histogram
@@ -116,6 +116,7 @@ public class Histogram{
 		for(int i=0;i<temp.size();i++){
 			temp2[i] = temp.get(i);
 		}
+		f0YIN = temp2.clone();
 		name = file.getName();								// Same process with dataSetting()
 		f0track = kickZeros(temp2);
 		sortedf0 = f0track.clone();
@@ -139,14 +140,13 @@ public class Histogram{
 		}
 	}
 	private float[] kickZeros(float [] arr){				// Kick zeros from pitch array
-		float[] out;
 		ArrayList<Float> temp = new ArrayList<Float>();
 		for(int i=0;i<arr.length;i++){
 			if(arr[i]>0){
 				temp.add(arr[i]);
 			}
 		}
-		out = new float[temp.size()];
+		float[] out = new float[temp.size()];
 		for(int k=0;k<temp.size();k++){
 			out[k] = temp.get(k);
 		}
@@ -166,5 +166,8 @@ public class Histogram{
 	}
 	public int getMaximum(){
 		return maxCentF0;
+	}
+	public float[] getPitchTrack(){
+		return f0YIN;
 	}
 }

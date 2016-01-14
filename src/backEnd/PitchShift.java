@@ -105,13 +105,11 @@ public class PitchShift {
         }
         public float holderCommaAmount(float tonic, float ahenk){
         	holderComma = (float) (FastMath.log10(ahenk/tonic)/FastMath.log10(FastMath.pow(2d, (1d/53d))));
-//        	holderComma = (float) FastMath.log(2, (ahenk/tonic))*53;
-//        	if(holderComma>30f){
-//        		holderComma = holderComma - 53f; 
-//        	}
-//        	if(holderComma<-30f){
-//        		holderComma=holderComma+53f;
-//        	}
+        	if(holderComma>30f){
+        		holderComma = holderComma - 53f; 
+        	} else if(holderComma<-30f){
+        		holderComma=holderComma+53f;
+        	}
         	return holderComma;
         }
         public int getFftFrameSize() {

@@ -42,7 +42,6 @@ package backEnd;
  */
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
@@ -58,6 +57,7 @@ import org.apache.commons.lang3.text.WordUtils;
 import org.apache.commons.math3.util.FastMath;
 
 import applied.SelectCulture;
+import be.tarsos.dsp.beatroot.Peaks;
 import datas.Makam;
 import utilities.AudioUtilities;
 
@@ -197,18 +197,33 @@ public class MakamClassifier {
 		}	
 	}
 	public void calcPeaks(float[] data){													// Very very very basic histogram peaks calculation method
-		float[] tempAr = data.clone();
+		float [] tempAr = data.clone();
+		double [] tempArD = new double[data.length];
+		for (int i = 0; i < tempArD.length; i++) {
+			tempArD[i] = (double) tempAr[i];
+		}
 		List<Float> b = Arrays.asList(ArrayUtils.toObject(tempAr));							// If the value of a point is greater than the right and left ones, it is a peak point :)
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		for (int i = shiftAmount+1; i < shiftAmount+1636; i++) {
-			if(tempAr[i-1]<tempAr[i] && tempAr[i+1]<=tempAr[i] && tempAr[i]>=(Collections.max(b)/15)){
-				temp.add(i);
-			}
+		float maxV = (Collections.max(b)/15);
+		Object [] tempObj = Peaks.findPeaks(tempArD, 6, maxV).toArray();
+		peaks = new int[tempObj.length];
+		for (int i = 0; i < tempObj.length; i++) {
+			peaks[i] = (int) tempObj[i];
 		}
-		peaks = new int[temp.size()];
-		for (int i = 0; i < temp.size(); i++) {
-			peaks[i] = temp.get(i);
-		}
+//		float[] tempAr = data.clone();
+//		List<Float> b = Arrays.asList(ArrayUtils.toObject(tempAr));							// If the value of a point is greater than the right and left ones, it is a peak point :)
+//		float maxV = (Collections.max(b)/15);
+//		ArrayList<Integer> temp = new ArrayList<Integer>();
+//		for (int i = shiftAmount+1; i < shiftAmount+1636; i++) {
+//			if(tempAr[i-1]<tempAr[i] && tempAr[i+1]<=tempAr[i] && tempAr[i]>=(maxV)){
+//				temp.add(i);
+//			}
+//		}
+//		peaks = new int[temp.size()];
+//		for (int i = 0; i < temp.size(); i++) {
+//			peaks[i] = temp.get(i);
+//		}
+	
+	
 	}
 	public int[] getPeaks(){
 		return peaks;

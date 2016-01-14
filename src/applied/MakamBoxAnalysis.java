@@ -917,6 +917,7 @@ public class MakamBoxAnalysis {
 					}
 					btnShiftPlay.setEnabled(true);
 					btnShiftSave.setEnabled(true);
+					btnShiftCancel.setEnabled(false);
 				}
 			}
 		});
@@ -1123,16 +1124,6 @@ public class MakamBoxAnalysis {
 					if(t==JOptionPane.YES_OPTION){
 						box = new MakamBox(chooser.getSelectedFile(),btnStop);
 					}
-//					int s = JOptionPane.showConfirmDialog(null,"Do you want to save new WAV file?","File type conversion", JOptionPane.YES_NO_OPTION);
-//					if (s==JOptionPane.YES_OPTION){
-//						try {
-//							System.out.println(box.getFolder());
-//							@SuppressWarnings("unused")
-//							new WaveWriter(box);
-//						} catch (IOException ex) {
-//							System.out.println("Yazamadi");
-//						}
-//					}
 				}
 				positionSlide.setMaximum((int)box.getWavefile().getFrameLength());
 				dir = chooser.getCurrentDirectory();
@@ -1149,6 +1140,7 @@ public class MakamBoxAnalysis {
 				System.gc();
 			}
 			catch(Exception ex){
+				System.out.println("hata 1");
 				JOptionPane.showMessageDialog(null,"Please select a file");
 			}
 			makamPane.setText("");

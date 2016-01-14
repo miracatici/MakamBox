@@ -127,5 +127,7 @@ public class Player{
 		MakamBoxAnalysis.positionSlide.setMaximum(b);
 		MakamBoxAnalysis.positionSlide.setValue(a);
 	}
+	public void setTime(){
+	}
 }
 
