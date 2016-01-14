@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class Write {
-	
-	public Write(){
-		
-	}
+
 	public static void writeText(String path, float[] data){
 		System.out.println("Star");
 		PrintWriter outFile;
