@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
-import org.example.trainear.data.ClipData;
+import backEnd.ClipData;
 
 public class Serial {
 	private HashMap<String, ClipData> results;
