@@ -21,7 +21,7 @@ public class Test14 {
 	}
 	public static float analyze(float[]rawDat,int noteNumber){
 		float answerResult = 0f;
-		PitchDetection pd = new PitchDetection(rawDat,44100);
+		PitchDetection pd = new PitchDetection("file",rawDat,44100);
 		float[] pr = pd.getPitchResult();
 		float[][] prc = pd.chunkPitchTrack(pr);
 		float[][] prcl = pd.pickLongChunks(prc, noteNumber);

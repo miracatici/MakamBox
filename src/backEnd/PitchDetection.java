@@ -65,9 +65,9 @@ public class PitchDetection {
 		estimate();
 	}
 	
-	public PitchDetection(float[] audioFloatData,float samplerate) {
+	public PitchDetection(String name, float[] audioFloatData,float samplerate) {
 		audio = null;
-		name = null;
+		this.name = name;
 		sampleRate = samplerate;
 		bufferSize = (int) Math.round(sampleRate*0.04);
 		floatData = audioFloatData;

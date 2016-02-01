@@ -201,5 +201,11 @@ public class Histogram{
 		}
 		return peakCent;
 	}
-	
+	public float[] getPeaksCent(int count){													// It returns the cent values of peak points
+		float[] peakCent = new float[count];
+		for (int i = 0; i < count; i++) {
+			peakCent[i] = ((peaks[i])*commaCent+minCentF0);
+		}
+		return peakCent;
+	}
 }
