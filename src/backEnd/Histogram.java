@@ -37,8 +37,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
+import org.apache.commons.lang3.ArrayUtils;
+
+import be.tarsos.dsp.beatroot.Peaks;
 import utilities.AudioUtilities;
 
 public class Histogram{
@@ -50,6 +55,7 @@ public class Histogram{
 	private int[] sortedCentF0;
 	private float[] f0track,sortedf0,histData, f0YIN;
 	private float commaCent;
+	private int[] peaks;
 	
 	public Histogram(){												// Constructor to access other methods without creating histogram
 																	// Maybe it will be required :)
@@ -59,6 +65,7 @@ public class Histogram{
 		AudioUtilities.normalizeMax(histData);								// Normalize to max=1
 		AudioUtilities.normalizeSum(histData);								// Normalize to area=1
 		histData = AudioUtilities.smootize(histData, 3);						// Smootize with element averaging
+		calcPeaks(histData);
 	}
 	public Histogram(File pitchFile) throws Exception{				// Constructor for text file 
 		if(pitchFile.getName().endsWith(".yin.txt")){				// It can be YIN output or etc.
@@ -170,4 +177,29 @@ public class Histogram{
 	public float[] getPitchTrack(){
 		return f0YIN;
 	}
+	public void calcPeaks(float[] data){													// Very very very basic histogram peaks calculation method
+		float [] tempAr = data.clone();
+		double [] tempArD = new double[data.length];
+		for (int i = 0; i < tempArD.length; i++) {
+			tempArD[i] = (double) tempAr[i];
+		}
+		List<Float> b = Arrays.asList(ArrayUtils.toObject(tempAr));							// If the value of a point is greater than the right and left ones, it is a peak point :)
+		float maxV = (Collections.max(b)/15);
+		Object [] tempObj = Peaks.findPeaks(tempArD, 6, maxV).toArray();
+		peaks = new int[tempObj.length];
+		for (int i = 0; i < tempObj.length; i++) {
+			peaks[i] = (int) tempObj[i];
+		}
+	}
+	public int[] getPeaks(){
+		return peaks;
+	}
+	public float[] getPeaksCent(){													// It returns the cent values of peak points
+		float[] peakCent = new float[peaks.length];
+		for (int i = 0; i < peaks.length; i++) {
+			peakCent[i] = ((peaks[i])*commaCent+minCentF0);
+		}
+		return peakCent;
+	}
+	
 }
