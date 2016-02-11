@@ -74,7 +74,9 @@ public class SelectCulture {
 			JOptionPane.showMessageDialog(null,"File not choosen");
 		}
 	}
-	
+	public static void setCulture(Culture cul){
+		culture = cul;
+	}
 	public static Culture getCulture(){
 		if(culture==null){
 			select(".ser",false);

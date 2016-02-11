@@ -191,6 +191,7 @@ public class Histogram{
 			peaks[i] = (int) tempObj[i];
 		}
 	}
+	
 	public int[] getPeaks(){
 		return peaks;
 	}

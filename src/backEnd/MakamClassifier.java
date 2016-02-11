@@ -75,8 +75,10 @@ public class MakamClassifier {
 	private float[][] distArray;
 	private String[] templatesNam;
 	private String makamName,name;
+	private Histogram hi;
 
 	public MakamClassifier(Histogram h) throws Exception{ // Constructor to use with Histogram object
+		hi = h;
 		histo = h.getHistogram();
 		name = h.getName();
 		minCent = h.getMinimum();
@@ -209,21 +211,6 @@ public class MakamClassifier {
 		for (int i = 0; i < tempObj.length; i++) {
 			peaks[i] = (int) tempObj[i];
 		}
-//		float[] tempAr = data.clone();
-//		List<Float> b = Arrays.asList(ArrayUtils.toObject(tempAr));							// If the value of a point is greater than the right and left ones, it is a peak point :)
-//		float maxV = (Collections.max(b)/15);
-//		ArrayList<Integer> temp = new ArrayList<Integer>();
-//		for (int i = shiftAmount+1; i < shiftAmount+1636; i++) {
-//			if(tempAr[i-1]<tempAr[i] && tempAr[i+1]<=tempAr[i] && tempAr[i]>=(maxV)){
-//				temp.add(i);
-//			}
-//		}
-//		peaks = new int[temp.size()];
-//		for (int i = 0; i < temp.size(); i++) {
-//			peaks[i] = temp.get(i);
-//		}
-	
-	
 	}
 	public int[] getPeaks(){
 		return peaks;
@@ -276,6 +263,15 @@ public class MakamClassifier {
 	public void setShiftTonic(float cent){
 		tonicCent += cent;
 		tonicHz = AudioUtilities.centToHertz(tonicCent);
+	}
+	public int getTonicInPeaks(){
+		float[] peakC = hi.getPeaksCent();
+		float[] dist = new float[peakC.length];
+		for (int i = 0; i < dist.length; i++) {
+			dist[i] = Math.abs(peakC[i] - tonicCent);
+		}
+		List<Float> k = Arrays.asList(ArrayUtils.toObject(dist));
+		return ArrayUtils.indexOf(dist, Collections.min(k));
 	}
 }
 
