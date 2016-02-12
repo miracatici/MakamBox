@@ -115,7 +115,7 @@ public class IntervalChart extends JDialog {
 		frameName = "Histogram Data with Intervals";
 		chart = ChartFactory.createXYLineChart(
 				histName, // chart title
-	            "Frequency (cent)", // x axis label
+	            "Intervals (Cent)", // x axis label
 	            "Frequency of Occurence", // y axis label
 	            createDataset(cent,data), // data 
 	            PlotOrientation.VERTICAL,
@@ -182,7 +182,7 @@ public class IntervalChart extends JDialog {
     	frameName = "Histogram Data with Intervals";
 		chart = ChartFactory.createXYLineChart(
 				histName, // chart title
-	            "Frequency (Holderian Comma)", // x axis label
+	            "Intervals (Holderian Comma)", // x axis label
 	            "Frequency of Occurence", // y axis label
 	            createDataset2(cent,data), // data 
 	            PlotOrientation.VERTICAL,

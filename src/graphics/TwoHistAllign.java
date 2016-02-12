@@ -107,7 +107,7 @@ public class TwoHistAllign {
             double k = cent2[i]-recTonic;
             double t = recData[i];
             double z = template[i];
-            if(x<songTonic*4){
+            if(x<2400 && x>-2400){
 	            series.add(x, y);
 	            series2.add(k,t);
 	            series3.add(x,z);
@@ -125,7 +125,7 @@ public class TwoHistAllign {
 	public void createOnlyChart(boolean withTemplate){
 		chart = ChartFactory.createXYLineChart(
 				histName, // chart title
-	            "Frequency (cent)", // x axis label
+	            "Intervals (Cent)", // x axis label
 	            "Frequency of Occuarence", // y axis label
 	            createDataset(cent,songData,withTemplate), // data 
 	            PlotOrientation.VERTICAL,

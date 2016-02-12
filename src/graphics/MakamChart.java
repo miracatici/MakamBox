@@ -164,10 +164,10 @@ public class MakamChart extends JDialog {
 		mincent = 0;
 	}
 	public void createFrame() {
-		String frameName = "Makam - Song Histogram Comparison"; //  Makam - Eser Histogram Karşılaştırması
+		String frameName = "Makam Histogram Comparison"; //  Makam - Eser Histogram Karşılaştırması
 		JFreeChart chart = ChartFactory.createXYLineChart(
 				frameName, // chart title
-	            "Frequency (Holderian Comma)", // x axis label Frekans (Holder Koma)
+	            "Intervals (Cent)", // x axis label Frekans (Holder Koma)
 	            "Frequency of Occurrence", // y axis label   Çalınma Sıklığı
 	            createMultiple(datas.length),
 	            PlotOrientation.VERTICAL,
@@ -213,10 +213,10 @@ public class MakamChart extends JDialog {
 	    pack();
 	} 
 	public void createFrame2() {
-		String frameName = "Makam - Song Histogram Comparison"; //  Makam - Eser Histogram Karşılaştırması
+		String frameName = "Makam Histogram Comparison"; //  Makam - Eser Histogram Karşılaştırması
 		JFreeChart chart = ChartFactory.createXYLineChart(
 				frameName, // chart title
-	            "Frequency (Holderian Comma)", // x axis label Frekans (Holder Koma)
+	            "Intervals (Holderian Comma)", // x axis label Frekans (Holder Koma)
 	            "Frequency of Occurrence", // y axis label   Çalınma Sıklığı
 	            createMultiple2(datas.length),
 	            PlotOrientation.VERTICAL,
@@ -274,8 +274,9 @@ public class MakamChart extends JDialog {
         	for (int j = 1200; j <2200; j++) {
         		double x = freq[j] - tonicCent;
         		double y = datas[i][j];
-        		tempSerie.add(x, y);
-        	}
+        		if(x<2400 && x>-2400){
+        			tempSerie.add(x, y);
+        		}        	}
         	tempResult.addSeries(tempSerie);
 		}
         return tempResult;
@@ -292,7 +293,9 @@ public class MakamChart extends JDialog {
         	for (int j = 1200; j <2200; j++) {
         		double x = (freq[j] - tonicCent)/(1200f/53f);
         		double y = datas[i][j];
-        		tempSerie.add(x, y);
+        		if(x<2400 && x>-2400){
+        			tempSerie.add(x, y);
+        		}
         	}
         	tempResult.addSeries(tempSerie);
 		}

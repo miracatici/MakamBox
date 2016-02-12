@@ -425,16 +425,15 @@ public class AudioUtilities {
 		return b;
 	}
 	public static int[] hertzToCent(float[] array){
-		final float REF_FREQ =8.17579892f*2f;
 		int[] centData = new int[array.length];
 		for(int i=0;i<array.length;i++){
-			centData[i] =(int) Math.round((1200 * FastMath.log(2, array[i] / REF_FREQ)));
+			centData[i] = hertzToCent(array[i]);
 		}
 		return centData;	
 	}
 	public static int hertzToCent(float hertz){
-		final float REF_FREQ =8.17579892f*2f;
-		int centData =(int) Math.round((1200 * FastMath.log(2, hertz / REF_FREQ)));
+		final float REF_FREQ = 8.17579892f*2f;
+		int centData = (int) Math.round((1200 * FastMath.log(2, hertz / REF_FREQ)));
 		return centData;
 	}
 	public static void normalizeMax(float[] ar){

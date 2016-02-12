@@ -71,7 +71,7 @@ public class PitchChart {
 		chart = ChartFactory.createXYLineChart(
 				"", // chart title
 	            "Time (sec)", // x axis label
-	            "Frequency (Hz)", // y axis label
+	            "Pitches (Hertz)", // y axis label
 	            createDataset(time,data), // data 
 	            PlotOrientation.VERTICAL,
 	            false, // include legend
