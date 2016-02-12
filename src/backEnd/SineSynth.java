@@ -40,7 +40,7 @@ import utilities.Write;
 
 public class SineSynth {
 	private AudioFormat af;
-	private int start;
+	private int start; 
 	private float phase,fSample,gain = 0.3f,twoPiF,time,frameLenSamp;
 	private float[] output,frame,timeAr,fadeIn,fadeOut,f0track;
 	private Wavefile synthedWave,sineWave;
@@ -49,9 +49,9 @@ public class SineSynth {
 	public SineSynth(PitchDetection pitch){
 		name = pitch.getName();
 		phase = 0f;
-		af = new AudioFormat(44100,16,1,true,false);
+		af = pitch.getFormat();										
 		f0track = pitch.getPitchResult();
-		fSample = pitch.getAudio().getSampleRate();
+		fSample = af.getSampleRate();
 		frameLenSamp =pitch.getBufferSize();
 		timeAr = new float[(int)frameLenSamp];
 		fadeIn = new float[(int)frameLenSamp];

@@ -446,6 +446,17 @@ public class AudioUtilities {
 			ar[i] = ar[i]/maximum;
 		}
 	}
+	public static float[] normalizeMaxR(float[] ar){
+		float maximum = 0f;
+		float[] temp = new float[ar.length];
+		temp = ar.clone();
+		Arrays.sort(temp);
+		maximum = temp[temp.length-1];
+		for (int i = 0; i < ar.length; i++) {
+			ar[i] = ar[i]/maximum;
+		}
+		return ar;
+	}
 	public static void normalizeSum(float[] ar){
 		float sum = 0f;
 		for (int i = 0; i < ar.length; i++) {

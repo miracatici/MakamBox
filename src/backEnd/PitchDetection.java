@@ -42,12 +42,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import javax.sound.sampled.AudioFormat;
+
 import org.apache.commons.lang3.ArrayUtils;
 
 import utilities.AudioUtilities;
 
 
 public class PitchDetection {
+	private AudioFormat format;
 	private Wavefile audio;
 	private Yin yin;
 	private String name;
@@ -58,6 +61,7 @@ public class PitchDetection {
 
 	public PitchDetection(Wavefile afs) throws Exception{
 		audio = afs ;
+		format = audio.getFormat();
 		name = audio.getName();
 		sampleRate = audio.getSampleRate();
 		bufferSize = (int) Math.round(sampleRate*0.04);
@@ -154,5 +158,8 @@ public class PitchDetection {
 			longChunks[i] = chunkedArray[i];
 		}
 		return longChunks;
+	}
+	public AudioFormat getFormat(){
+		return format;
 	}
 }
