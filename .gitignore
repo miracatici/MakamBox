@@ -1,4 +1,9 @@
 /bin/
 .classpath
+<<<<<<< HEAD
 *.wav
 *.mp3
+=======
+*.mp3
+*.wav
+>>>>>>> origin/master
