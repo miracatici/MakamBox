@@ -162,4 +162,15 @@ public class PitchDetection {
 	public AudioFormat getFormat(){
 		return format;
 	}
+	public float[] getChunkResults(int noteNumber){
+		float[][] tempResult = pickLongChunks(chunkPitchTrack(getPitchResult()), noteNumber);
+		float[] answerResult = new float[noteNumber];
+
+		for (int i = 0; i < tempResult.length; i++) {
+			answerResult[i] = AudioUtilities.findMedian(tempResult[i]);
+		}
+		Arrays.sort(answerResult);
+
+		return answerResult;
+	}
 }
