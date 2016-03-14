@@ -35,6 +35,7 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
@@ -64,8 +65,7 @@ import graphics.MakamChart;
 import graphics.TonicChart;
 
 public class Tuning {
-	//private static final ResourceMakamBoxAnalysis.LANG MakamBoxAnalysis.LANG = MakamBoxAnalysis.LANG; //ResourceMakamBoxAnalysis.LANG.getMakamBoxAnalysis.LANG("applied.tuning"); //$NON-NLS-1$
-
+	public static ResourceBundle LANG = MakamBoxAnalysis.LANG; //$NON-NLS-1$
 	protected JFrame frmTuning;
 	private JTextField txtTrack1;
 	private JTextField txtTrack2;
@@ -679,6 +679,7 @@ public class Tuning {
 			mc.setNames(song.getName());
 			mc.createFrame();
 		} catch (Exception e) {
+			e.printStackTrace();
 			JOptionPane.showMessageDialog(null,"Comparison chart couldn't created");
 		}
 	}

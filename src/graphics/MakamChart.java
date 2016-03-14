@@ -8,6 +8,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
+import java.util.ResourceBundle;
 import java.util.TreeMap;
 
 import javax.swing.JButton;
@@ -27,6 +28,7 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
+import applied.MakamBoxAnalysis;
 import backEnd.MakamBox;
 import datas.Makam;
 import datas.TuningSystem;
@@ -37,6 +39,7 @@ public class MakamChart extends JDialog {
 	 * 
 	 */
 	private static final long serialVersionUID = 7502229854331926766L;
+	public static ResourceBundle LANG = MakamBoxAnalysis.LANG; //$NON-NLS-1$
 	private final JPanel contentPanel = new JPanel();
 	private int count;
 	private final float comma;
@@ -64,16 +67,16 @@ public class MakamChart extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				final JButton btnSetComma = new JButton("Set Comma");
+				final JButton btnSetComma = new JButton(LANG.getString("MakamChart.setComma.text"));
 				btnSetComma.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						if(btnSetComma.getText().equals("Set Comma")){
+						if(btnSetComma.getText().equals(LANG.getString("MakamChart.setComma.text"))){
 							try {
 								isComma = true;
 								setSystem();
 								addAnnotation(box.getMakam().getPeaksComma());
 								createFrame2();
-								btnSetComma.setText("Set Cent");
+								btnSetComma.setText(LANG.getString("MakamChart.setCent.text"));
 							} catch (Exception e) {
 								e.printStackTrace();
 							}
@@ -84,7 +87,7 @@ public class MakamChart extends JDialog {
 								setSystem();
 								addAnnotation(box.getMakam().getPeaksCent());
 								createFrame();
-								btnSetComma.setText("Set Comma");
+								btnSetComma.setText(LANG.getString("MakamChart.setComma.text"));
 							} catch (Exception e) {
 								e.printStackTrace();
 							}
@@ -94,7 +97,7 @@ public class MakamChart extends JDialog {
 				buttonPane.add(btnSetComma);
 			}
 			{
-				JButton okButton = new JButton("Exit");
+				JButton okButton = new JButton(LANG.getString("MakamBoxAnalysis.mntmExit.text"));
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						isComma = false;
@@ -117,7 +120,8 @@ public class MakamChart extends JDialog {
 			if(box==null){
 				JOptionPane.showMessageDialog(null,"Please load a recording to the first slot");
 			} else {
-				JOptionPane.showMessageDialog(null, "Makam Chart couldn't created");
+				System.out.println(e.getMessage());
+//				JOptionPane.showMessageDialog(null, "Makam Chart couldn't created");
 			}		
 		}
 	}
@@ -130,22 +134,22 @@ public class MakamChart extends JDialog {
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
-				final JButton btnSetComma = new JButton("Set Comma");
+				final JButton btnSetComma = new JButton(LANG.getString("MakamChart.setComma.text"));
 				btnSetComma.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						if(btnSetComma.getText().equals("Set Comma")){
+						if(btnSetComma.getText().equals(LANG.getString("MakamChart.setComma.text"))){
 							createFrame2();
-							btnSetComma.setText("Set Cent");
+							btnSetComma.setText(LANG.getString("MakamChart.setCent.text"));
 						} else {
 							createFrame();
-							btnSetComma.setText("Set Comma");
+							btnSetComma.setText(LANG.getString("MakamChart.setComma.text"));
 						}
 					}
 				});
 				buttonPane.add(btnSetComma);
 			}
 			{
-				JButton okButton = new JButton("Exit");
+				JButton okButton = new JButton(LANG.getString("MakamBoxAnalysis.mntmExit.text"));
 				okButton.setActionCommand("Exit");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
@@ -164,11 +168,11 @@ public class MakamChart extends JDialog {
 		mincent = 0;
 	}
 	public void createFrame() {
-		String frameName = "Makam Histogram Comparison"; //  Makam - Eser Histogram Karşılaştırması
+		String frameName = LANG.getString("MakamChart.mhcomparison.text"); //  Makam - Eser Histogram Karşılaştırması
 		JFreeChart chart = ChartFactory.createXYLineChart(
 				frameName, // chart title
-	            "Intervals (Cent)", // x axis label Frekans (Holder Koma)
-	            "Frequency of Occurrence", // y axis label   Çalınma Sıklığı
+				LANG.getString("MakamChart.intervalsCent.text"), // x axis label Frekans (Cent)
+				LANG.getString("MakamChart.occurrence.text"), // y axis label   Çalınma Sıklığı
 	            createMultiple(datas.length),
 	            PlotOrientation.VERTICAL,
 	            true, // include legend
@@ -202,7 +206,9 @@ public class MakamChart extends JDialog {
 				plot.addAnnotation(annotation[i]);
 			}
 	    }
-//	    plot.setBackgroundPaint(Color.WHITE);
+	    if(LANG.equals(ResourceBundle.getBundle("applied.language_tr"))){
+	    	plot.setBackgroundPaint(Color.WHITE);	
+	    }
 	    plot.setRenderer(renderer);  
 	    ChartPanel frame = new ChartPanel(chart, true);
 	    frame.setRangeZoomable(false);
@@ -213,11 +219,11 @@ public class MakamChart extends JDialog {
 	    pack();
 	} 
 	public void createFrame2() {
-		String frameName = "Makam Histogram Comparison"; //  Makam - Eser Histogram Karşılaştırması
+		String frameName = LANG.getString("MakamChart.mhcomparison.text"); //  Makam - Eser Histogram Karşılaştırması
 		JFreeChart chart = ChartFactory.createXYLineChart(
 				frameName, // chart title
-	            "Intervals (Holderian Comma)", // x axis label Frekans (Holder Koma)
-	            "Frequency of Occurrence", // y axis label   Çalınma Sıklığı
+				LANG.getString("MakamChart.intervalsComma.text"), // x axis label Aralik (Holder Koma)
+				LANG.getString("MakamChart.occurrence.text"), // y axis label   Çalınma Sıklığı
 	            createMultiple2(datas.length),
 	            PlotOrientation.VERTICAL,
 	            true, // include legend
@@ -251,7 +257,9 @@ public class MakamChart extends JDialog {
 				plot.addAnnotation(annotation[i]);
 			}
 	    }
-//	    plot.setBackgroundPaint(Color.WHITE);
+	    if(LANG.equals(ResourceBundle.getBundle("applied.language_tr"))){
+	    	plot.setBackgroundPaint(Color.WHITE);	
+	    }
 	    plot.setRenderer(renderer);   
 	    plot.getDomainAxis().setRange(-200, 200);
 	    ChartPanel frame = new ChartPanel(chart, true);
