@@ -256,8 +256,8 @@ public class TemplateCreate {
 				add=i;
 			}
 		}
-		int yeni = (tonInd+add-offset);
-		return yeni;
+		int newT = (tonInd+add-offset);
+		return newT;
 	}
 	private void normalize(float[] array, float k){
 		for (int i = 0; i < array.length; i++) {
