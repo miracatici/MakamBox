@@ -16,7 +16,7 @@
 //		HashMap<String, ClipData> clipdatas = new HashMap<String,ClipData>();
 //		String[] optionList = new String[]{"Major Second","Minor Second","Major Third","Minor Third"};
 //		try {
-//			BufferedReader file = new BufferedReader(new FileReader("n_2.txt"));
+//			BufferedReader file = new BufferedReader(new FileReader("/Users/miracatici/Documents/workspace/TrainEar/assets/settings/n_4.txt"));
 //			String line = "";
 //			while((line = file.readLine())!= null){
 //				String[] parse = line.split("\t");
@@ -25,12 +25,12 @@
 //					System.out.print(parse[i]+ " ");
 //				}
 //				System.out.println();
-//				clipdatas.put(parse[0], new ClipData(parse[0],parse[1],new float[]{Float.valueOf(parse[2]),Float.valueOf(parse[3])},optionList));
+//				clipdatas.put(parse[0], new ClipData(parse[0],parse[1],new float[]{Float.valueOf(parse[2]),Float.valueOf(parse[3]),Float.valueOf(parse[4]),Float.valueOf(parse[5])},optionList));
 //			}
 //			file.close();
 //			FileOutputStream fileOut;
 //			ObjectOutputStream out;
-//			String name = "n_2";
+//			String name = "n_4";
 //			try {
 //				fileOut = new FileOutputStream(name+".ser");
 //				out = new ObjectOutputStream(fileOut);
