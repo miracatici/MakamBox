@@ -29,7 +29,7 @@ package backEnd;
  * It uses the YIN implementation of TarsosDSP by Joren Six
  * 
  * Due to implementation of YIN, we need to split float array to chunk with buffer size. 
- * This buffer size is calculated from sample rate (40 msec window size)
+ * This buffer size is calculated from sample rate (30 msec window size)
  * It also create pitch file folder in project folder and write pitch result array to text file
  * 
  * Created @author mirac
