@@ -17,8 +17,8 @@ public class AnalysisForTonic {
 		BufferedReader fullFileList  = null;
 		String rootPath = "/Volumes/MrcMac/CompMusicCorpus/";
 		try {
-			PrintWriter resultWrite = new PrintWriter(new File("analysisForTonicResult2.txt"));
-			fullFileList = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/finalFileList2.txt")));
+			PrintWriter resultWrite = new PrintWriter(new File("analysisForTonicResult4.txt"));
+			fullFileList = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/finalFileList4.txt")));
 			String fileLine = "";
 			while((fileLine = fullFileList.readLine())!=null){
 				String[] column = fileLine.split("\t");

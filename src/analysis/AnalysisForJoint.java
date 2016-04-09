@@ -16,15 +16,15 @@ public class AnalysisForJoint {
 		BufferedReader fullFileList  = null;
 		String rootPath = "/Volumes/MrcMac/CompMusicCorpus/";
 		try {
-			fullFileList = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/finalFileList.txt")));
+			fullFileList = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/finalFileList4.txt")));
 			String fileLine = "";
+			System.out.println("FileName\tMakamRecog\tTonicRecog\tTonicAnnot\tMakamAnnot");
 			while((fileLine = fullFileList.readLine())!=null){
 				String[] column = fileLine.split("\t");
 				String fileName = column[1];
-				System.out.println("New recording...: "+ fileName+ " : "+column.length);
 				file = new MakamBox(rootPath+fileName,null);
 				file.createMakam();
-				System.out.println(fileName+"\t"+file.getMakamName() + "\t"+ file.getTonicHz()+"\t"+column[2]+"\t"+column[3]);
+				System.out.println(fileName+"\t"+file.getMakamName() + "\t"+ file.getTonicHz()+"\t"+column[2]+"\t"+column[3].replace("makam: ", ""));
 				file.killObject();
 				file = null;
 			}

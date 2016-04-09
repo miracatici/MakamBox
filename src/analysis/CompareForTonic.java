@@ -16,14 +16,14 @@ public class CompareForTonic {
 					String[] column = resultLine.split("\t");
 					float tonicCalc = (Float.valueOf(column[2]));
 					float tonicAnnot = (Float.valueOf(column[3]));
-					if(Math.abs(tonicCalc / tonicAnnot)<1.03 && (tonicCalc / tonicAnnot)>0.97f){
-						System.out.println(resultLine+"\t"+"True");
+					if(Math.abs(tonicCalc / tonicAnnot)<1.035f && (tonicCalc / tonicAnnot)>0.98f){
+						System.out.println(resultLine+"\t"+"True"+"\t"+Math.abs(tonicCalc / tonicAnnot));
 						TT++;
-					} else if (Math.abs(tonicCalc / (tonicAnnot*2))<1.03 && (tonicCalc / (tonicAnnot*2))>0.97f){
-						System.out.println(resultLine+"\t"+"True");
+					} else if (Math.abs(tonicCalc / (tonicAnnot*2))<1.035f && (tonicCalc / (tonicAnnot*2))>0.98f){
+						System.out.println(resultLine+"\t"+"True"+"\t"+Math.abs(tonicCalc / (tonicAnnot*2)));
 						TT++;
-					} else if (Math.abs(tonicCalc / (tonicAnnot/2))<1.03 && (tonicCalc / (tonicAnnot/2))>0.97f){
-						System.out.println(resultLine+"\t"+"True");
+					} else if (Math.abs(tonicCalc / (tonicAnnot/2))<1.035f && (tonicCalc / (tonicAnnot/2))>0.98f){
+						System.out.println(resultLine+"\t"+"True"+"\t"+Math.abs(tonicCalc / (tonicAnnot/2)));
 						TT++;
 					} else {
 						System.out.println(resultLine+"\t"+"False");
