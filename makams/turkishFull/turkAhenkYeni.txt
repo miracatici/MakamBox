@@ -1,6 +1,0 @@
-Mansur	rast	391.11
-Bolahenk	rast	293.33
-Kiz	rast	440.0
-Yildiz	rast	469.0
-Davud	rast	330.0
-Bb Clar.	rast	392.44
