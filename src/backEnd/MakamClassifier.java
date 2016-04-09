@@ -151,8 +151,8 @@ public class MakamClassifier {
 	private void computeTonic(){											// In template histograms, 1636th. point is tonic point
 		commaCent = 1200.0f/159.0f;											// It measures the distance between this point and best matching point (output of the sortAndPick)
 		tonicIndex = 1636-shiftAmount;										// The difference between them is tonic difference
-		reCompute(tonicIndex,5);											// Sometimes, it doesn't match on histogram peak, so we try to find nearest histogram peak in given offset
-		shiftAmount = 1636 - tonicIndex;									// Tonic cent value is calculated via sum of minimum value of histogram and tonic difference value.
+		reCompute(tonicIndex,6);											// Sometimes, it doesn't match on histogram peak, so we try to find nearest histogram peak in given offset
+		shiftAmount = 1635 - tonicIndex;									// Tonic cent value is calculated via sum of minimum value of histogram and tonic difference value.
 		tonicCent = minCent + tonicIndex*commaCent;
 		tonicHz = AudioUtilities.centToHertz(tonicCent);					// Conversion from cent to hertz
 	}

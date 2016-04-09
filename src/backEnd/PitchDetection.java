@@ -64,7 +64,7 @@ public class PitchDetection {
 		format = audio.getFormat();
 		name = audio.getName();
 		sampleRate = audio.getSampleRate();
-		bufferSize = (int) Math.round(sampleRate*0.03);
+		bufferSize = (int) Math.round(sampleRate*0.04);
 		floatData = audio.getFloatData().clone();
 		estimate();
 	}
@@ -73,7 +73,7 @@ public class PitchDetection {
 		audio = null;
 		this.name = name;
 		sampleRate = samplerate;
-		bufferSize = (int) Math.round(sampleRate*0.03);
+		bufferSize = (int) Math.round(sampleRate*0.04);
 		floatData = audioFloatData;
 		estimate();
 	}

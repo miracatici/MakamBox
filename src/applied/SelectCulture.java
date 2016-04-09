@@ -131,10 +131,9 @@ public class SelectCulture {
 		
 		final JComboBox<String> comboBox = new JComboBox<String>();
 		comboBox.setBounds(15, 82, 161, 27);
-		comboBox.addItem("TurkishCulture");
 		comboBox.addItem("TurkishExtended");
 		comboBox.addItem("ArabCulture");
-		comboBox.setSelectedItem("TurkishCulture");
+		comboBox.setSelectedItem("TurkishExtended");
 		frmSelection.getContentPane().add(comboBox);
 		
 		final JComboBox<String> comboBox_1 = new JComboBox<String>();

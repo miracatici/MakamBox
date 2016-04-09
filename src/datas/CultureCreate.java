@@ -24,10 +24,10 @@ public class CultureCreate {
 	
 	public static void main (String[] arg){
 		CultureCreate cc = new CultureCreate();
-		cc.readIntervals("makams/turkishFull/arels.txt");
-		cc.loadNote(new File("makams/turkishFull/turkNoteYeni.txt"));
-		cc.loadAhenk(new File("makams/turkishFull/turkAhenkYeni.txt"));
-		cc.loadMakam(new File("makams/turkishFull/turkMakamYeni.txt"));
+		cc.readIntervals("/Users/miracatici/Downloads/AEU/AEUIntervals.txt");
+		cc.loadNote(new File("/Users/miracatici/Downloads/AEU/AEUNotes.txt"));
+		cc.loadAhenk(new File("/Users/miracatici/Downloads/AEU/AEUAhenk.txt"));
+		cc.loadMakam(new File("/Users/miracatici/Downloads/AEU/AEUMakam.txt"));
 		
 		Culture cul = new Culture("TurkishCultureFull",cc.notesMap,cc.makamsMap,cc.ahenksMap);
 		cul.serialize("TurkishCultureFull");

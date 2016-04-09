@@ -1062,7 +1062,12 @@ public class MakamBoxAnalysis {
 			btnPitchShift.setEnabled(false);
 		} else {
 			try {
-				String tonicNote = SelectCulture.getCulture().getMakamsData().get(box.getMakamName()).getTonicNote();
+				String tonicNote  = "";
+				try {
+					tonicNote = SelectCulture.getCulture().getMakamsData().get(box.getMakamName()).getTonicNote();
+				}  catch (NullPointerException e){
+					JOptionPane.showMessageDialog(null,"Please detect makam");
+				}
 				System.out.println(tonicNote);
 				float tonicFreq = box.getTonicHz();
 				System.out.println(tonicFreq);
