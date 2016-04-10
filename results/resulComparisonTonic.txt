@@ -1,256 +1,256 @@
-16_makamda_ud_taksimleri/14_acemasiran.mp3	Acemasiran	183.40323	183.0	makam: Acemasiran	True	1.0022035
-40Makam40Anlam_1/1-01_ney_taksimi___acemasiran_makaminda__.mp3	Acemasiran	371.9675	439.6	makam: Acemasiran	False
-ergin_kizilay__ud_taksimleri/02_02-acemasiran.mp3	Acemasiran	147.4755	174.0	makam: Acemasiran	False
-gazeller__vol_1/11_SeniKimGorse_K.mp3	Acemasiran	199.91985	310.0	makam: Acemasiran	False
-MastersOfTurkishMusicNey2/13_ACEMASIRANTAKSIM_Ney.mp3	Acemasiran	510.22025	393.1	makam: Acemasiran	False
-MeralUgurlu_TrtArsivSerisi2/22-acemasiran_kanun_taksimi-erolderan.mp3	Acemasiran	247.91245	391.4	makam: Acemasiran	False
-NeyzenTevfik__hic/15_acemasiran_taksim.mp3	Acemasiran	430.152	341.9	makam: Acemasiran	False
-TurkMuzigiUstalari_kemence2/10_AcemasiranTaksim_Kemence.mp3	Acemasiran	289.92184	230.8	makam: Acemasiran	False
-ihsan_ozgen__anatolia__meragi_itri/04_-_kemence_taksimi.mp3	Bestenigar	237.76428	237.8	makam: Bestenigar	True	0.9998498
-kudsi_erguner_ensemble__saz_eserleri/15_bestenigar_kanun_taksim.mp3	Bestenigar	182.35884	183.0	makam: Bestenigar	True	0.9964964
-MuratAydemir_MakamGuide2/2-51_bestenigar_taksim.mp3	Bestenigar	137.22809	276.8	makam: Bestenigar	True	0.99153244
-necdet_yasar_2/2-07_bestenigar.mp3	Bestenigar	141.6778	284.1	makam: Bestenigar	True	0.9973797
-NeyzenTevfik__hic/7_bestenigar_taksim.mp3	Bestenigar	355.914	355.9	makam: Bestenigar	True	1.0000393
-niyazi_sayin__sada/08_-_bestenigar_taksimi.mp3	Bestenigar	562.006	354.0	makam: Bestenigar	False
-tanburi_cemil_bey__vol_4/06_-_bestenigar_taksim__yayli_tanbur_.mp3	Bestenigar	173.7769	175.0	makam: Bestenigar	True	0.9930109
-TurkMuzigiUstalari_kemence1/06_BestenigarTaksim_Kemence.mp3	Bestenigar	377.0284	190.0	makam: Bestenigar	True	0.99218005
-ask_1/1-12_bayati_taksim.mp3	Beyati	254.08623	253.0	makam: Beyati	True	1.0042934
-izak_algazi_efendi/04_bayati_gazel_[improvisation].mp3	Beyati	219.30814	322.1	makam: Beyati	False
-turk_tasavvuf_muzigi/22_tanbur_taksimi.mp3	Beyati	146.83719	147.3	makam: Beyati	True	0.996858
-14_makamda_keman_taksimi/11_beyatiaraban_taksim.mp3	Beyatiaraban	248.578	249.0	makam: Beyatiaraban	True	0.99830526
-14_makamda_keman_taksimi/10_ferahfeza_taksim.mp3	Ferahfeza	330.62057	219.0	makam: Ferahfeza	False
-ask_1/1-02_ferahfeza_bas_taksim__ayinden_.mp3	Ferahfeza	249.3078	331.0	makam: Ferahfeza	False
-ask_2/2-18_ferahfeza_son_taksim__ayinden_.mp3	Ferahfeza	501.03424	326.0	makam: Ferahfeza	False
-dede_efendi__mevlevi_sesler__1_ferahfeza/1_01_ney_taksimi.mp3	Ferahfeza	338.26	447.0	makam: Ferahfeza	False
-12MakamdaYayli_tanbur_taksimleri/01_hicaz.mp3	Hicaz	224.7794	223.0	makam: Hicaz	True	1.0079794
-14_makamda_keman_taksimi/01_hicaz_taksim.mp3	Hicaz	220.69165	220.0	makam: Hicaz	True	1.0031439
-16_makamda_ud_taksimleri/04_hicaz.mp3	Hicaz	123.465454	248.0	makam: Hicaz	True	0.99568915
-ask_2/2-04_hicaz_taksim.mp3	Hicaz	227.02722	225.0	makam: Hicaz	True	1.0090098
-bekir_sidki_sezgin__klasikler_2/06_ihsan_ozgen-_hicaz_kemence_taksimi.mp3	Hicaz	295.25336	590.0	makam: Hicaz	True	1.0008588
-bekir_sidki_sezgin__turk_din_musikisi/3-01_hicaz_mk._ikindi_ezani.mp3	Hicaz	225.56717	227.0	makam: Hicaz	True	0.993688
-bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/09-hicaz_tanbur_taksimi-necdet_yasar.mp3	Hicaz	150.16785	150.0	makam: Hicaz	True	1.001119
-BekirSidkiSezgin_22/hicaz_kanun_taksimi.mp3	Hicaz	291.95743	293.0	makam: Hicaz	True	0.9964417
-dersaadette_aksam/01_taksim_-_kanuni_haci_arif_bey.mp3	Hicaz	384.38467	393.0	makam: Hicaz	False
-enst_tsm_besteleri-3__eserli_saz_eserleri/13_yayli_tambur_taksimi.mp3	Hicaz	223.38495	443.0	makam: Hicaz	True	1.0085099
-ercumend_batanay__tanbur_2/02_07_-_hicaz_taksim.mp3	Hicaz	180.80931	120.0	makam: Hicaz	False
-ercumend_batanay__tanbur_2/02_06_-_hicaz_taksim.mp3	Hicaz	192.28658	321.0	makam: Hicaz	False
-ergin_kizilay__ud_taksimleri/01_01-hicaz.mp3	Hicaz	147.87785	295.0	makam: Hicaz	True	1.0025617
-fahrettin_cimenli__yayli_tanbur__vol_1/06_hicaz_gecis_taksim.mp3	Hicaz	220.396	219.0	makam: Hicaz	True	1.0063744
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/15_hicaz_taksim.mp3	Hicaz	331.8299	330.0	makam: Hicaz	True	1.0055451
-gazeller__vol_3/07_kalbimde_ne_askin_emeli_matemi_ka.mp3	Hicaz	186.67824	187.4	makam: Hicaz	True	0.9961486
-izak_algazi_efendi/01_hicaz_gazel_[improvisation].mp3	Hicaz	211.45941	160.4	makam: Hicaz	False
-MastersOfTurkishMusicNey1/21_HicazTaksim_Ney.mp3	Hicaz	425.1186	425.0	makam: Hicaz	True	1.0002791
-mesut_cemil__disc_1/1-02_tanburla_hicaz_taksim.mp3	Hicaz	161.81297	161.5	makam: Hicaz	True	1.0019379
-enst_tsm_besteleri-3__eserli_saz_eserleri/13_yayli_tambur_taksimi.mp3	Hicaz	223.38495	443.0	makam: Hicaz	True	1.0085099
-ud_disc_1/1-02_hicaz_taksim.mp3	Hicaz	188.59439	381.4	makam: Hicaz	True	0.98895854
-udi_hrant_2/04_-_ud_taksimi.mp3	Hicaz	122.567184	123.0	makam: Hicaz	True	0.9964812
-12MakamdaYayli_tanbur_taksimleri/02_hicazkar.mp3	Hicazkar	299.14005	396.0	makam: Hicazkar	False
-14_makamda_keman_taksimi/09_hicazkar_taksim.mp3	Hicazkar	292.9136	293.0	makam: Hicazkar	True	0.99970514
-16_makamda_ud_taksimleri/06_hicazkar.mp3	Hicazkar	164.43343	130.0	makam: Hicazkar	False
-BekirSidkiSezgin_Hicazkar6/kemence_taksimi_.mp3	Hicazkar	333.7776	501.1	makam: Hicazkar	False
-ercumend_batanay__tanbur_2/02_02_-_hicazkar_taksim.mp3	Hicazkar	240.46667	240.0	makam: Hicazkar	True	1.0019444
-ergin_kizilay__ud_taksimleri/05_05-hicazkar.mp3	Hicazkar	129.05545	129.0	makam: Hicazkar	True	1.0004299
-kadin_bestekarlar__disc_2/11_kanun_taksimi.mp3	Hicazkar	388.14383	260.7	makam: Hicazkar	False
-KoraySafkan_B_2776_Hicazkar_290491/01-b_2776-keman-k.demir.mp3	Hicazkar	395.25586	263.9	makam: Hicazkar	False
-kudsi_erguner_ensemble__tatyos_efendi_kulliyati/16_klarnet_taksim.mp3	Hicazkar	196.62888	195.9	makam: Hicazkar	True	1.0037206
-yorgo_bacanos_udi/15_kemence_taksim.mp3	Hicazkar	485.26114	218.0	makam: Hicazkar	False
-yorgo_bacanos_udi/16_hicazkar_taksim.mp3	Hicazkar	229.85794	301.0	makam: Hicazkar	False
-14_makamda_keman_taksimi/08_huseyni_taksim.mp3	Huseyni	248.78667	249.0	makam: Huseyni	True	0.99914324
-16_makamda_ud_taksimleri/02_huseyni.mp3	Huseyni	123.083885	123.0	makam: Huseyni	True	1.000682
-BekirSidkiSezgin_Huseyni3/tanbur_taksimi.mp3	Huseyni	142.40692	286.5	makam: Huseyni	True	0.99411464
-ercumend_batanay__tanbur__1/1-04_huseyni_taksim.mp3	Huseyni	165.9493	249.0	makam: Huseyni	False
-ergin_kizilay__ud_taksimleri/03_03-huseyni.mp3	Huseyni	147.33574	147.0	makam: Huseyni	True	1.0022839
-fahrettin_cimenli__yayli_tanbur__vol_1/03_huseyni_taksim.mp3	Huseyni	218.36848	219.0	makam: Huseyni	True	0.9971164
-gazeller__vol_1/17_HerZamanBirVamik_K.mp3	Huseyni	229.72023	231.0	makam: Huseyni	True	0.99445987
-KoraySafkan_c_0933_huseyni_110292/1_KemanTaksimi.mp3	Huseyni	293.12122	294.8	makam: Huseyni	True	0.9943054
-kudsi_erguner_ensemble__tatyos_efendi_kulliyati/06_tanbur_taksim.mp3	Huseyni	146.50311	219.9	makam: Huseyni	False
-MeralUgurluEnsemble_ottoman_turkish_court_music_cd_1/07-huseyni_ney_taksimi-aziz_senol_filiz.mp3	Huseyni	495.81412	497.1	makam: Huseyni	True	0.9974132
-mesut_cemil__disc_1/1-01_viyolonsel_ile_huseyni_taksim.mp3	Huseyni	110.61795	110.6	makam: Huseyni	True	1.0001624
-necdet_yasar/12_huseyni_taksim.mp3	Huseyni	140.61638	280.6	makam: Huseyni	True	1.002255
-NeyzenTevfik__hic/4_huseyni_taksim.mp3	Huseyni	437.72327	438.3	makam: Huseyni	True	0.99868417
-ud_disc_1/1-01_huseyni_taksim.mp3	Huseyni	187.53265	187.8	makam: Huseyni	True	0.9985764
-12MakamdaYayli_tanbur_taksimleri/03_huzzam.mp3	Huzzam	247.78549	248.0	makam: Huzzam	True	0.9991351
-14_makamda_keman_taksimi/07_huzzam__taksim.mp3	Huzzam	274.1124	275.0	makam: Huzzam	True	0.99677235
-16_makamda_ud_taksimleri/12_huzzam.mp3	Huzzam	141.29845	110.0	makam: Huzzam	False
-40Makam40Anlam_3/3-19_huzzam_gazel.mp3	Huzzam	153.59915	308.4	makam: Huzzam	True	0.99610347
-AlaeddinYavasca_Huzzam14/08_huzzam_tanbur_taksimi.mp3	Huzzam	81.23428	162.0	makam: Huzzam	True	1.0028924
-bekir_sidki_sezgin__klasikler_2/12_niyazi_sayin-_huzzam_ney_taksimi_2.mp3	Huzzam	556.8723	557.0	makam: Huzzam	True	0.99977076
-dersaadette_aksam/12_bade-i_zehr-i_gam-i_firkate_kandim_bu_gece_-_hafiz_osman.mp3	Huzzam	178.21124	179.0	makam: Huzzam	True	0.99559355
-enst_tsm_besteleri-3__eserli_saz_eserleri/11_ud_taksimi.mp3	Huzzam	137.38074	137.0	makam: Huzzam	True	1.0027791
-ergin_kizilay__ud_taksimleri/08_08-huzzam.mp3	Huzzam	106.222885	194.0	makam: Huzzam	False
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/09_huzzam_taksim.mp3	Huzzam	364.79318	367.0	makam: Huzzam	True	0.99398685
-fasl-i-sahane__enst_1/1-11_ud_taksim.mp3	Huzzam	134.0821	164.0	makam: Huzzam	False
-gazeller__vol_1/06_CanHastaDusup_K.mp3	Huzzam	396.5934	391.4	makam: Huzzam	True	1.0132688
-gazeller__vol_1/05_PekMustaribim_K.mp3	Huzzam	205.15765	417.7	makam: Huzzam	True	0.98232055
-gazeller__vol_2/04_HicraniElem_K.mp3	Huzzam	189.69312	190.0	makam: Huzzam	True	0.99838483
-KoraySafkan_C_2005_Huzzam_020896/01-C-2005-Kemence-HasanEsen.mp3	Huzzam	275.22903	276.6	makam: Huzzam	True	0.9950435
-kudsi_erguner_ensemble__tatyos_efendi_kulliyati/22_kanun_taksim.mp3	Huzzam	243.96695	243.7	makam: Huzzam	True	1.0010954
-munir_nurettin_selcuk__vesvese/02_salincak_sarkisi.mp3	Huzzam	164.86588	330.3	makam: Huzzam	True	0.99827963
-munirNureddinSelcuk_tereddut/15-kildi_zulfun_huzzam_gazel_-m.nurettin_selcuk.mp3	Huzzam	193.2109	388.3	makam: Huzzam	True	0.9951631
-enst_tsm_besteleri-3__eserli_saz_eserleri/11_ud_taksimi.mp3	Huzzam	137.38074	137.0	makam: Huzzam	True	1.0027791
-ud_disc_1/1-05_huzzam_taksim.mp3	Huzzam	205.27844	206.6	makam: Huzzam	True	0.9936033
-yorgo_bacanos_udi/01_huzzam_taksim.mp3	Huzzam	181.22954	182.6	makam: Huzzam	True	0.9924947
-12MakamdaYayli_tanbur_taksimleri/04_karcigar.mp3	Karcigar	223.23404	223.0	makam: Karcigar	True	1.0010495
-14_makamda_keman_taksimi/04_karcigar_taksim.mp3	Karcigar	220.5137	221.0	makam: Karcigar	True	0.9977996
-16_makamda_ud_taksimleri/03_karcigar.mp3	Karcigar	122.76772	123.0	makam: Karcigar	True	0.99811155
-BekirSidkiSezgin_15/karcigar_viyola_taksimi.mp3	Karcigar	148.99408	447.0	makam: Karcigar	False
-BekirSidkiSezgin_22/karcigar_tanbur_taksimi.mp3	Karcigar	122.57119	163.0	makam: Karcigar	False
-BekirSidkiSezgin_Karcigar5/viyola_taksimi.mp3	Karcigar	152.89433	154.0	makam: Karcigar	True	0.9928203
-BekirSidkiSezgin_Karcigar5/ud_taksimi.mp3	Karcigar	150.73845	205.0	makam: Karcigar	False
-kudsi_erguner_ensemble__saz_eserleri/13_karcigar_keman_taksim.mp3	Karcigar	220.42484	220.0	makam: Karcigar	True	1.0019311
-MuratAydemir_MakamGuide1/1-53_karcigar_taksim.mp3	Karcigar	164.69527	164.8	makam: Karcigar	True	0.99936444
-ZekiMurendenSecmeler_TRT/15_KemanTaksimi.mp3	Karcigar	292.8338	291.5	makam: Karcigar	True	1.0045756
-12MakamdaYayli_tanbur_taksimleri/05_kurdili_hicazkar.mp3	Kurdilihicazkar	298.79468	397.0	makam: Kurdilihicazkar	False
-14_makamda_keman_taksimi/03_k_hicazkar_taksim.mp3	Kurdilihicazkar	292.9679	220.0	makam: Kurdilihicazkar	False
-16_makamda_ud_taksimleri/05_kurdilihicazkar.mp3	Kurdilihicazkar	123.1067	247.0	makam: Kurdilihicazkar	True	0.9968154
-ask_2/2-15_kurdilihicazkar_taksim.mp3	Kurdilihicazkar	392.04675	393.0	makam: Kurdilihicazkar	True	0.99757445
-avni_anil/01_-_keman_taksimi.mp3	Kurdilihicazkar	258.35294	272.0	makam: Kurdilihicazkar	False
-avni_anil/09_-_klarnet_taksimi.mp3	Kurdilihicazkar	220.92026	222.0	makam: Kurdilihicazkar	True	0.9951363
-bekir_sidki_sezgin__klasikler_2/16_cuneyd_kosal-_kurdilihicazkar_kanun_taksimi.mp3	Kurdilihicazkar	401.5735	267.0	makam: Kurdilihicazkar	False
-bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/13-kurdilihicazkar_kanun_taksimi-cuneyt_kosal.mp3	Kurdilihicazkar	398.0266	264.0	makam: Kurdilihicazkar	False
-dersaadette_aksam/14_taksim.mp3	Kurdilihicazkar	196.55174	263.0	makam: Kurdilihicazkar	False
-ercumend_batanay__tanbur__1/1-03_kurdili_hicazkar_taksim.mp3	Kurdilihicazkar	151.65134	228.0	makam: Kurdilihicazkar	False
-ergin_kizilay__ud_taksimleri/07_kurdili_hicazkar.mp3	Kurdilihicazkar	97.43336	103.0	makam: Kurdilihicazkar	False
-fahrettin_cimenli__yayli_tanbur__vol_2/03_kuridilihicazkar_taksim_1.mp3	Kurdilihicazkar	294.0074	197.0	makam: Kurdilihicazkar	False
-fahrettin_cimenli__yayli_tanbur__vol_2/01_kurdilihicazkar_taksim_3.mp3	Kurdilihicazkar	221.42885	196.0	makam: Kurdilihicazkar	False
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/06_kurdili_hicazkar_saz_semai-_haydar_tatliyar.mp3	Kurdilihicazkar	293.4952	588.0	makam: Kurdilihicazkar	True	0.998283
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/05_kurdili_hicazkar_taksim.mp3	Kurdilihicazkar	294.4532	292.0	makam: Kurdilihicazkar	True	1.0084013
-Kanuni_19secmeKlasikEser/14_kurdili_hicazkar_taksim.mp3	Kurdilihicazkar	293.7256	147.3	makam: Kurdilihicazkar	True	0.99703187
-sarkilarla_istanbul/04_-_ney_taksimi.mp3	Kurdilihicazkar	672.9754	444.7	makam: Kurdilihicazkar	False
-ud_disc_2/2-15_kurdilihicazkar_taksim_-_udi_hr.mp3	Kurdilihicazkar	209.41368	274.0	makam: Kurdilihicazkar	False
-adktmk_rahmi_bey/15_mahurkemantaksimi.mp3	Mahur	219.87534	221.0	makam: Mahur	True	0.994911
-AlaeddinYavasca_mahur01/02_mahur_tanbur_taksimi.mp3	Mahur	125.723564	125.9	makam: Mahur	True	0.9985986
-bestekar_iii._selim_han__2/05_ud_taksimi.mp3	Mahur	130.28635	130.7	makam: Mahur	True	0.9968351
-lalezar__volume_3_minority_composers/12_-_kemence_taksim.mp3	Mahur	244.37416	246.8	makam: Mahur	True	0.99017084
-MuratAydemir_MakamGuide1/1-10_mahur_taksim.mp3	Mahur	147.26671	148.0	makam: Mahur	True	0.9950453
-refik_fersan/03_-_cello_taksimi.mp3	Mahur	65.23838	130.3	makam: Mahur	True	1.0013566
-12MakamdaYayli_tanbur_taksimleri/07_muhayyer.mp3	Muhayyer	223.2292	223.0	makam: Muhayyer	True	1.0010278
-16_makamda_ud_taksimleri/07_muhayyer.mp3	Muhayyer	109.21279	109.0	makam: Muhayyer	True	1.0019522
-bekir_sidki_sezgin__turk_din_musikisi/3-07_muhayyer_sugl.mp3	Muhayyer	130.8955	137.0	makam: Muhayyer	False
-bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/06-muhayyer_kemence_taksimi-ihsan_ozgen.mp3	Muhayyer	250.08339	249.0	makam: Muhayyer	True	1.004351
-BekirSidkiSezgin_16/muhayyer_ney_taksimi.mp3	Muhayyer	233.95483	233.8	makam: Muhayyer	True	1.0006622
-izak_algazi_efendi/07_muhayyer_gazel._aman_nazre-i_taba.mp3	Muhayyer	214.71767	323.1	makam: Muhayyer	False
-MeralUgurluEnsemble_ottoman_turkish_court_music_cd_1/10-muhayyer_ud_taksimi-samim_karaca.mp3	Muhayyer	124.32964	123.6	makam: Muhayyer	True	1.0059032
-sarkilarla_istanbul/16_-_tanbur_taksimi.mp3	Muhayyer	123.00476	123.8	makam: Muhayyer	True	0.9935764
-tanburi_cemil_bey__vol_4/16_-_muhayyer_taksim__violoncello_.mp3	Muhayyer	155.4635	239.9	makam: Muhayyer	False
-yorgo_bacanos_udi/07_muhayyer_keman_taksim.mp3	Muhayyer	445.63187	336.6	makam: Muhayyer	False
-ask_1/1-08_mustear_taksim.mp3	Mustear	197.56975	266.0	makam: Mustear	False
-14_makamda_keman_taksimi/06_neveser_taksim.mp3	Neveser	331.91666	292.0	makam: Neveser	False
-40Makam40Anlam_2/2-18_kemence_taksimi___neva_makaminda__.mp3	Neva	278.12677	278.5	makam: Neva	True	0.99865985
-dersaadette_aksam/06_taksim.mp3	Neva	328.84885	165.0	makam: Neva	True	0.99651164
-gazeller__vol_1/15_SeniKimGorse_K.mp3	Neva	207.1912	139.0	makam: Neva	False
-gazeller__vol_1/09_DidemdenNigahbanOldum_K.mp3	Neva	239.29283	240.1	makam: Neva	True	0.9966382
-gazeller__vol_2/10_FeryadEdiyorBirGulIcin_K.mp3	Neva	222.5878	300.0	makam: Neva	False
-gazeller__vol_2/16_BeniEndiseyeSaldi_K.mp3	Neva	274.60577	274.9	makam: Neva	True	0.99892974
-MuratAydemir_MakamGuide1/1-55_neva_taksim.mp3	Neva	166.31142	165.8	makam: Neva	True	1.0030845
-MustafaDoganDikmen_Itri/01_neva_neyTaksimi.mp3	Neva	596.7109	596.7	makam: Neva	True	1.0000182
-TurkMuzigiUstalari_kemence2/22_NevaTaksim_Kemence.mp3	Neva	292.3683	291.3	makam: Neva	True	1.0036674
-ud_disc_2/2-11_neva_taksim_-_ibrahim_ziya_bey.mp3	Neva	163.5826	163.9	makam: Neva	True	0.99806345
-12MakamdaYayli_tanbur_taksimleri/08_nihavend.mp3	Nihavend	198.16273	396.0	makam: Nihavend	True	1.000822
-14_makamda_keman_taksimi/05_nihavent_taksim.mp3	Nihavend	195.26003	209.0	makam: Nihavend	False
-16_makamda_ud_taksimleri/09_nihavent.mp3	Nihavend	123.4964	123.0	makam: Nihavend	True	1.0040357
-adktmk_rahmi_bey/12_nihaventkanuntaksimi.mp3	Nihavend	219.94485	331.0	makam: Nihavend	False
-ask_2/2-08_nihavend_taksim.mp3	Nihavend	453.95547	226.0	makam: Nihavend	True	1.0043262
-BekirSidkiSezgin_26/hicaz_ney_taksimi.mp3	Nihavend	524.7989	596.0	makam: Nihavend	False
-enst_tsm_besteleri-3__eserli_saz_eserleri/08_klarnet_taksimi.mp3	Nihavend	220.9756	220.0	makam: Nihavend	True	1.0044346
-ercumend_batanay__tanbur_2/02_04_-_nihavend_taksim.mp3	Nihavend	161.26723	322.0	makam: Nihavend	True	1.0016598
-ergin_kizilay__tm_de_ud_ile_anilar_-_1_enst/12_ud_taksimi.mp3	Nihavend	97.50453	195.0	makam: Nihavend	True	1.0000465
-ergin_kizilay__ud_taksimleri/10_10-nihavent.mp3	Nihavend	121.58665	122.0	makam: Nihavend	True	0.99661183
-fahrettin_cimenli__yayli_tanbur__vol_1/08_nihavend_taksim.mp3	Nihavend	197.0322	197.0	makam: Nihavend	True	1.0001634
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/01_nihavent_taksim.mp3	Nihavend	290.8903	292.0	makam: Nihavend	True	0.9961996
-enst_tsm_besteleri-3__eserli_saz_eserleri/08_klarnet_taksimi.mp3	Nihavend	220.9756	220.0	makam: Nihavend	True	1.0044346
-yorgo_bacanos_udi/18_nihavent_taksim.mp3	Nihavend	145.23132	145.8	makam: Nihavend	True	0.9960996
-ask_2/2-01_pencgah_bas_taksim__ayinden_.mp3	Pencgah	218.88553	219.0	makam: Pencgah	True	0.9994773
-12MakamdaYayli_tanbur_taksimleri/09_rast.mp3	Rast	199.34329	198.0	makam: Rast	True	1.0067843
-14_makamda_keman_taksimi/12_rast_taksim.mp3	Rast	260.91376	194.0	makam: Rast	False
-16_makamda_ud_taksimleri/08_rast.mp3	Rast	109.92929	109.0	makam: Rast	True	1.0085256
-adktmk_ahmet_rasim_bey/05_rasttanburtaksimi_tevfiksoyata.mp3	Rast	109.05818	109.0	makam: Rast	True	1.0005338
-ask_1/1-09_rast_seyir.mp3	Rast	214.62637	213.0	makam: Rast	True	1.0076356
-ask_2/2-16_rast_taksim.mp3	Rast	163.40619	329.0	makam: Rast	True	0.9933507
-dersaadette_aksam/13_ey_seker-leb_sen_muruvvet_eyle_allah_askina_-_hafiz_yasar_okur.mp3	Rast	178.79102	179.0	makam: Rast	True	0.99883246
-derya_turkan_letter_from_istanbul/10_-_rast_taksim_on_kanun.mp3	Rast	290.94733	292.0	makam: Rast	True	0.99639493
-enst_tsm_besteleri__saz_eserleri/15_sevmekten_kim_usanir.mp3	Rast	220.31197	222.0	makam: Rast	True	0.99239624
-ergin_kizilay__ud_taksimleri/06_06-rast.mp3	Rast	129.66873	130.0	makam: Rast	True	0.9974518
-ErgunerKaracaKutbay_makam/01_MakamRast_Ney.mp3	Rast	475.11926	233.0	makam: Rast	True	1.0195693
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/12_rast_taksim.mp3	Rast	292.47656	293.0	makam: Rast	True	0.9982135
-gazeller__vol_1/04_AskaDustum_K.mp3	Rast	197.1675	198.4	makam: Rast	True	0.9937878
-kadin_bestekarlar__disc_2/08_ney_taksimi.mp3	Rast	445.1077	444.5	makam: Rast	True	1.0013671
-kani_karaca__ask_ile_-_with_love/1-09_taksim_on_the_ney.mp3	Rast	262.91757	262.9	makam: Rast	True	1.0000669
-kudsi_erguner_ensemble__tatyos_efendi_kulliyati/09_rast_ney_taksim.mp3	Rast	391.49594	196.1	makam: Rast	True	0.9982048
-mesut_cemil__disc_1/1-16_viyolonsel_ile_rast_taksim.mp3	Rast	74.82905	301.0	makam: Rast	False
-sultan_bestekarlar__disc_2_saz_eserleri/2-18_tanbur_taksimi.mp3	Rast	109.42367	219.4	makam: Rast	True	0.99748105
-TurkMuzigiUstalari_kemence2/15_RastTaksim_Kemence.mp3	Rast	287.1045	436.2	makam: Rast	False
-ud_disc_2/2-06_rast_taksim_-_udi_nes_et_bey.mp3	Rast	257.93936	172.2	makam: Rast	False
-UlviErguner_MusiqueDeLaCourOttomane/16_necdet_yasar_-_16_-_rast_tambur_taksimi.mp3	Rast	129.72527	260.2	makam: Rast	True	0.9971196
-12MakamdaYayli_tanbur_taksimleri/10_saba.mp3	Saba	222.9326	223.0	makam: Saba	True	0.99969774
-14_makamda_keman_taksimi/13_saba_taksim.mp3	Saba	329.6311	330.0	makam: Saba	True	0.9988821
-ask_1/1-17_saba_bas_taksim__ayinden_.mp3	Saba	496.07346	585.0	makam: Saba	False
-ask_1/1-13_saba_taksim.mp3	Saba	232.48569	203.0	makam: Saba	False
-fahrettin_cimenli__yayli_tanbur__vol_2/08_saba_taksim.mp3	Saba	221.10327	220.0	makam: Saba	True	1.0050149
-fahrettin_cimenli__yayli_tanbur__vol_2/06_saba_taksim.mp3	Saba	221.48676	220.0	makam: Saba	True	1.006758
-gazeller__vol_2/18_UymuyorTalihimHerArzuma_K.mp3	Saba	343.34094	344.0	makam: Saba	True	0.9980841
-kani_karaca__ask_ile_-_with_love/1-03_adhan__morning.mp3	Saba	220.12228	221.3	makam: Saba	True	0.9946782
-MastersOfTurkishMusicNey1/22_SabaTaksim_Ney.mp3	Saba	425.07217	210.6	makam: Saba	True	1.0091932
-saba_canli_fasil9/17_kara_gozlu_cingenem.mp3	Saba	250.80939	255.0	makam: Saba	True	0.9835662
-sevahot_lael/13_saba_makaminda_ney_taksimi.mp3	Saba	583.527	582.4	makam: Saba	True	1.001935
-12MakamdaYayli_tanbur_taksimleri/11_segah.mp3	Segah	247.22174	248.0	makam: Segah	True	0.9968619
-14_makamda_keman_taksimi/02_segah_taksim.mp3	Segah	273.3547	275.0	makam: Segah	True	0.9940171
-16_makamda_ud_taksimleri/11_segah.mp3	Segah	109.60509	109.0	makam: Segah	True	1.0055512
-ask_2/2-14_segah_taksim.mp3	Segah	282.23062	281.0	makam: Segah	True	1.0043794
-ask_2/2-02_segah_taksim.mp3	Segah	278.02982	277.0	makam: Segah	True	1.0037178
-ask_2/2-12_segah_seyir.mp3	Segah	269.98535	269.0	makam: Segah	True	1.0036631
-dersaadette_aksam/11_nigeh_gulcin-i_hasret_damenim_pur-har-i_mihnetdir_-_hafiz_kemal.mp3	Segah	239.6504	241.0	makam: Segah	True	0.9944
-dersaadette_aksam/10_taksim.mp3	Segah	376.3183	375.0	makam: Segah	True	1.0035155
-fahrettin_cimenli__yayli_tanbur__vol_2/07_segah_taksim.mp3	Segah	247.11932	246.0	makam: Segah	True	1.0045501
-fahri_karaduman__osmanlidan_bugune_turk_musikisi/07_segah_taksim.mp3	Segah	365.5374	367.0	makam: Segah	True	0.9960148
-fasl-i-sahane__enst_4/01_segah--sarki--semai--ben_seni--amir_ates.mp3	Segah	138.88466	275.0	makam: Segah	True	1.0100702
-gazeller__vol_1/13_TazelendiTabIAlem_K.mp3	Segah	218.99525	220.0	makam: Segah	True	0.995433
-gazeller__vol_1/10_NigehGulciniHasret_K.mp3	Segah	246.80171	249.7	makam: Segah	True	0.98839295
-ihsan_ozgen__anatolia__meragi_itri/07_-_rebab_taksimi.mp3	Segah	156.28403	312.0	makam: Segah	True	1.0018207
-ilhan_barutcu__ask-i_neyzen/11_sagah_taksim.mp3	Segah	488.0882	489.2	makam: Segah	True	0.9977273
-KoraySafkan_C_1224_Segah_240292/1_UdTaksimi.mp3	Segah	164.00389	164.0	makam: Segah	True	1.0000237
-tanburi_cemil_bey__vol_5/08_-_segah_taksim__kemence_.mp3	Segah	374.48532	373.0	makam: Segah	True	1.0039821
-yorgo_bacanos_1900-1977___arsiv/02_segah_taksim.mp3	Segah	204.3231	201.0	makam: Segah	True	1.0165329
-fahrettin_cimenli__yayli_tanbur__vol_1/09_sehnaz_taksim.mp3	Sehnaz	219.73404	236.0	makam: Sehnaz	False
-40Makam40Anlam_1/1-04_tanbur_taksimi___sultaniyegah_makaminda__.mp3	Sultaniyegah	137.89977	184.8	makam: Sultaniyegah	False
-dede_efendi__mevlevi_sesler__1_ferahfeza/1_08_taksim.mp3	Sultaniyegah	164.79404	109.0	makam: Sultaniyegah	False
-gazeller__vol_2/02_MestiNazimKimBuyuttuBoyle_K.mp3	Sultaniyegah	169.94112	230.0	makam: Sultaniyegah	False
-halil_karaduman__kanun_sololari/05_sultaniyegah.mp3	Sultaniyegah	330.2857	220.0	makam: Sultaniyegah	False
-ilhan_barutcu__ask-i_neyzen/03_sultaniyegah_taksim.mp3	Sultaniyegah	442.3126	289.7	makam: Sultaniyegah	False
-MastersOfTurkishMusicNey1/13_sultaniyghtaksim_Ney.mp3	Sultaniyegah	485.21365	323.5	makam: Sultaniyegah	False
-MuratAydemir_MakamGuide2/2-27_sultani_yegah_taksim.mp3	Sultaniyegah	164.28654	221.0	makam: Sultaniyegah	False
-osmanli_dan_bugune_turk_musikisi_ney_CanGulbol/07_-_sultaniyegah_taksim.mp3	Sultaniyegah	491.39746	327.7	makam: Sultaniyegah	False
-soz_saz_istanbul_yenikapi_mevlevihanesi/09_suntaniyegah_makaminda_kanun_taksimi.mp3	Sultaniyegah	248.24226	328.4	makam: Sultaniyegah	False
-turk_musikisinde_tanbur_taksimleri/08_sultaniyegah_taksimi.mp3	Sultaniyegah	243.38539	433.1	makam: Sultaniyegah	False
-TurkMuzigiUstalari_kemence1/01_sultaniyghtaksim_Kemence.mp3	Sultaniyegah	260.40808	348.0	makam: Sultaniyegah	False
-ask_2/2-19_suzidil_taksim.mp3	Suzidil	377.80994	383.0	makam: Suzidil	True	0.98644894
-40Makam40Anlam_2/2-06_tanbur_taksimi___suzinak_makaminda__.mp3	Suzinak	122.88418	248.0	makam: Suzinak	True	0.9910014
-ahenk_1/10_kemence_taksimi__suzinak.mp3	Suzinak	288.69846	583.0	makam: Suzinak	True	0.9903892
-bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/17-suznak_kanun_taksimi-erol_deran.mp3	Suzinak	259.10577	261.0	makam: Suzinak	True	0.9927424
-BekirSidkiSezgin_14/suznak_kanun_taksimi.mp3	Suzinak	268.02396	271.0	makam: Suzinak	True	0.98901826
-kudsi_erguner_ensemble__tatyos_efendi_kulliyati/19_ud_taksim.mp3	Suzinak	97.06771	97.1	makam: Suzinak	True	0.99966747
-lalezar__volume_3_minority_composers/07_-_ney_taksim.mp3	Suzinak	370.65225	494.8	makam: Suzinak	False
-lalezar__volume_3_minority_composers/10_-_kanun_taksim.mp3	Suzinak	245.66388	247.4	makam: Suzinak	True	0.99298257
-MuratAydemir_MakamGuide1/1-24_suznak_taksim.mp3	Suzinak	148.03589	148.0	makam: Suzinak	True	1.0002425
-Ney_ile_Icra_Edilmis_Saz_Eserleri/suz-nak_saz_semai__mansur_ney_.mp3	Suzinak	391.16327	394.8	makam: Suzinak	True	0.99078846
-12MakamdaYayli_tanbur_taksimleri/12_ussak.mp3	Ussak	297.38147	445.0	makam: Ussak	False
-14_makamda_keman_taksimi/14_ussak_taksim.mp3	Ussak	329.44077	331.0	makam: Ussak	True	0.9952893
-16_makamda_ud_taksimleri/01_ussak.mp3	Ussak	123.39146	123.0	makam: Ussak	True	1.0031825
-barkcin_sarigul_erdal_erdem_kutlu__can_sesi_ask_nefesi/01_-_ussak_ney_taksimi.mp3	Ussak	427.75833	428.0	makam: Ussak	True	0.99943537
-BekirSidkiSezgin_16/ussak_tanbur_taksimi.mp3	Ussak	140.98158	141.0	makam: Ussak	True	0.9998694
-dersaadette_aksam/08_guzelsin_-_ahmed_celal_tokses.mp3	Ussak	177.75153	270.0	makam: Ussak	False
-dersaadette_aksam/09_her_zaman_bir_vamik_u_azra_olur_alem_bu_ya_-_hafiz_osman.mp3	Ussak	383.80704	383.0	makam: Ussak	True	1.0021071
-enst_tsm_besteleri__saz_eserleri/05_kanun_taksimi.mp3	Ussak	439.87534	442.0	makam: Ussak	True	0.99519306
-enst_tsm_besteleri__saz_eserleri/08_klarnetTaksimi.mp3	Ussak	328.57315	220.0	makam: Ussak	False
-ergin_kizilay__ud_taksimleri/09_09-ussak.mp3	Ussak	121.51643	122.0	makam: Ussak	True	0.99603635
-gazeller__vol_2/12_BanaMeySunmaSaki_K.mp3	Ussak	370.31308	372.8	makam: Ussak	True	0.9933291
-gazeller__vol_2/03_HasretleBuSeb_K.mp3	Ussak	186.27788	186.7	makam: Ussak	True	0.9977391
-gazeller__vol_2/06_HacerulEsvedImis_K.mp3	Ussak	139.60855	281.6	makam: Ussak	True	0.991538
-ittmt_sevki_bey/01_kemencetaksimi_sertactezeren.mp3	Ussak	293.67438	294.4	makam: Ussak	True	0.9975353
-KoraySafkan_B_3145_ussak_270592/4_viyola_taksimi.mp3	Ussak	294.40186	295.9	makam: Ussak	True	0.994937
-kudsi_erguner_ensemble__saz_eserleri/08_ussak_ney_taksim.mp3	Ussak	439.52078	219.9	makam: Ussak	True	0.99936515
-music_from_sufi_way__sultan_of_the_eleven/03_hasan_esen.mp3	Ussak	294.7325	295.9	makam: Ussak	True	0.9960545
-sultan_bestekarlar__disc_2_saz_eserleri/2-09_kanun_taksimi.mp3	Ussak	329.8	331.0	makam: Ussak	True	0.9963746
-ud_disc_1/1-04_ussak_taksim.mp3	Ussak	188.70337	189.0	makam: Ussak	True	0.99843055
-yorgo_bacanos_udi/05_ussak_taksim.mp3	Ussak	163.49171	325.0	makam: Ussak	True	1.0061028
-Result: %69.803925	%0.3019608 is wrong
+FileName	Makam Calc	Tonic Calc	Tonic Annot	Makam Annot	Result	Ratio
+16_makamda_ud_taksimleri/14_acemasiran.mp3	Acemasiran	183.40323	183	makam: Acemasiran	TRUE	1.0022035
+40Makam40Anlam_1/1-01_ney_taksimi___acemasiran_makaminda__.mp3	Acemasiran	371.9675	439.6	makam: Acemasiran	FALSE	
+ergin_kizilay__ud_taksimleri/02_02-acemasiran.mp3	Acemasiran	147.4755	174	makam: Acemasiran	FALSE	
+gazeller__vol_1/11_SeniKimGorse_K.mp3	Acemasiran	199.91985	310	makam: Acemasiran	FALSE	
+MastersOfTurkishMusicNey2/13_ACEMASIRANTAKSIM_Ney.mp3	Acemasiran	510.22025	393.1	makam: Acemasiran	FALSE	
+MeralUgurlu_TrtArsivSerisi2/22-acemasiran_kanun_taksimi-erolderan.mp3	Acemasiran	247.91245	391.4	makam: Acemasiran	FALSE	
+NeyzenTevfik__hic/15_acemasiran_taksim.mp3	Acemasiran	430.152	341.9	makam: Acemasiran	FALSE	
+TurkMuzigiUstalari_kemence2/10_AcemasiranTaksim_Kemence.mp3	Acemasiran	289.92184	230.8	makam: Acemasiran	FALSE	
+ihsan_ozgen__anatolia__meragi_itri/04_-_kemence_taksimi.mp3	Bestenigar	237.76428	237.8	makam: Bestenigar	TRUE	0.9998498
+kudsi_erguner_ensemble__saz_eserleri/15_bestenigar_kanun_taksim.mp3	Bestenigar	182.35884	183	makam: Bestenigar	TRUE	0.9964964
+MuratAydemir_MakamGuide2/2-51_bestenigar_taksim.mp3	Bestenigar	137.22809	276.8	makam: Bestenigar	TRUE	0.99153244
+necdet_yasar_2/2-07_bestenigar.mp3	Bestenigar	141.6778	284.1	makam: Bestenigar	TRUE	0.9973797
+NeyzenTevfik__hic/7_bestenigar_taksim.mp3	Bestenigar	355.914	355.9	makam: Bestenigar	TRUE	1.0000393
+niyazi_sayin__sada/08_-_bestenigar_taksimi.mp3	Bestenigar	562.006	354	makam: Bestenigar	FALSE	
+tanburi_cemil_bey__vol_4/06_-_bestenigar_taksim__yayli_tanbur_.mp3	Bestenigar	173.7769	175	makam: Bestenigar	TRUE	0.9930109
+TurkMuzigiUstalari_kemence1/06_BestenigarTaksim_Kemence.mp3	Bestenigar	377.0284	190	makam: Bestenigar	TRUE	0.99218005
+ask_1/1-12_bayati_taksim.mp3	Beyati	254.08623	253	makam: Beyati	TRUE	1.0042934
+izak_algazi_efendi/04_bayati_gazel_[improvisation].mp3	Beyati	219.30814	322.1	makam: Beyati	FALSE	
+turk_tasavvuf_muzigi/22_tanbur_taksimi.mp3	Beyati	146.83719	147.3	makam: Beyati	TRUE	0.996858
+14_makamda_keman_taksimi/11_beyatiaraban_taksim.mp3	Beyatiaraban	248.578	249	makam: Beyatiaraban	TRUE	0.99830526
+14_makamda_keman_taksimi/10_ferahfeza_taksim.mp3	Ferahfeza	330.62057	219	makam: Ferahfeza	FALSE	
+ask_1/1-02_ferahfeza_bas_taksim__ayinden_.mp3	Ferahfeza	249.3078	331	makam: Ferahfeza	FALSE	
+ask_2/2-18_ferahfeza_son_taksim__ayinden_.mp3	Ferahfeza	501.03424	326	makam: Ferahfeza	FALSE	
+dede_efendi__mevlevi_sesler__1_ferahfeza/1_01_ney_taksimi.mp3	Ferahfeza	338.26	447	makam: Ferahfeza	FALSE	
+12MakamdaYayli_tanbur_taksimleri/01_hicaz.mp3	Hicaz	224.7794	223	makam: Hicaz	TRUE	1.0079794
+14_makamda_keman_taksimi/01_hicaz_taksim.mp3	Hicaz	220.69165	220	makam: Hicaz	TRUE	1.0031439
+16_makamda_ud_taksimleri/04_hicaz.mp3	Hicaz	123.465454	248	makam: Hicaz	TRUE	0.99568915
+ask_2/2-04_hicaz_taksim.mp3	Hicaz	227.02722	225	makam: Hicaz	TRUE	1.0090098
+bekir_sidki_sezgin__klasikler_2/06_ihsan_ozgen-_hicaz_kemence_taksimi.mp3	Hicaz	295.25336	590	makam: Hicaz	TRUE	1.0008588
+bekir_sidki_sezgin__turk_din_musikisi/3-01_hicaz_mk._ikindi_ezani.mp3	Hicaz	225.56717	227	makam: Hicaz	TRUE	0.993688
+bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/09-hicaz_tanbur_taksimi-necdet_yasar.mp3	Hicaz	150.16785	150	makam: Hicaz	TRUE	1.001119
+BekirSidkiSezgin_22/hicaz_kanun_taksimi.mp3	Hicaz	291.95743	293	makam: Hicaz	TRUE	0.9964417
+dersaadette_aksam/01_taksim_-_kanuni_haci_arif_bey.mp3	Hicaz	384.38467	393	makam: Hicaz	FALSE	
+enst_tsm_besteleri-3__eserli_saz_eserleri/13_yayli_tambur_taksimi.mp3	Hicaz	223.38495	443	makam: Hicaz	TRUE	1.0085099
+ercumend_batanay__tanbur_2/02_07_-_hicaz_taksim.mp3	Hicaz	180.80931	120	makam: Hicaz	FALSE	
+ercumend_batanay__tanbur_2/02_06_-_hicaz_taksim.mp3	Hicaz	192.28658	321	makam: Hicaz	FALSE	
+ergin_kizilay__ud_taksimleri/01_01-hicaz.mp3	Hicaz	147.87785	295	makam: Hicaz	TRUE	1.0025617
+fahrettin_cimenli__yayli_tanbur__vol_1/06_hicaz_gecis_taksim.mp3	Hicaz	220.396	219	makam: Hicaz	TRUE	1.0063744
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/15_hicaz_taksim.mp3	Hicaz	331.8299	330	makam: Hicaz	TRUE	1.0055451
+gazeller__vol_3/07_kalbimde_ne_askin_emeli_matemi_ka.mp3	Hicaz	186.67824	187.4	makam: Hicaz	TRUE	0.9961486
+izak_algazi_efendi/01_hicaz_gazel_[improvisation].mp3	Hicaz	211.45941	160.4	makam: Hicaz	FALSE	
+MastersOfTurkishMusicNey1/21_HicazTaksim_Ney.mp3	Hicaz	425.1186	425	makam: Hicaz	TRUE	1.0002791
+mesut_cemil__disc_1/1-02_tanburla_hicaz_taksim.mp3	Hicaz	161.81297	161.5	makam: Hicaz	TRUE	1.0019379
+enst_tsm_besteleri-3__eserli_saz_eserleri/13_yayli_tambur_taksimi.mp3	Hicaz	223.38495	443	makam: Hicaz	TRUE	1.0085099
+ud_disc_1/1-02_hicaz_taksim.mp3	Hicaz	188.59439	381.4	makam: Hicaz	TRUE	0.98895854
+udi_hrant_2/04_-_ud_taksimi.mp3	Hicaz	122.567184	123	makam: Hicaz	TRUE	0.9964812
+12MakamdaYayli_tanbur_taksimleri/02_hicazkar.mp3	Hicazkar	299.14005	396	makam: Hicazkar	FALSE	
+14_makamda_keman_taksimi/09_hicazkar_taksim.mp3	Hicazkar	292.9136	293	makam: Hicazkar	TRUE	0.99970514
+16_makamda_ud_taksimleri/06_hicazkar.mp3	Hicazkar	164.43343	130	makam: Hicazkar	FALSE	
+BekirSidkiSezgin_Hicazkar6/kemence_taksimi_.mp3	Hicazkar	333.7776	501.1	makam: Hicazkar	FALSE	
+ercumend_batanay__tanbur_2/02_02_-_hicazkar_taksim.mp3	Hicazkar	240.46667	240	makam: Hicazkar	TRUE	1.0019444
+ergin_kizilay__ud_taksimleri/05_05-hicazkar.mp3	Hicazkar	129.05545	129	makam: Hicazkar	TRUE	1.0004299
+kadin_bestekarlar__disc_2/11_kanun_taksimi.mp3	Hicazkar	388.14383	260.7	makam: Hicazkar	FALSE	
+KoraySafkan_B_2776_Hicazkar_290491/01-b_2776-keman-k.demir.mp3	Hicazkar	395.25586	263.9	makam: Hicazkar	FALSE	
+kudsi_erguner_ensemble__tatyos_efendi_kulliyati/16_klarnet_taksim.mp3	Hicazkar	196.62888	195.9	makam: Hicazkar	TRUE	1.0037206
+yorgo_bacanos_udi/15_kemence_taksim.mp3	Hicazkar	485.26114	218	makam: Hicazkar	FALSE	
+yorgo_bacanos_udi/16_hicazkar_taksim.mp3	Hicazkar	229.85794	301	makam: Hicazkar	FALSE	
+14_makamda_keman_taksimi/08_huseyni_taksim.mp3	Huseyni	248.78667	249	makam: Huseyni	TRUE	0.99914324
+16_makamda_ud_taksimleri/02_huseyni.mp3	Huseyni	123.083885	123	makam: Huseyni	TRUE	1.000682
+BekirSidkiSezgin_Huseyni3/tanbur_taksimi.mp3	Huseyni	142.40692	286.5	makam: Huseyni	TRUE	0.99411464
+ercumend_batanay__tanbur__1/1-04_huseyni_taksim.mp3	Huseyni	165.9493	249	makam: Huseyni	FALSE	
+ergin_kizilay__ud_taksimleri/03_03-huseyni.mp3	Huseyni	147.33574	147	makam: Huseyni	TRUE	1.0022839
+fahrettin_cimenli__yayli_tanbur__vol_1/03_huseyni_taksim.mp3	Huseyni	218.36848	219	makam: Huseyni	TRUE	0.9971164
+gazeller__vol_1/17_HerZamanBirVamik_K.mp3	Huseyni	229.72023	231	makam: Huseyni	TRUE	0.99445987
+KoraySafkan_c_0933_huseyni_110292/1_KemanTaksimi.mp3	Huseyni	293.12122	294.8	makam: Huseyni	TRUE	0.9943054
+kudsi_erguner_ensemble__tatyos_efendi_kulliyati/06_tanbur_taksim.mp3	Huseyni	146.50311	219.9	makam: Huseyni	FALSE	
+MeralUgurluEnsemble_ottoman_turkish_court_music_cd_1/07-huseyni_ney_taksimi-aziz_senol_filiz.mp3	Huseyni	495.81412	497.1	makam: Huseyni	TRUE	0.9974132
+mesut_cemil__disc_1/1-01_viyolonsel_ile_huseyni_taksim.mp3	Huseyni	110.61795	110.6	makam: Huseyni	TRUE	1.0001624
+necdet_yasar/12_huseyni_taksim.mp3	Huseyni	140.61638	280.6	makam: Huseyni	TRUE	1.002255
+NeyzenTevfik__hic/4_huseyni_taksim.mp3	Huseyni	437.72327	438.3	makam: Huseyni	TRUE	0.99868417
+ud_disc_1/1-01_huseyni_taksim.mp3	Huseyni	187.53265	187.8	makam: Huseyni	TRUE	0.9985764
+12MakamdaYayli_tanbur_taksimleri/03_huzzam.mp3	Huzzam	247.78549	248	makam: Huzzam	TRUE	0.9991351
+14_makamda_keman_taksimi/07_huzzam__taksim.mp3	Huzzam	274.1124	275	makam: Huzzam	TRUE	0.99677235
+16_makamda_ud_taksimleri/12_huzzam.mp3	Huzzam	141.29845	110	makam: Huzzam	FALSE	
+40Makam40Anlam_3/3-19_huzzam_gazel.mp3	Huzzam	153.59915	308.4	makam: Huzzam	TRUE	0.99610347
+AlaeddinYavasca_Huzzam14/08_huzzam_tanbur_taksimi.mp3	Huzzam	81.23428	162	makam: Huzzam	TRUE	1.0028924
+bekir_sidki_sezgin__klasikler_2/12_niyazi_sayin-_huzzam_ney_taksimi_2.mp3	Huzzam	556.8723	557	makam: Huzzam	TRUE	0.99977076
+dersaadette_aksam/12_bade-i_zehr-i_gam-i_firkate_kandim_bu_gece_-_hafiz_osman.mp3	Huzzam	178.21124	179	makam: Huzzam	TRUE	0.99559355
+enst_tsm_besteleri-3__eserli_saz_eserleri/11_ud_taksimi.mp3	Huzzam	137.38074	137	makam: Huzzam	TRUE	1.0027791
+ergin_kizilay__ud_taksimleri/08_08-huzzam.mp3	Huzzam	106.222885	194	makam: Huzzam	FALSE	
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/09_huzzam_taksim.mp3	Huzzam	364.79318	367	makam: Huzzam	TRUE	0.99398685
+fasl-i-sahane__enst_1/1-11_ud_taksim.mp3	Huzzam	134.0821	164	makam: Huzzam	FALSE	
+gazeller__vol_1/06_CanHastaDusup_K.mp3	Huzzam	396.5934	391.4	makam: Huzzam	TRUE	1.0132688
+gazeller__vol_1/05_PekMustaribim_K.mp3	Huzzam	205.15765	417.7	makam: Huzzam	TRUE	0.98232055
+gazeller__vol_2/04_HicraniElem_K.mp3	Huzzam	189.69312	190	makam: Huzzam	TRUE	0.99838483
+KoraySafkan_C_2005_Huzzam_020896/01-C-2005-Kemence-HasanEsen.mp3	Huzzam	275.22903	276.6	makam: Huzzam	TRUE	0.9950435
+kudsi_erguner_ensemble__tatyos_efendi_kulliyati/22_kanun_taksim.mp3	Huzzam	243.96695	243.7	makam: Huzzam	TRUE	1.0010954
+munir_nurettin_selcuk__vesvese/02_salincak_sarkisi.mp3	Huzzam	164.86588	330.3	makam: Huzzam	TRUE	0.99827963
+munirNureddinSelcuk_tereddut/15-kildi_zulfun_huzzam_gazel_-m.nurettin_selcuk.mp3	Huzzam	193.2109	388.3	makam: Huzzam	TRUE	0.9951631
+enst_tsm_besteleri-3__eserli_saz_eserleri/11_ud_taksimi.mp3	Huzzam	137.38074	137	makam: Huzzam	TRUE	1.0027791
+ud_disc_1/1-05_huzzam_taksim.mp3	Huzzam	205.27844	206.6	makam: Huzzam	TRUE	0.9936033
+yorgo_bacanos_udi/01_huzzam_taksim.mp3	Huzzam	181.22954	182.6	makam: Huzzam	TRUE	0.9924947
+12MakamdaYayli_tanbur_taksimleri/04_karcigar.mp3	Karcigar	223.23404	223	makam: Karcigar	TRUE	1.0010495
+14_makamda_keman_taksimi/04_karcigar_taksim.mp3	Karcigar	220.5137	221	makam: Karcigar	TRUE	0.9977996
+16_makamda_ud_taksimleri/03_karcigar.mp3	Karcigar	122.76772	123	makam: Karcigar	TRUE	0.99811155
+BekirSidkiSezgin_15/karcigar_viyola_taksimi.mp3	Karcigar	148.99408	447	makam: Karcigar	FALSE	
+BekirSidkiSezgin_22/karcigar_tanbur_taksimi.mp3	Karcigar	122.57119	163	makam: Karcigar	FALSE	
+BekirSidkiSezgin_Karcigar5/viyola_taksimi.mp3	Karcigar	152.89433	154	makam: Karcigar	TRUE	0.9928203
+BekirSidkiSezgin_Karcigar5/ud_taksimi.mp3	Karcigar	150.73845	205	makam: Karcigar	FALSE	
+kudsi_erguner_ensemble__saz_eserleri/13_karcigar_keman_taksim.mp3	Karcigar	220.42484	220	makam: Karcigar	TRUE	1.0019311
+MuratAydemir_MakamGuide1/1-53_karcigar_taksim.mp3	Karcigar	164.69527	164.8	makam: Karcigar	TRUE	0.99936444
+ZekiMurendenSecmeler_TRT/15_KemanTaksimi.mp3	Karcigar	292.8338	291.5	makam: Karcigar	TRUE	1.0045756
+12MakamdaYayli_tanbur_taksimleri/05_kurdili_hicazkar.mp3	Kurdilihicazkar	298.79468	397	makam: Kurdilihicazkar	FALSE	
+14_makamda_keman_taksimi/03_k_hicazkar_taksim.mp3	Kurdilihicazkar	292.9679	220	makam: Kurdilihicazkar	FALSE	
+16_makamda_ud_taksimleri/05_kurdilihicazkar.mp3	Kurdilihicazkar	123.1067	247	makam: Kurdilihicazkar	TRUE	0.9968154
+ask_2/2-15_kurdilihicazkar_taksim.mp3	Kurdilihicazkar	392.04675	393	makam: Kurdilihicazkar	TRUE	0.99757445
+avni_anil/01_-_keman_taksimi.mp3	Kurdilihicazkar	258.35294	272	makam: Kurdilihicazkar	FALSE	
+avni_anil/09_-_klarnet_taksimi.mp3	Kurdilihicazkar	220.92026	222	makam: Kurdilihicazkar	TRUE	0.9951363
+bekir_sidki_sezgin__klasikler_2/16_cuneyd_kosal-_kurdilihicazkar_kanun_taksimi.mp3	Kurdilihicazkar	401.5735	267	makam: Kurdilihicazkar	FALSE	
+bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/13-kurdilihicazkar_kanun_taksimi-cuneyt_kosal.mp3	Kurdilihicazkar	398.0266	264	makam: Kurdilihicazkar	FALSE	
+dersaadette_aksam/14_taksim.mp3	Kurdilihicazkar	196.55174	263	makam: Kurdilihicazkar	FALSE	
+ercumend_batanay__tanbur__1/1-03_kurdili_hicazkar_taksim.mp3	Kurdilihicazkar	151.65134	228	makam: Kurdilihicazkar	FALSE	
+ergin_kizilay__ud_taksimleri/07_kurdili_hicazkar.mp3	Kurdilihicazkar	97.43336	103	makam: Kurdilihicazkar	FALSE	
+fahrettin_cimenli__yayli_tanbur__vol_2/03_kuridilihicazkar_taksim_1.mp3	Kurdilihicazkar	294.0074	197	makam: Kurdilihicazkar	FALSE	
+fahrettin_cimenli__yayli_tanbur__vol_2/01_kurdilihicazkar_taksim_3.mp3	Kurdilihicazkar	221.42885	196	makam: Kurdilihicazkar	FALSE	
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/06_kurdili_hicazkar_saz_semai-_haydar_tatliyar.mp3	Kurdilihicazkar	293.4952	588	makam: Kurdilihicazkar	TRUE	0.998283
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/05_kurdili_hicazkar_taksim.mp3	Kurdilihicazkar	294.4532	292	makam: Kurdilihicazkar	TRUE	1.0084013
+Kanuni_19secmeKlasikEser/14_kurdili_hicazkar_taksim.mp3	Kurdilihicazkar	293.7256	147.3	makam: Kurdilihicazkar	TRUE	0.99703187
+sarkilarla_istanbul/04_-_ney_taksimi.mp3	Kurdilihicazkar	672.9754	444.7	makam: Kurdilihicazkar	FALSE	
+ud_disc_2/2-15_kurdilihicazkar_taksim_-_udi_hr.mp3	Kurdilihicazkar	209.41368	274	makam: Kurdilihicazkar	FALSE	
+adktmk_rahmi_bey/15_mahurkemantaksimi.mp3	Mahur	219.87534	221	makam: Mahur	TRUE	0.994911
+AlaeddinYavasca_mahur01/02_mahur_tanbur_taksimi.mp3	Mahur	125.723564	125.9	makam: Mahur	TRUE	0.9985986
+bestekar_iii._selim_han__2/05_ud_taksimi.mp3	Mahur	130.28635	130.7	makam: Mahur	TRUE	0.9968351
+lalezar__volume_3_minority_composers/12_-_kemence_taksim.mp3	Mahur	244.37416	246.8	makam: Mahur	TRUE	0.99017084
+MuratAydemir_MakamGuide1/1-10_mahur_taksim.mp3	Mahur	147.26671	148	makam: Mahur	TRUE	0.9950453
+refik_fersan/03_-_cello_taksimi.mp3	Mahur	65.23838	130.3	makam: Mahur	TRUE	1.0013566
+12MakamdaYayli_tanbur_taksimleri/07_muhayyer.mp3	Muhayyer	223.2292	223	makam: Muhayyer	TRUE	1.0010278
+16_makamda_ud_taksimleri/07_muhayyer.mp3	Muhayyer	109.21279	109	makam: Muhayyer	TRUE	1.0019522
+bekir_sidki_sezgin__turk_din_musikisi/3-07_muhayyer_sugl.mp3	Muhayyer	130.8955	137	makam: Muhayyer	FALSE	
+bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/06-muhayyer_kemence_taksimi-ihsan_ozgen.mp3	Muhayyer	250.08339	249	makam: Muhayyer	TRUE	1.004351
+BekirSidkiSezgin_16/muhayyer_ney_taksimi.mp3	Muhayyer	233.95483	233.8	makam: Muhayyer	TRUE	1.0006622
+izak_algazi_efendi/07_muhayyer_gazel._aman_nazre-i_taba.mp3	Muhayyer	214.71767	323.1	makam: Muhayyer	FALSE	
+MeralUgurluEnsemble_ottoman_turkish_court_music_cd_1/10-muhayyer_ud_taksimi-samim_karaca.mp3	Muhayyer	124.32964	123.6	makam: Muhayyer	TRUE	1.0059032
+sarkilarla_istanbul/16_-_tanbur_taksimi.mp3	Muhayyer	123.00476	123.8	makam: Muhayyer	TRUE	0.9935764
+tanburi_cemil_bey__vol_4/16_-_muhayyer_taksim__violoncello_.mp3	Muhayyer	155.4635	239.9	makam: Muhayyer	FALSE	
+yorgo_bacanos_udi/07_muhayyer_keman_taksim.mp3	Muhayyer	445.63187	336.6	makam: Muhayyer	FALSE	
+ask_1/1-08_mustear_taksim.mp3	Mustear	197.56975	266	makam: Mustear	FALSE	
+14_makamda_keman_taksimi/06_neveser_taksim.mp3	Neveser	331.91666	292	makam: Neveser	FALSE	
+40Makam40Anlam_2/2-18_kemence_taksimi___neva_makaminda__.mp3	Neva	278.12677	278.5	makam: Neva	TRUE	0.99865985
+dersaadette_aksam/06_taksim.mp3	Neva	328.84885	165	makam: Neva	TRUE	0.99651164
+gazeller__vol_1/15_SeniKimGorse_K.mp3	Neva	207.1912	139	makam: Neva	FALSE	
+gazeller__vol_1/09_DidemdenNigahbanOldum_K.mp3	Neva	239.29283	240.1	makam: Neva	TRUE	0.9966382
+gazeller__vol_2/10_FeryadEdiyorBirGulIcin_K.mp3	Neva	222.5878	300	makam: Neva	FALSE	
+gazeller__vol_2/16_BeniEndiseyeSaldi_K.mp3	Neva	274.60577	274.9	makam: Neva	TRUE	0.99892974
+MuratAydemir_MakamGuide1/1-55_neva_taksim.mp3	Neva	166.31142	165.8	makam: Neva	TRUE	1.0030845
+MustafaDoganDikmen_Itri/01_neva_neyTaksimi.mp3	Neva	596.7109	596.7	makam: Neva	TRUE	1.0000182
+TurkMuzigiUstalari_kemence2/22_NevaTaksim_Kemence.mp3	Neva	292.3683	291.3	makam: Neva	TRUE	1.0036674
+ud_disc_2/2-11_neva_taksim_-_ibrahim_ziya_bey.mp3	Neva	163.5826	163.9	makam: Neva	TRUE	0.99806345
+12MakamdaYayli_tanbur_taksimleri/08_nihavend.mp3	Nihavend	198.16273	396	makam: Nihavend	TRUE	1.000822
+14_makamda_keman_taksimi/05_nihavent_taksim.mp3	Nihavend	195.26003	209	makam: Nihavend	FALSE	
+16_makamda_ud_taksimleri/09_nihavent.mp3	Nihavend	123.4964	123	makam: Nihavend	TRUE	1.0040357
+adktmk_rahmi_bey/12_nihaventkanuntaksimi.mp3	Nihavend	219.94485	331	makam: Nihavend	FALSE	
+ask_2/2-08_nihavend_taksim.mp3	Nihavend	453.95547	226	makam: Nihavend	TRUE	1.0043262
+BekirSidkiSezgin_26/hicaz_ney_taksimi.mp3	Nihavend	524.7989	596	makam: Nihavend	FALSE	
+enst_tsm_besteleri-3__eserli_saz_eserleri/08_klarnet_taksimi.mp3	Nihavend	220.9756	220	makam: Nihavend	TRUE	1.0044346
+ercumend_batanay__tanbur_2/02_04_-_nihavend_taksim.mp3	Nihavend	161.26723	322	makam: Nihavend	TRUE	1.0016598
+ergin_kizilay__tm_de_ud_ile_anilar_-_1_enst/12_ud_taksimi.mp3	Nihavend	97.50453	195	makam: Nihavend	TRUE	1.0000465
+ergin_kizilay__ud_taksimleri/10_10-nihavent.mp3	Nihavend	121.58665	122	makam: Nihavend	TRUE	0.99661183
+fahrettin_cimenli__yayli_tanbur__vol_1/08_nihavend_taksim.mp3	Nihavend	197.0322	197	makam: Nihavend	TRUE	1.0001634
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/01_nihavent_taksim.mp3	Nihavend	290.8903	292	makam: Nihavend	TRUE	0.9961996
+enst_tsm_besteleri-3__eserli_saz_eserleri/08_klarnet_taksimi.mp3	Nihavend	220.9756	220	makam: Nihavend	TRUE	1.0044346
+yorgo_bacanos_udi/18_nihavent_taksim.mp3	Nihavend	145.23132	145.8	makam: Nihavend	TRUE	0.9960996
+ask_2/2-01_pencgah_bas_taksim__ayinden_.mp3	Pencgah	218.88553	219	makam: Pencgah	TRUE	0.9994773
+12MakamdaYayli_tanbur_taksimleri/09_rast.mp3	Rast	199.34329	198	makam: Rast	TRUE	1.0067843
+14_makamda_keman_taksimi/12_rast_taksim.mp3	Rast	260.91376	194	makam: Rast	FALSE	
+16_makamda_ud_taksimleri/08_rast.mp3	Rast	109.92929	109	makam: Rast	TRUE	1.0085256
+adktmk_ahmet_rasim_bey/05_rasttanburtaksimi_tevfiksoyata.mp3	Rast	109.05818	109	makam: Rast	TRUE	1.0005338
+ask_1/1-09_rast_seyir.mp3	Rast	214.62637	213	makam: Rast	TRUE	1.0076356
+ask_2/2-16_rast_taksim.mp3	Rast	163.40619	329	makam: Rast	TRUE	0.9933507
+dersaadette_aksam/13_ey_seker-leb_sen_muruvvet_eyle_allah_askina_-_hafiz_yasar_okur.mp3	Rast	178.79102	179	makam: Rast	TRUE	0.99883246
+derya_turkan_letter_from_istanbul/10_-_rast_taksim_on_kanun.mp3	Rast	290.94733	292	makam: Rast	TRUE	0.99639493
+enst_tsm_besteleri__saz_eserleri/15_sevmekten_kim_usanir.mp3	Rast	220.31197	222	makam: Rast	TRUE	0.99239624
+ergin_kizilay__ud_taksimleri/06_06-rast.mp3	Rast	129.66873	130	makam: Rast	TRUE	0.9974518
+ErgunerKaracaKutbay_makam/01_MakamRast_Ney.mp3	Rast	475.11926	233	makam: Rast	TRUE	1.0195693
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/12_rast_taksim.mp3	Rast	292.47656	293	makam: Rast	TRUE	0.9982135
+gazeller__vol_1/04_AskaDustum_K.mp3	Rast	197.1675	198.4	makam: Rast	TRUE	0.9937878
+kadin_bestekarlar__disc_2/08_ney_taksimi.mp3	Rast	445.1077	444.5	makam: Rast	TRUE	1.0013671
+kani_karaca__ask_ile_-_with_love/1-09_taksim_on_the_ney.mp3	Rast	262.91757	262.9	makam: Rast	TRUE	1.0000669
+kudsi_erguner_ensemble__tatyos_efendi_kulliyati/09_rast_ney_taksim.mp3	Rast	391.49594	196.1	makam: Rast	TRUE	0.9982048
+mesut_cemil__disc_1/1-16_viyolonsel_ile_rast_taksim.mp3	Rast	74.82905	301	makam: Rast	TRUE	0.994406
+sultan_bestekarlar__disc_2_saz_eserleri/2-18_tanbur_taksimi.mp3	Rast	109.42367	219.4	makam: Rast	TRUE	0.99748105
+TurkMuzigiUstalari_kemence2/15_RastTaksim_Kemence.mp3	Rast	287.1045	436.2	makam: Rast	FALSE	
+ud_disc_2/2-06_rast_taksim_-_udi_nes_et_bey.mp3	Rast	257.93936	172.2	makam: Rast	FALSE	
+UlviErguner_MusiqueDeLaCourOttomane/16_necdet_yasar_-_16_-_rast_tambur_taksimi.mp3	Rast	129.72527	260.2	makam: Rast	TRUE	0.9971196
+12MakamdaYayli_tanbur_taksimleri/10_saba.mp3	Saba	222.9326	223	makam: Saba	TRUE	0.99969774
+14_makamda_keman_taksimi/13_saba_taksim.mp3	Saba	329.6311	330	makam: Saba	TRUE	0.9988821
+ask_1/1-17_saba_bas_taksim__ayinden_.mp3	Saba	496.07346	585	makam: Saba	FALSE	
+ask_1/1-13_saba_taksim.mp3	Saba	232.48569	203	makam: Saba	FALSE	
+fahrettin_cimenli__yayli_tanbur__vol_2/08_saba_taksim.mp3	Saba	221.10327	220	makam: Saba	TRUE	1.0050149
+fahrettin_cimenli__yayli_tanbur__vol_2/06_saba_taksim.mp3	Saba	221.48676	220	makam: Saba	TRUE	1.006758
+gazeller__vol_2/18_UymuyorTalihimHerArzuma_K.mp3	Saba	343.34094	344	makam: Saba	TRUE	0.9980841
+kani_karaca__ask_ile_-_with_love/1-03_adhan__morning.mp3	Saba	220.12228	221.3	makam: Saba	TRUE	0.9946782
+MastersOfTurkishMusicNey1/22_SabaTaksim_Ney.mp3	Saba	425.07217	210.6	makam: Saba	TRUE	1.0091932
+saba_canli_fasil9/17_kara_gozlu_cingenem.mp3	Saba	250.80939	255	makam: Saba	TRUE	0.9835662
+sevahot_lael/13_saba_makaminda_ney_taksimi.mp3	Saba	583.527	582.4	makam: Saba	TRUE	1.001935
+12MakamdaYayli_tanbur_taksimleri/11_segah.mp3	Segah	247.22174	248	makam: Segah	TRUE	0.9968619
+14_makamda_keman_taksimi/02_segah_taksim.mp3	Segah	273.3547	275	makam: Segah	TRUE	0.9940171
+16_makamda_ud_taksimleri/11_segah.mp3	Segah	109.60509	109	makam: Segah	TRUE	1.0055512
+ask_2/2-14_segah_taksim.mp3	Segah	282.23062	281	makam: Segah	TRUE	1.0043794
+ask_2/2-02_segah_taksim.mp3	Segah	278.02982	277	makam: Segah	TRUE	1.0037178
+ask_2/2-12_segah_seyir.mp3	Segah	269.98535	269	makam: Segah	TRUE	1.0036631
+dersaadette_aksam/11_nigeh_gulcin-i_hasret_damenim_pur-har-i_mihnetdir_-_hafiz_kemal.mp3	Segah	239.6504	241	makam: Segah	TRUE	0.9944
+dersaadette_aksam/10_taksim.mp3	Segah	376.3183	375	makam: Segah	TRUE	1.0035155
+fahrettin_cimenli__yayli_tanbur__vol_2/07_segah_taksim.mp3	Segah	247.11932	246	makam: Segah	TRUE	1.0045501
+fahri_karaduman__osmanlidan_bugune_turk_musikisi/07_segah_taksim.mp3	Segah	365.5374	367	makam: Segah	TRUE	0.9960148
+fasl-i-sahane__enst_4/01_segah--sarki--semai--ben_seni--amir_ates.mp3	Segah	138.88466	275	makam: Segah	TRUE	1.0100702
+gazeller__vol_1/13_TazelendiTabIAlem_K.mp3	Segah	218.99525	220	makam: Segah	TRUE	0.995433
+gazeller__vol_1/10_NigehGulciniHasret_K.mp3	Segah	246.80171	249.7	makam: Segah	TRUE	0.98839295
+ihsan_ozgen__anatolia__meragi_itri/07_-_rebab_taksimi.mp3	Segah	156.28403	312	makam: Segah	TRUE	1.0018207
+ilhan_barutcu__ask-i_neyzen/11_sagah_taksim.mp3	Segah	488.0882	489.2	makam: Segah	TRUE	0.9977273
+KoraySafkan_C_1224_Segah_240292/1_UdTaksimi.mp3	Segah	164.00389	164	makam: Segah	TRUE	1.0000237
+tanburi_cemil_bey__vol_5/08_-_segah_taksim__kemence_.mp3	Segah	374.48532	373	makam: Segah	TRUE	1.0039821
+yorgo_bacanos_1900-1977___arsiv/02_segah_taksim.mp3	Segah	204.3231	201	makam: Segah	TRUE	1.0165329
+fahrettin_cimenli__yayli_tanbur__vol_1/09_sehnaz_taksim.mp3	Sehnaz	219.73404	236	makam: Sehnaz	FALSE	
+40Makam40Anlam_1/1-04_tanbur_taksimi___sultaniyegah_makaminda__.mp3	Sultaniyegah	137.89977	184.8	makam: Sultaniyegah	FALSE	
+dede_efendi__mevlevi_sesler__1_ferahfeza/1_08_taksim.mp3	Sultaniyegah	164.79404	109	makam: Sultaniyegah	FALSE	
+gazeller__vol_2/02_MestiNazimKimBuyuttuBoyle_K.mp3	Sultaniyegah	169.94112	230	makam: Sultaniyegah	FALSE	
+halil_karaduman__kanun_sololari/05_sultaniyegah.mp3	Sultaniyegah	330.2857	220	makam: Sultaniyegah	FALSE	
+ilhan_barutcu__ask-i_neyzen/03_sultaniyegah_taksim.mp3	Sultaniyegah	442.3126	289.7	makam: Sultaniyegah	FALSE	
+MastersOfTurkishMusicNey1/13_sultaniyghtaksim_Ney.mp3	Sultaniyegah	485.21365	323.5	makam: Sultaniyegah	FALSE	
+MuratAydemir_MakamGuide2/2-27_sultani_yegah_taksim.mp3	Sultaniyegah	164.28654	221	makam: Sultaniyegah	FALSE	
+osmanli_dan_bugune_turk_musikisi_ney_CanGulbol/07_-_sultaniyegah_taksim.mp3	Sultaniyegah	491.39746	327.7	makam: Sultaniyegah	FALSE	
+soz_saz_istanbul_yenikapi_mevlevihanesi/09_suntaniyegah_makaminda_kanun_taksimi.mp3	Sultaniyegah	248.24226	328.4	makam: Sultaniyegah	FALSE	
+turk_musikisinde_tanbur_taksimleri/08_sultaniyegah_taksimi.mp3	Sultaniyegah	243.38539	433.1	makam: Sultaniyegah	FALSE	
+TurkMuzigiUstalari_kemence1/01_sultaniyghtaksim_Kemence.mp3	Sultaniyegah	260.40808	348	makam: Sultaniyegah	FALSE	
+ask_2/2-19_suzidil_taksim.mp3	Suzidil	377.80994	383	makam: Suzidil	TRUE	0.98644894
+40Makam40Anlam_2/2-06_tanbur_taksimi___suzinak_makaminda__.mp3	Suzinak	122.88418	248	makam: Suzinak	TRUE	0.9910014
+ahenk_1/10_kemence_taksimi__suzinak.mp3	Suzinak	288.69846	583	makam: Suzinak	TRUE	0.9903892
+bekir_sidki_sezgin_den_secmeler_trt_arsiv_serisi_28/17-suznak_kanun_taksimi-erol_deran.mp3	Suzinak	259.10577	261	makam: Suzinak	TRUE	0.9927424
+BekirSidkiSezgin_14/suznak_kanun_taksimi.mp3	Suzinak	268.02396	271	makam: Suzinak	TRUE	0.98901826
+kudsi_erguner_ensemble__tatyos_efendi_kulliyati/19_ud_taksim.mp3	Suzinak	97.06771	97.1	makam: Suzinak	TRUE	0.99966747
+lalezar__volume_3_minority_composers/07_-_ney_taksim.mp3	Suzinak	370.65225	494.8	makam: Suzinak	FALSE	
+lalezar__volume_3_minority_composers/10_-_kanun_taksim.mp3	Suzinak	245.66388	247.4	makam: Suzinak	TRUE	0.99298257
+MuratAydemir_MakamGuide1/1-24_suznak_taksim.mp3	Suzinak	148.03589	148	makam: Suzinak	TRUE	1.0002425
+Ney_ile_Icra_Edilmis_Saz_Eserleri/suz-nak_saz_semai__mansur_ney_.mp3	Suzinak	391.16327	394.8	makam: Suzinak	TRUE	0.99078846
+12MakamdaYayli_tanbur_taksimleri/12_ussak.mp3	Ussak	297.38147	445	makam: Ussak	FALSE	
+14_makamda_keman_taksimi/14_ussak_taksim.mp3	Ussak	329.44077	331	makam: Ussak	TRUE	0.9952893
+16_makamda_ud_taksimleri/01_ussak.mp3	Ussak	123.39146	123	makam: Ussak	TRUE	1.0031825
+barkcin_sarigul_erdal_erdem_kutlu__can_sesi_ask_nefesi/01_-_ussak_ney_taksimi.mp3	Ussak	427.75833	428	makam: Ussak	TRUE	0.99943537
+BekirSidkiSezgin_16/ussak_tanbur_taksimi.mp3	Ussak	140.98158	141	makam: Ussak	TRUE	0.9998694
+dersaadette_aksam/08_guzelsin_-_ahmed_celal_tokses.mp3	Ussak	177.75153	270	makam: Ussak	FALSE	
+dersaadette_aksam/09_her_zaman_bir_vamik_u_azra_olur_alem_bu_ya_-_hafiz_osman.mp3	Ussak	383.80704	383	makam: Ussak	TRUE	1.0021071
+enst_tsm_besteleri__saz_eserleri/05_kanun_taksimi.mp3	Ussak	439.87534	442	makam: Ussak	TRUE	0.99519306
+enst_tsm_besteleri__saz_eserleri/08_klarnetTaksimi.mp3	Ussak	328.57315	220	makam: Ussak	FALSE	
+ergin_kizilay__ud_taksimleri/09_09-ussak.mp3	Ussak	121.51643	122	makam: Ussak	TRUE	0.99603635
+gazeller__vol_2/12_BanaMeySunmaSaki_K.mp3	Ussak	370.31308	372.8	makam: Ussak	TRUE	0.9933291
+gazeller__vol_2/03_HasretleBuSeb_K.mp3	Ussak	186.27788	186.7	makam: Ussak	TRUE	0.9977391
+gazeller__vol_2/06_HacerulEsvedImis_K.mp3	Ussak	139.60855	281.6	makam: Ussak	TRUE	0.991538
+ittmt_sevki_bey/01_kemencetaksimi_sertactezeren.mp3	Ussak	293.67438	294.4	makam: Ussak	TRUE	0.9975353
+KoraySafkan_B_3145_ussak_270592/4_viyola_taksimi.mp3	Ussak	294.40186	295.9	makam: Ussak	TRUE	0.994937
+kudsi_erguner_ensemble__saz_eserleri/08_ussak_ney_taksim.mp3	Ussak	439.52078	219.9	makam: Ussak	TRUE	0.99936515
+music_from_sufi_way__sultan_of_the_eleven/03_hasan_esen.mp3	Ussak	294.7325	295.9	makam: Ussak	TRUE	0.9960545
+sultan_bestekarlar__disc_2_saz_eserleri/2-09_kanun_taksimi.mp3	Ussak	329.8	331	makam: Ussak	TRUE	0.9963746
+ud_disc_1/1-04_ussak_taksim.mp3	Ussak	188.70337	189	makam: Ussak	TRUE	0.99843055
+yorgo_bacanos_udi/05_ussak_taksim.mp3	Ussak	163.49171	325	makam: Ussak	TRUE	1.0061028

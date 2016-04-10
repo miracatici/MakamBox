@@ -15,7 +15,7 @@ public class SingleMakamSoloRecordings {
 	
     public static void main(String[] args) {
     	//Audio metadata files folder, file format is json
-    	File jsonFolder = new File("/Users/miracatici/Downloads/turkish_makam_corpus_stats-master/data/AudioMetadata");	
+    	File jsonFolder = new File("turkish_makam_corpus_stats-master/data/AudioMetadata");	
     	
     	//Path contains different folders, so Apache Commons tools do file listing recursively, to a new array
     	File[] jsonFileList = FileUtils.listFiles(jsonFolder, new String[]{"json"}, true).toArray(new File[0]);

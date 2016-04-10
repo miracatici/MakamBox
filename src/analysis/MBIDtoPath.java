@@ -12,8 +12,8 @@ public class MBIDtoPath {
 		BufferedReader pathFile  = null;
 		BufferedReader mbidFile = null;
 		try {
-			pathFile = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/filePath.txt")));
-			mbidFile = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/finalFileList.txt")));
+			pathFile = new BufferedReader(new FileReader(new File("results/filePath.txt")));
+			mbidFile = new BufferedReader(new FileReader(new File("results/finalFileList.txt")));
 			
 			String pathLine = "";
 			while ((pathLine = pathFile.readLine())!=null){

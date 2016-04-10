@@ -11,12 +11,12 @@ import datas.Culture;
 
 public class AnalysisForJoint {
 	public static void main (String[] args){
-		SelectCulture.setCulture(Culture.deserialize("/Users/miracatici/Documents/workspace/MakamBox/settings/TurkishExtended.ser"));
+		SelectCulture.setCulture(Culture.deserialize("settings/TurkishExtended.ser"));
 		MakamBox file = null;
 		BufferedReader fullFileList  = null;
-		String rootPath = "/Volumes/MrcMac/CompMusicCorpus/";
+		String rootPath = "CompMusicCorpus/";
 		try {
-			fullFileList = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/finalFileList4.txt")));
+			fullFileList = new BufferedReader(new FileReader(new File("results/finalFileList.txt")));
 			String fileLine = "";
 			System.out.println("FileName\tMakamRecog\tTonicRecog\tTonicAnnot\tMakamAnnot");
 			while((fileLine = fullFileList.readLine())!=null){

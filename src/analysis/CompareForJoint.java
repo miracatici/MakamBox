@@ -10,7 +10,7 @@ public class CompareForJoint {
 	public static void main (String[] args){
 		BufferedReader analysisFile  = null;
 		try {
-			analysisFile = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/analysisForMakamResult1.txt")));
+			analysisFile = new BufferedReader(new FileReader(new File("results/analysisForMakamResult.txt")));
 			String resultLine = "";
 			while ((resultLine = analysisFile.readLine())!=null){
 				String[] column = resultLine.split("\t");
@@ -44,6 +44,10 @@ public class CompareForJoint {
 		} else if (Math.abs(tonicCalc / (tonicAnnot*2))<1.035f && (tonicCalc / (tonicAnnot*2))>0.98f){
 			return true;
 		} else if (Math.abs(tonicCalc / (tonicAnnot/2))<1.035f && (tonicCalc / (tonicAnnot/2))>0.98f){
+			return true;
+		} else if (Math.abs(tonicCalc / (tonicAnnot*4))<1.035f && (tonicCalc / (tonicAnnot*4))>0.98f){
+			return true;
+		} else if (Math.abs(tonicCalc / (tonicAnnot/4))<1.035f && (tonicCalc / (tonicAnnot/4))>0.98f){
 			return true;
 		} else {
 			return false;

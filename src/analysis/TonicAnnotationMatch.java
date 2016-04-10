@@ -12,7 +12,7 @@ public class TonicAnnotationMatch {
 		BufferedReader annotationItem  = null;
 		BufferedReader soloRecordings = null;
 		try {
-			annotationItem = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/tonikAnnot.txt")));
+			annotationItem = new BufferedReader(new FileReader(new File("results/tonikAnnot.txt")));
 			String annotLine = "";
 			while ((annotLine = annotationItem.readLine()) != null){
 				String[] columns1 = annotLine.split("\t");
@@ -20,14 +20,13 @@ public class TonicAnnotationMatch {
 			}
 			System.out.println(tonicAnnotations.size());
 			
-			soloRecordings = new BufferedReader(new FileReader(new File("/Users/miracatici/Documents/workspace/MakamBox/singleMakamSoloRecordings.txt")));
+			soloRecordings = new BufferedReader(new FileReader(new File("results/singleMakamSoloRecordings.txt")));
 			String recLine = "";
 			while ((recLine = soloRecordings.readLine()) != null){
 				if(tonicAnnotations.get(recLine) != null){
 					System.out.println(recLine + "\t"+tonicAnnotations.get(recLine));
 				}
 			}
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
