@@ -62,7 +62,7 @@ public class TuningSystem implements Serializable{
 			String line;
 			BufferedReader buffReader = new BufferedReader (new FileReader(theoryFile));
 			while((line = buffReader.readLine())!=null){
-				String[] temp = line.split("\\t");
+				String[] temp = line.split("\t");
 				float[] interval = new float[temp.length-1];
 				for (int i = 1; i < temp.length; i++) {
 					 interval[i-1] = Float.valueOf(temp[i]); 
@@ -143,7 +143,7 @@ public class TuningSystem implements Serializable{
 	        newSystem = (TuningSystem) in.readObject();
 	        in.close();
 	        fileIn.close();
-			JOptionPane.showMessageDialog(null, "Culture data file is read");
+			JOptionPane.showMessageDialog(null, "Tuning system file is read");
 		}
 		catch(Exception ex){
 			JOptionPane.showMessageDialog(null,"Please select a file");

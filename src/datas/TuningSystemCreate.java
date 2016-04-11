@@ -1,4 +1,4 @@
-package test;
+package datas;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -15,12 +15,13 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
+import applied.SelectCulture;
 import backEnd.MakamBox;
 import datas.Makam;
 import datas.TuningSystem;
 import utilities.Plot;
 
-public class Test3 {
+public class TuningSystemCreate {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
@@ -36,12 +37,14 @@ public class Test3 {
 		fr.getContentPane().add(pane);
 		fr.pack();
 		
-		TuningSystem karadeniz_41 = new TuningSystem(new File("/Users/mirac/Documents/workspace/MakamToolBox/makams/theoreticalData/Karadeniz_41.txt"));
-		TuningSystem yarman_21 = new TuningSystem(new File("/Users/mirac/Documents/workspace/MakamToolBox/makams/theoreticalData/Yarman_21.txt"));
-		TuningSystem yarman_24 = new TuningSystem(new File("/Users/mirac/Documents/workspace/MakamToolBox/makams/theoreticalData/Yarman_24.txt"));
-		TuningSystem yarman_79 = new TuningSystem(new File("/Users/mirac/Documents/workspace/MakamToolBox/makams/theoreticalData/Yarman_79.txt"));
-		TuningSystem yavuzoglu_48 = new TuningSystem(new File("/Users/mirac/Documents/workspace/MakamToolBox/makams/theoreticalData/Yavuzoglu_48.txt"));
-		TuningSystem arel = new TuningSystem(new File("/Users/mirac/Documents/workspace/MakamToolBox/makams/theoreticalData/Arel_Ezgi_Uzdilek.txt"));
+		SelectCulture.setCulture(Culture.deserialize("TurkishCultureFull.ser"));
+
+		TuningSystem karadeniz_41 = new TuningSystem(new File("makams/theoreticalData/Karadeniz_41.txt"));
+		TuningSystem yarman_21 = new TuningSystem(new File("makams/theoreticalData/Yarman_21.txt"));
+		TuningSystem yarman_24 = new TuningSystem(new File("makams/theoreticalData/Yarman_24.txt"));
+		TuningSystem yarman_79 = new TuningSystem(new File("makams/theoreticalData/Yarman_79.txt"));
+		TuningSystem yavuzoglu_48 = new TuningSystem(new File("makams/theoreticalData/Yavuzoglu_48.txt"));
+		TuningSystem arel = new TuningSystem(new File("makams/theoreticalData/Arel_Ezgi_Uzdilek.txt"));
 		
 		karadeniz_41.writeSystemToFile("karadeniz.txt");
 		yarman_21.writeSystemToFile("yarman21.txt");
@@ -61,7 +64,8 @@ public class Test3 {
 		
 		MakamBox rec=null;
 		try {
-			rec = new MakamBox("test.wav",null);
+			rec = new MakamBox("test.mp3",null);
+			rec.createMakam("Pencgah");
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -103,7 +107,7 @@ public class Test3 {
 		Makam b = null;
 		try {
 			b = a.get(rec.getMakamName());
-			b.toString();
+			System.out.println(b.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

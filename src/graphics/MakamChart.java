@@ -319,9 +319,9 @@ public class MakamChart extends JDialog {
 		annotation = new XYTextAnnotation[peaks.length];
 		for (int i = 1; i < peaks.length; i++) {
 			if(isComma){
-				annotation[i] = new XYTextAnnotation(String.valueOf(Math.round(peaks[i]*100.0)/100.0)+" comma", peaks[i], 0.01);
+				annotation[i] = new XYTextAnnotation(String.valueOf((int) Math.round(peaks[i]))+" comma", peaks[i], 0.01);
 			} else {				
-				annotation[i] = new XYTextAnnotation(String.valueOf(Math.round(peaks[i]*100.0)/100.0)+" cent", peaks[i], 0.01);
+				annotation[i] = new XYTextAnnotation(String.valueOf((int) Math.round(peaks[i]))+" cent", peaks[i], 0.01);
 			}
 			annotation[i].setFont(new Font("Lucida Grande", Font.PLAIN, 11));
 			annotation[i].setRotationAngle(200);
@@ -362,6 +362,7 @@ public class MakamChart extends JDialog {
 				b = a.get(so.getMakamName());
 				temp[i] = b.getIntervalArray();
 			} catch (Exception e) {
+				e.printStackTrace();
 				JOptionPane.showMessageDialog(null,"Please select a file");
 				return;
 			}
