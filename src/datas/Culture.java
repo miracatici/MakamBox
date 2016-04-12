@@ -137,6 +137,7 @@ public class Culture implements Serializable  {
 			JOptionPane.showMessageDialog(null, "Culture data file is read");
 		}
 		catch(Exception ex){
+			ex.printStackTrace();
 			JOptionPane.showMessageDialog(null,"Culture data isn't read");
 		}
 		return newCulture;
