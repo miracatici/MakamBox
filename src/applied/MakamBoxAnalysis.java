@@ -545,10 +545,38 @@ public class MakamBoxAnalysis {
 		menuBar = new JMenuBar();
 		mnShowHistogram = new JMenu(LANG.getString("MakamBoxAnalysis.mnShowHistogram.text")); //$NON-NLS-1$
 		mnShowHistogram.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		
+		btnShowSongPT = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowSongPT.text")); //$NON-NLS-1$
+		btnShowSongPT.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		btnShowSongPT.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					Plot.plot(box.getPitchTrackData());
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+		mnShowHistogram.add(btnShowSongPT);
 		mnShowHistogram.add(btnShowHistogram);
 		mnShowHistogram.add(btnShowHistogramWith);
 		mnShowHistogram.add(btnShowIntervals);
 		mnShowHistogram.add(btnShowTuningChart);
+		
+		btnShowRecordPT = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowRecordPT.text")); //$NON-NLS-1$
+		btnShowRecordPT.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		btnShowRecordPT.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					Plot.plot(recBox.getPitchTrackData());
+				} catch (Exception e1) {
+					JOptionPane.showMessageDialog(null,"Please make a record");
+				}
+			}			
+		});
+		mnShowHistogram.add(btnShowRecordPT);
 		mnShowHistogram.add(btnShowRecordHistogram);
 		
 		btnShowRecordWithtemplate = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowRecordWithtemplate.text")); //$NON-NLS-1$
@@ -591,34 +619,6 @@ public class MakamBoxAnalysis {
 		lblVolume.setBackground(Color.WHITE);
 		menuBar.add(mntmSelectFile);
 		menuBar.add(mnShowHistogram);
-		
-		btnShowRecordPT = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowRecordPT.text")); //$NON-NLS-1$
-		btnShowRecordPT.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-		btnShowRecordPT.addActionListener(new ActionListener(){
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				try {
-					Plot.plot(recBox.getPitchTrackData());
-				} catch (Exception e1) {
-					JOptionPane.showMessageDialog(null,"Please make a record");
-				}
-			}			
-		});
-		mnShowHistogram.add(btnShowRecordPT);
-		
-		btnShowSongPT = new JMenuItem(LANG.getString("MakamBoxAnalysis.btnShowSongPT.text")); //$NON-NLS-1$
-		btnShowSongPT.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-		btnShowSongPT.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				try {
-					Plot.plot(box.getPitchTrackData());
-				} catch (Exception e1) {
-					e1.printStackTrace();
-				}
-			}
-		});
-		mnShowHistogram.add(btnShowSongPT);
 		
 		mntmTuning = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmTuning.text")); //$NON-NLS-1$
 		mntmTuning.addActionListener(new ActionListener() {
