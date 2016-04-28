@@ -17,8 +17,6 @@ import javax.swing.JTextArea;
 
 import applied.SelectCulture;
 import backEnd.MakamBox;
-import datas.Makam;
-import datas.TuningSystem;
 import utilities.Plot;
 
 public class TuningSystemCreate {
