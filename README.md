@@ -27,4 +27,9 @@ It's still being designed,implemented and developed by Bilge Mirac ATICI; superv
 	You should have received a copy of the GNU General Public License
     along with MakamBox.  If not, see <http://www.gnu.org/licenses/>.
  
+ 
+ Dependencies
+ ============
+ 
+ All dependencies are located in "lib" folder. You have to rebuild project classpath (In Eclipse, Java Build Path/ Add External Libraries)
 
