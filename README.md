@@ -29,7 +29,6 @@ It's still being designed,implemented and developed by Bilge Mirac ATICI; superv
  
  
  Dependencies
- ============
- 
+============ 
  All dependencies are located in "lib" folder. You have to rebuild project classpath (In Eclipse, Java Build Path/ Add External Libraries)
 
