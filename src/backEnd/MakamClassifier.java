@@ -273,5 +273,8 @@ public class MakamClassifier {
 		List<Float> k = Arrays.asList(ArrayUtils.toObject(dist));
 		return ArrayUtils.indexOf(dist, Collections.min(k));
 	}
+	public float[][] getDistanceArray(){
+		return distArray;
+	}
 }
 
