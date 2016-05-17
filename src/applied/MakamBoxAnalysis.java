@@ -79,7 +79,7 @@ public class MakamBoxAnalysis {
 	private JMenuItem mntmSelectFile,mntmTuning,btnShowHistogram,
 	btnShowSongWith,btnShowIntervals,btnShowRecordWithtemplate,
 	btnSongRecordTemp,btnShowTuningChart,btnShowHistogramWith,
-	btnShowRecordHistogram,btnShowSetting, btnShowRecordPT,btnShowSongPT;
+	btnShowRecordHistogram,btnShowSetting, btnShowRecordPT,btnShowSongPT, mntmSelectData;
 	private JMenuBar menuBar;
 	private JMenu mnShowHistogram,mnCulturespecificSettings;
 	private JPanel pitchComp,waveComp;
@@ -611,21 +611,29 @@ public class MakamBoxAnalysis {
 		mnSelect.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		menuBar.add(mnSelect);
 		
-			mntmSelectFile = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmSelectFile.text")); //$NON-NLS-1$
-			mnSelect.add(mntmSelectFile);
-			mntmSelectFile.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
-			mntmSelectFile.setMaximumSize(new Dimension(85, 19));
-			
-			JMenuItem mntmLoadPitchtrackData = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmLoadPitchtrackData.text")); //$NON-NLS-1$
-			mnSelect.add(mntmLoadPitchtrackData);
-			mntmSelectFile.addActionListener(new ActionListener(){
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					lblStatusLabel.setForeground(Color.RED);
-					lblStatusLabel.setText("!!! Please Wait !!!");
-					selectFile();
-				}
-			});
+		mntmSelectFile = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmSelectFile.text")); //$NON-NLS-1$
+		mntmSelectFile.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		mntmSelectFile.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				lblStatusLabel.setForeground(Color.RED);
+				lblStatusLabel.setText("!!! Please Wait !!!");
+				selectFile();
+			}
+		});
+		mnSelect.add(mntmSelectFile);
+		
+		mntmSelectData= new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmLoadPitchtrackData.text")); //$NON-NLS-1$
+		mntmSelectData.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
+		mnSelect.add(mntmSelectData);
+		mntmSelectData.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				lblStatusLabel.setForeground(Color.RED);
+				lblStatusLabel.setText("!!! Please Wait !!!");
+				JOptionPane.showMessageDialog(null,"This function is not ready");
+			}
+		});
 		menuBar.add(mnShowHistogram);
 		
 		mntmTuning = new JMenuItem(LANG.getString("MakamBoxAnalysis.mntmTuning.text")); //$NON-NLS-1$

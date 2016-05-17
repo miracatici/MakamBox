@@ -143,8 +143,6 @@ public class SelectCulture {
 		frmSelection.getContentPane().add(comboBox_1);
 		frmSelection.repaint();
 		
-		
-		
 		btnSelectFile.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
