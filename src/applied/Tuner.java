@@ -45,8 +45,7 @@ public class Tuner extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = -3967699817035377903L;
-	private JButton btnStartTuner;
-	private JButton btnStopTuner;
+	private JButton btnStartStop;
 	private AudioFormat format = new AudioFormat((float)44100,16,1,true,false);
 	private PitchTracking track = new PitchTracking(format);
 	private static DialChart chart = new DialChart();
@@ -59,30 +58,28 @@ public class Tuner extends JFrame {
 		setTitle("Tuner");
 		getContentPane().setBackground(Color.DARK_GRAY);
 
-		btnStartTuner = new JButton("Start Tuner");
-		btnStartTuner.addActionListener(new ActionListener() {
+		btnStartStop = new JButton("Start Tuner");
+		btnStartStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				track.captureAudio();
-			}
-		});
-		getContentPane().setLayout(null);
-		btnStartTuner.setBounds(6, 31, 117, 29);
-		getContentPane().add(btnStartTuner);
-		
-		btnStopTuner = new JButton("Stop Tuner");
-		btnStopTuner.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					track.running = false;
-					track.stopCapture();
-				} catch (Exception e1) {
-					e1.printStackTrace();
+				if(btnStartStop.getText().equals("Start Tuner")){
+					track.captureAudio();
+					btnStartStop.setText("Stop Tuner");				
+				} else {
+					try {
+						track.running = false;
+						track.stopCapture();
+						btnStartStop.setText("Start Tuner");
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
 				}
 			}
 		});
-		btnStopTuner.setBounds(6, 72, 117, 29);
-		getContentPane().add(btnStopTuner);
+		getContentPane().setLayout(null);
+		btnStartStop.setBounds(6, 31, 117, 29);
+		getContentPane().add(btnStartStop);
 		
+				
 		JPanel panel = new JPanel();
 		panel.setBounds(135, 6, 333, 315);
 		panel.setLayout(null);

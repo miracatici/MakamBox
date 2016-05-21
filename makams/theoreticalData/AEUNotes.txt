@@ -1,0 +1,73 @@
+kaba cargah	1
+kaba nim hicaz	1.053705495
+kaba hicaz	1.067576625
+kaba dik hicaz	1.110295271
+yegah	1.124911356
+kaba nim hisar	1.185325278
+kaba hisar	1.200929069
+kaba dik hisar	1.248983759
+huseyni asiran	1.26542556
+acemasiran	1.333385866
+dik acemasiran	1.350938748
+irak	1.404996014
+gevest	1.423491583
+dik gevest	1.480452021
+rast	1.499940903
+nim zirgule	1.580495972
+zirgule	1.601301847
+dik zirgule	1.665377291
+dugah	1.687300556
+kurdi	1.777917868
+dik kurdi	1.801322633
+segah	1.873401827
+buselik	1.898063557
+dik buselik	1.923049937
+cargah	2
+nim hicaz	2.10741099
+hicaz	2.13515325
+dik hicaz	2.220590541
+neva	2.249822713
+nim hisar	2.370650556
+hisar	2.401858139
+dik hisar	2.497967518
+huseyni asiran	2.530851119
+acem	2.666771732
+dik acem	2.701877496
+evic	2.809992028
+mahur	2.846983165
+dik mahur	2.960904042
+gerdaniye	2.999881806
+nim sehnaz	3.160991944
+sehnaz	3.202603694
+dik sehnaz	3.330754582
+muhayyer	3.374601111
+sunbule	3.555835735
+dik sunbule	3.602645265
+tiz segah	3.746803654
+tiz buselik	3.796127114
+tiz dik buselik	3.846099874
+tiz cargah	4
+tiz nim hicaz	4.214821981
+tiz hicaz	4.2703065
+tiz dik hicaz	4.441181082
+tiz neva	4.499645425
+tiz nim hisar	4.741301111
+tiz hisar	4.803716277
+tiz dik hisar	4.995935035
+tiz huseyni	5.061702239
+tiz acem	5.333543464
+tiz dik acem	5.403754993
+tiz evic	5.619984057
+tiz mahur	5.693966331
+tiz dik mahur	5.921808084
+tiz gerdaniye	5.999763612
+tiz nim sehnaz	6.321983888
+tiz sehnaz	6.405207388
+tiz dik sehnaz	6.661509164
+tiz muhayyer	6.749202223
+tiz sunbule	7.111671471
+tiz dik sunbule	7.205290531
+tiz tiz segah	7.493607309
+tiz tiz buselik	7.592254227
+tiz tiz dik buselik	7.692199748
+tiz tiz cargah	8

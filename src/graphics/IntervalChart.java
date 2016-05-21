@@ -54,37 +54,35 @@ public class IntervalChart extends JDialog {
 		getContentPane().setLayout(new BorderLayout(0,0));
 		contentPanel.setLayout(new BorderLayout(0, 0));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
-		{
-			JPanel buttonPane = new JPanel();
-			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
-			{
-				final JButton btnSetComma = new JButton("Set Comma");
-				btnSetComma.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						if(btnSetComma.getText().equals("Set Comma")){
-							setCommaAxis();	
-							btnSetComma.setText("Set Cent");
-						} else {
-							createFrame();
-							btnSetComma.setText("Set Comma");
-						}
-					}
-				});
-				buttonPane.add(btnSetComma);
+		JPanel buttonPane = new JPanel();
+		buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			
+		final JButton btnSetComma = new JButton("Set Comma");
+		btnSetComma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(btnSetComma.getText().equals("Set Comma")){
+					setCommaAxis();	
+					btnSetComma.setText("Set Cent");
+				} else {
+					createFrame();
+					btnSetComma.setText("Set Comma");
+				}
 			}
-			{
-				JButton okButton = new JButton("Exit");
-				okButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						dispose();
-					}
-				});
-				okButton.setActionCommand("Exit");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
+		});
+		buttonPane.add(btnSetComma);
+	
+	
+		JButton okButton = new JButton("Exit");
+		okButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
 			}
-		}
+		});
+		okButton.setActionCommand("Exit");
+		buttonPane.add(okButton);
+		getRootPane().setDefaultButton(okButton);
+			
 		
 		// create 'a' array for X axis
 			try {
@@ -188,8 +186,7 @@ public class IntervalChart extends JDialog {
 	            PlotOrientation.VERTICAL,
 	            true, // include legend
 	            true, // tooltips
-	            true // urls
-	            );		
+	            true ); // urls		
 		plot = (XYPlot) chart.getPlot();
 		renderer = new XYLineAndShapeRenderer();
 	    renderer.setSeriesLinesVisible(0, true);

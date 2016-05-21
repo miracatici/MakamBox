@@ -24,10 +24,22 @@
 
 package graphics;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JToggleButton;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartMouseEvent;
@@ -46,6 +58,7 @@ import backEnd.Player;
 
 public class PitchChart {
 	
+	private JDialog frame;
 	private static JFreeChart chart;
 	private ChartPanel panel;
 	private XYPlot plot;
@@ -56,8 +69,9 @@ public class PitchChart {
 	private float[] data,time;
 	private double xPrev,xCurr;
 	private float bufferSize,frameRate;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
-	public PitchChart(MakamBox obj) throws Exception{
+	public PitchChart(MakamBox obj) throws Exception{		
 		data = obj.getPitchTrackData();       
         time = new float[data.length];
         bufferSize = obj.getPitchDetection().getBufferSize();
@@ -66,6 +80,131 @@ public class PitchChart {
 		}
         play = obj.getPlayer();
         frameRate = obj.getWavefile().getFrameRate();  
+	}
+
+	/**
+	 * @throws CloneNotSupportedException 
+	 * @wbp.parser.entryPoint
+	 */
+	public void createDialog() throws CloneNotSupportedException{
+		frame = new JDialog();
+		frame.getContentPane().setPreferredSize(new Dimension(640, 515));
+		frame.getContentPane().setLayout(new BorderLayout());
+		
+		JPanel contentPanel = new JPanel();
+		contentPanel.setPreferredSize(new Dimension(640, 480));
+		contentPanel.setSize(640, 480);
+		contentPanel.setMinimumSize(new Dimension(640, 480));
+		frame.getContentPane().add(contentPanel, BorderLayout.CENTER);
+		
+		JPanel butonPanel = new JPanel();
+		frame.getContentPane().add(butonPanel, BorderLayout.SOUTH);
+		butonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		final ChartPanel bigPanel = new ChartPanel((JFreeChart) chart.clone(),true);
+		bigPanel.setRangeZoomable(true);		
+		bigPanel.setSize(new Dimension(640,480));
+		bigPanel.addMouseListener(new MouseListener(){
+	    	@Override
+			public void mousePressed(MouseEvent arg0) {
+				ChartMouseEvent event = new ChartMouseEvent(bigPanel.getChart(), arg0, null);
+				xPrev = bigPanel.getChart().getXYPlot().getDomainAxis().java2DToValue(
+								event.getTrigger().getX(), 
+								bigPanel.getScreenDataArea(), 
+								bigPanel.getChart().getXYPlot().getDomainAxisEdge());				
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				ChartMouseEvent event = new ChartMouseEvent(bigPanel.getChart(), arg0, null);			
+				xCurr = bigPanel.getChart().getXYPlot().getDomainAxis().java2DToValue
+						(event.getTrigger().getX(), 
+								bigPanel.getScreenDataArea(), 
+								bigPanel.getChart().getXYPlot().getDomainAxisEdge());	
+				if(xCurr>xPrev){
+					xPrev = bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getLowerBound();
+					xCurr = bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getUpperBound();
+					play.setLoopPoint((int)(xPrev*frameRate),(int)(xCurr*frameRate));
+					WaveChart.zoom(xPrev, xCurr);
+				} else if(xCurr==xPrev){
+					play.setPosition((int)(xPrev*frameRate));
+				} else if (xCurr<xPrev){
+					play.stopButton();
+					WaveChart.zoom(bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getLowerBound(),
+							bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getUpperBound());
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent arg0) {}
+			@Override
+			public void mouseEntered(MouseEvent arg0) {}
+			@Override
+			public void mouseExited(MouseEvent arg0) {}
+	    });
+		final JCheckBox rangeZoom = new JCheckBox("Vertical Zoom On");
+		rangeZoom.setSelected(true);
+		rangeZoom.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(rangeZoom.isSelected()){
+					rangeZoom.setText("Vertical Zoom On");
+					bigPanel.setRangeZoomable(true);
+				} else {
+					rangeZoom.setText("Vertical Zoom Off");
+					bigPanel.setRangeZoomable(false);
+				}
+			}	
+		});
+		butonPanel.add(rangeZoom);
+
+		JRadioButton rdFrequency = new JRadioButton("Frequency");
+		butonPanel.add(rdFrequency);
+		buttonGroup.add(rdFrequency);
+		rdFrequency.setSelected(true);
+		
+		JRadioButton rdCent = new JRadioButton("Cent");
+		butonPanel.add(rdCent);
+		buttonGroup.add(rdCent);
+		rdCent.setSelected(false);
+		
+		final JToggleButton toggleCent = new JToggleButton("Absolute");
+		butonPanel.add(toggleCent);
+		toggleCent.setEnabled(false);
+		toggleCent.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(toggleCent.getText().equals("Absolute")){
+					toggleCent.setText("Interval");
+				} else {
+					toggleCent.setText("Absolute");
+				}
+			}
+		});
+		
+		JButton btnExit = new JButton("Exit");
+		butonPanel.add(btnExit);
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		rdCent.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				toggleCent.setEnabled(true);
+			}
+		});
+		rdFrequency.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				toggleCent.setEnabled(false);
+			}
+		});
+									
+		
+		frame.getContentPane().add(bigPanel);
+		frame.setVisible(true);
+		frame.repaint();
+		frame.pack();
 	}
 	public void createFrame() {
 		chart = ChartFactory.createXYLineChart(
@@ -149,5 +288,8 @@ public class PitchChart {
 	}
 	public XYPlot getXYPlot(){
 		return plot;
+	}
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 }
