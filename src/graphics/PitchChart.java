@@ -55,31 +55,37 @@ import org.jfree.util.ShapeUtilities;
 
 import backEnd.MakamBox;
 import backEnd.Player;
+import utilities.AudioUtilities;
 
 public class PitchChart {
 	
+	private String yLabel, xLabel;
+	private JPanel contentPanel,buttonPanel;
 	private JDialog frame;
-	private static JFreeChart chart;
-	private ChartPanel panel;
+	private static JFreeChart chart,bigChart;
+	private ChartPanel panel,bigPanel;
 	private XYPlot plot;
 	private XYLineAndShapeRenderer renderer;
 	private XYSeriesCollection result;
 	private Player play;
 	private XYSeries series;
+	private int[] centData;
 	private float[] data,time;
 	private double xPrev,xCurr;
 	private float bufferSize,frameRate;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
 	public PitchChart(MakamBox obj) throws Exception{		
-		data = obj.getPitchTrackData();       
-        time = new float[data.length];
+		data = obj.getPitchTrackData(); 
+		centData = AudioUtilities.hertzToCent(data);
+		time = new float[data.length];
         bufferSize = obj.getPitchDetection().getBufferSize();
         for (int i = 0; i < time.length; i++) {
 			time[i] = i*(bufferSize/obj.getWavefile().getSampleRate());
 		}
         play = obj.getPlayer();
         frameRate = obj.getWavefile().getFrameRate();  
+		xLabel = "Time (sec)"; yLabel = "Pitches (Hertz)";
 	}
 
 	/**
@@ -91,55 +97,18 @@ public class PitchChart {
 		frame.getContentPane().setPreferredSize(new Dimension(640, 515));
 		frame.getContentPane().setLayout(new BorderLayout());
 		
-		JPanel contentPanel = new JPanel();
+		contentPanel = new JPanel();
 		contentPanel.setPreferredSize(new Dimension(640, 480));
 		contentPanel.setSize(640, 480);
 		contentPanel.setMinimumSize(new Dimension(640, 480));
 		frame.getContentPane().add(contentPanel, BorderLayout.CENTER);
 		
-		JPanel butonPanel = new JPanel();
-		frame.getContentPane().add(butonPanel, BorderLayout.SOUTH);
-		butonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		buttonPanel = new JPanel();
+		frame.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
+		buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		final ChartPanel bigPanel = new ChartPanel((JFreeChart) chart.clone(),true);
-		bigPanel.setRangeZoomable(true);		
-		bigPanel.setSize(new Dimension(640,480));
-		bigPanel.addMouseListener(new MouseListener(){
-	    	@Override
-			public void mousePressed(MouseEvent arg0) {
-				ChartMouseEvent event = new ChartMouseEvent(bigPanel.getChart(), arg0, null);
-				xPrev = bigPanel.getChart().getXYPlot().getDomainAxis().java2DToValue(
-								event.getTrigger().getX(), 
-								bigPanel.getScreenDataArea(), 
-								bigPanel.getChart().getXYPlot().getDomainAxisEdge());				
-			}
-			@Override
-			public void mouseReleased(MouseEvent arg0) {
-				ChartMouseEvent event = new ChartMouseEvent(bigPanel.getChart(), arg0, null);			
-				xCurr = bigPanel.getChart().getXYPlot().getDomainAxis().java2DToValue
-						(event.getTrigger().getX(), 
-								bigPanel.getScreenDataArea(), 
-								bigPanel.getChart().getXYPlot().getDomainAxisEdge());	
-				if(xCurr>xPrev){
-					xPrev = bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getLowerBound();
-					xCurr = bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getUpperBound();
-					play.setLoopPoint((int)(xPrev*frameRate),(int)(xCurr*frameRate));
-					WaveChart.zoom(xPrev, xCurr);
-				} else if(xCurr==xPrev){
-					play.setPosition((int)(xPrev*frameRate));
-				} else if (xCurr<xPrev){
-					play.stopButton();
-					WaveChart.zoom(bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getLowerBound(),
-							bigPanel.getChart().getXYPlot().getDomainAxis().getRange().getUpperBound());
-				}
-			}
-			@Override
-			public void mouseClicked(MouseEvent arg0) {}
-			@Override
-			public void mouseEntered(MouseEvent arg0) {}
-			@Override
-			public void mouseExited(MouseEvent arg0) {}
-	    });
+		createFrame2(data,"Pitches (Cent)",false);
+
 		final JCheckBox rangeZoom = new JCheckBox("Vertical Zoom On");
 		rangeZoom.setSelected(true);
 		rangeZoom.addActionListener(new ActionListener(){
@@ -154,20 +123,20 @@ public class PitchChart {
 				}
 			}	
 		});
-		butonPanel.add(rangeZoom);
+		buttonPanel.add(rangeZoom);
 
 		JRadioButton rdFrequency = new JRadioButton("Frequency");
-		butonPanel.add(rdFrequency);
+		buttonPanel.add(rdFrequency);
 		buttonGroup.add(rdFrequency);
 		rdFrequency.setSelected(true);
 		
 		JRadioButton rdCent = new JRadioButton("Cent");
-		butonPanel.add(rdCent);
+		buttonPanel.add(rdCent);
 		buttonGroup.add(rdCent);
 		rdCent.setSelected(false);
 		
 		final JToggleButton toggleCent = new JToggleButton("Absolute");
-		butonPanel.add(toggleCent);
+		buttonPanel.add(toggleCent);
 		toggleCent.setEnabled(false);
 		toggleCent.addActionListener(new ActionListener() {
 			@Override
@@ -181,7 +150,7 @@ public class PitchChart {
 		});
 		
 		JButton btnExit = new JButton("Exit");
-		butonPanel.add(btnExit);
+		buttonPanel.add(btnExit);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -209,8 +178,8 @@ public class PitchChart {
 	public void createFrame() {
 		chart = ChartFactory.createXYLineChart(
 				"", // chart title
-	            "Time (sec)", // x axis label
-	            "Pitches (Hertz)", // y axis label
+	            xLabel, // x axis label
+	            yLabel, // y axis label
 	            createDataset(time,data), // data 
 	            PlotOrientation.VERTICAL,
 	            false, // include legend
@@ -289,7 +258,90 @@ public class PitchChart {
 	public XYPlot getXYPlot(){
 		return plot;
 	}
-	protected Object clone() throws CloneNotSupportedException {
-		return super.clone();
+	public void createFrame2(float[] dat, String yLabel, boolean respectTonic) {
+		bigChart = ChartFactory.createXYLineChart(
+				"", // chart title
+	            xLabel, // x axis label
+	            yLabel, // y axis label
+	            createDataset2(time,dat,respectTonic), // data 
+	            PlotOrientation.VERTICAL,
+	            false, // include legend
+	            true, // tooltips
+	            false // urls
+	            );
+		XYPlot plot = (XYPlot) bigChart.getPlot();
+		XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
+		renderer.setSeriesShape(0, ShapeUtilities.createDiamond(1));
+		renderer.setSeriesLinesVisible(0, false);
+	    renderer.setSeriesShapesVisible(0, true);
+	    renderer.setSeriesPaint(0, Color.BLACK);
+	    plot.setRenderer(renderer);   	
+	    
+	    bigPanel = new ChartPanel(bigChart,true);
+	    bigPanel.setPreferredSize(new Dimension(713,230));
+	    bigPanel.setRangeZoomable(true);
+	    bigPanel.addMouseListener(new MouseListener(){
+	    	@Override
+			public void mousePressed(MouseEvent arg0) {
+				ChartMouseEvent event = new ChartMouseEvent(bigChart, arg0, null);
+				xPrev = bigChart.getXYPlot().getDomainAxis().java2DToValue(
+								event.getTrigger().getX(), 
+								panel.getScreenDataArea(), 
+								bigChart.getXYPlot().getDomainAxisEdge());				
+			}
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				ChartMouseEvent event = new ChartMouseEvent(bigChart, arg0, null);			
+				xCurr = bigChart.getXYPlot().getDomainAxis().java2DToValue
+						(event.getTrigger().getX(), 
+								panel.getScreenDataArea(), 
+								bigChart.getXYPlot().getDomainAxisEdge());	
+				if(xCurr>xPrev){
+					xPrev = bigChart.getXYPlot().getDomainAxis().getRange().getLowerBound();
+					xCurr = bigChart.getXYPlot().getDomainAxis().getRange().getUpperBound();
+					play.setLoopPoint((int)(xPrev*frameRate),(int)(xCurr*frameRate));
+					WaveChart.zoom(xPrev, xCurr);
+				} else if(xCurr==xPrev){
+					play.setPosition((int)(xPrev*frameRate));
+				} else if (xCurr<xPrev){
+					play.stopButton();
+					WaveChart.zoom(bigChart.getXYPlot().getDomainAxis().getRange().getLowerBound(),
+							bigChart.getXYPlot().getDomainAxis().getRange().getUpperBound());
+				}
+			}
+			@Override
+			public void mouseClicked(MouseEvent arg0) {}
+			@Override
+			public void mouseEntered(MouseEvent arg0) {}
+			@Override
+			public void mouseExited(MouseEvent arg0) {}
+	    });
 	}
+    private XYDataset createDataset2(float[] xx,float[] yy, boolean respectTonic) {
+        result = new XYSeriesCollection();
+        series = new XYSeries("Song Pitch Track");
+        if(respectTonic){
+        	for (int i = 0; i <xx.length; i++) {
+            	if(yy[i]!=0){
+    	        	double x = xx[i];
+    	            double y = yy[i];
+    	            if(y<5000){
+    	            	series.add(x, y);
+    	            }
+            	}
+            }
+        } else {
+        	for (int i = 0; i <xx.length; i++) {
+            	if(yy[i]!=0){
+    	        	double x = xx[i];
+    	            double y = yy[i];
+    	            if(y<5000){
+    	            	series.add(x, y);
+    	            }
+            	}
+            }
+        }
+        result.addSeries(series);   
+        return result;
+    }
 }
