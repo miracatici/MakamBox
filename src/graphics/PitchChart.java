@@ -37,6 +37,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JToggleButton;
@@ -59,7 +60,6 @@ import utilities.AudioUtilities;
 
 public class PitchChart {
 	
-	private String yLabel, xLabel;
 	private JPanel contentPanel,buttonPanel;
 	private JDialog frame;
 	private static JFreeChart chart,bigChart;
@@ -69,15 +69,18 @@ public class PitchChart {
 	private XYSeriesCollection result;
 	private Player play;
 	private XYSeries series;
-	private int[] centData;
-	private float[] data,time;
+	private float[] data,time, centData;
 	private double xPrev,xCurr;
 	private float bufferSize,frameRate;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private MakamBox box;
 	
 	public PitchChart(MakamBox obj) throws Exception{		
 		data = obj.getPitchTrackData(); 
-		centData = AudioUtilities.hertzToCent(data);
+		centData = new float[data.length];
+		for (int i = 0; i < centData.length; i++) {
+			centData[i] = AudioUtilities.hertzToCent(data[i]);
+		}
 		time = new float[data.length];
         bufferSize = obj.getPitchDetection().getBufferSize();
         for (int i = 0; i < time.length; i++) {
@@ -85,7 +88,7 @@ public class PitchChart {
 		}
         play = obj.getPlayer();
         frameRate = obj.getWavefile().getFrameRate();  
-		xLabel = "Time (sec)"; yLabel = "Pitches (Hertz)";
+        box = obj;
 	}
 
 	/**
@@ -107,16 +110,14 @@ public class PitchChart {
 		frame.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		createFrame2(data,"Pitches (Cent)",false);
-
-		final JCheckBox rangeZoom = new JCheckBox("Vertical Zoom On");
-		rangeZoom.setSelected(true);
+		final JCheckBox rangeZoom = new JCheckBox("Vertical Zoom Off");
+		rangeZoom.setSelected(false);
 		rangeZoom.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(rangeZoom.isSelected()){
 					rangeZoom.setText("Vertical Zoom On");
-					bigPanel.setRangeZoomable(true);
+					bigPanel.setRangeZoomable(true);					
 				} else {
 					rangeZoom.setText("Vertical Zoom Off");
 					bigPanel.setRangeZoomable(false);
@@ -142,8 +143,30 @@ public class PitchChart {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(toggleCent.getText().equals("Absolute")){
+					try {
+						createFrame2(centData,true,true);
+						contentPanel.removeAll();
+						contentPanel.add(bigPanel);
+						contentPanel.repaint();
+						rangeZoom.setSelected(false); rangeZoom.setText("Vertical Zoom Off");
+						frame.repaint();
+						frame.pack();
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
 					toggleCent.setText("Interval");
 				} else {
+					try {
+						createFrame2(centData,true,false);
+						contentPanel.removeAll();
+						contentPanel.add(bigPanel);
+						contentPanel.repaint();
+						rangeZoom.setSelected(false); rangeZoom.setText("Vertical Zoom Off");
+						frame.repaint();
+						frame.pack();
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
 					toggleCent.setText("Absolute");
 				}
 			}
@@ -159,18 +182,45 @@ public class PitchChart {
 		rdCent.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				toggleCent.setEnabled(true);
+				try {
+					createFrame2(centData,true,false);
+					contentPanel.removeAll();
+					contentPanel.add(bigPanel);
+					contentPanel.repaint();
+					rangeZoom.setSelected(false); rangeZoom.setText("Vertical Zoom Off");
+					toggleCent.setSelected(false); toggleCent.setText("Absolute");
+					frame.repaint();
+					frame.pack();
+					toggleCent.setEnabled(true);
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
 		rdFrequency.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				toggleCent.setEnabled(false);
+				try {
+					createFrame2(data,false,false);
+					contentPanel.removeAll();
+					contentPanel.add(bigPanel);
+					contentPanel.repaint();
+					rangeZoom.setSelected(false); rangeZoom.setText("Vertical Zoom Off");
+					frame.repaint();
+					frame.pack();
+					toggleCent.setEnabled(false);
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
-									
-		
-		frame.getContentPane().add(bigPanel);
+		try {
+			createFrame2(data,false,false);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}			
+		contentPanel.add(bigPanel);
+		contentPanel.repaint();
 		frame.setVisible(true);
 		frame.repaint();
 		frame.pack();
@@ -178,8 +228,8 @@ public class PitchChart {
 	public void createFrame() {
 		chart = ChartFactory.createXYLineChart(
 				"", // chart title
-	            xLabel, // x axis label
-	            yLabel, // y axis label
+				"Time (sec)", // x axis label
+				"Pitches (Hertz)", // y axis label
 	            createDataset(time,data), // data 
 	            PlotOrientation.VERTICAL,
 	            false, // include legend
@@ -258,12 +308,12 @@ public class PitchChart {
 	public XYPlot getXYPlot(){
 		return plot;
 	}
-	public void createFrame2(float[] dat, String yLabel, boolean respectTonic) {
+	public void createFrame2(float [] dat, boolean isCent,boolean respectTonic) throws Exception {
 		bigChart = ChartFactory.createXYLineChart(
 				"", // chart title
-	            xLabel, // x axis label
-	            yLabel, // y axis label
-	            createDataset2(time,dat,respectTonic), // data 
+				"Time (sec)", // x axis label
+				"Pitches (Cent)", // y axis label
+	            createDataset2(time,dat,isCent,respectTonic), // data 
 	            PlotOrientation.VERTICAL,
 	            false, // include legend
 	            true, // tooltips
@@ -278,8 +328,8 @@ public class PitchChart {
 	    plot.setRenderer(renderer);   	
 	    
 	    bigPanel = new ChartPanel(bigChart,true);
-	    bigPanel.setPreferredSize(new Dimension(713,230));
-	    bigPanel.setRangeZoomable(true);
+	    bigPanel.setPreferredSize(new Dimension(640,480));
+	    bigPanel.setRangeZoomable(false);
 	    bigPanel.addMouseListener(new MouseListener(){
 	    	@Override
 			public void mousePressed(MouseEvent arg0) {
@@ -317,19 +367,34 @@ public class PitchChart {
 			public void mouseExited(MouseEvent arg0) {}
 	    });
 	}
-    private XYDataset createDataset2(float[] xx,float[] yy, boolean respectTonic) {
+    private XYDataset createDataset2(float[] xx,float[] yy,boolean isCent, boolean respectTonic) throws Exception {
         result = new XYSeriesCollection();
         series = new XYSeries("Song Pitch Track");
-        if(respectTonic){
-        	for (int i = 0; i <xx.length; i++) {
-            	if(yy[i]!=0){
-    	        	double x = xx[i];
-    	            double y = yy[i];
-    	            if(y<5000){
-    	            	series.add(x, y);
-    	            }
-            	}
-            }
+        if(isCent){
+	        if(respectTonic){
+	        	try{
+	        		float tonic = box.getTonicCent();
+	        		for (int i = 0; i <xx.length; i++) {
+		            	if(yy[i]!=0){
+		    	        	double x = xx[i];
+		    	            double y = yy[i] - tonic;
+		    	            if(y>-2400 && y<2400){
+		    	            	series.add(x, y);
+		    	            }
+		            	}
+		            }
+	        	} catch (NullPointerException n){
+					JOptionPane.showMessageDialog(null,"Please detect makam");
+	        	}
+	        } else {
+	        	for (int i = 0; i <xx.length; i++) {
+	            	if(yy[i]!=0){
+	    	        	double x = xx[i];
+	    	            double y = yy[i];
+	    	            series.add(x, y);
+	            	}
+	            }
+	        }
         } else {
         	for (int i = 0; i <xx.length; i++) {
             	if(yy[i]!=0){

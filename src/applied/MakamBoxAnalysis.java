@@ -52,7 +52,6 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.JRadioButton;
 import javax.swing.JSlider;
 import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
@@ -68,13 +67,11 @@ import datas.Ahenk;
 import datas.Makam;
 import graphics.About;
 import utilities.Plot;
-import javax.swing.ButtonGroup;
-import javax.swing.JToggleButton;
 
 public class MakamBoxAnalysis {
 	public static ResourceBundle LANG = ResourceBundle.getBundle("applied.language_en"); //$NON-NLS-1$
 
-	public static JSlider volumeSlide,positionSlide;
+	public static JSlider volumeSlide, positionSlide;
 	public static JProgressBar progressBar;
 	protected JFrame frmMakambox;
 	private JComboBox<String> ahenkList;
@@ -86,10 +83,10 @@ public class MakamBoxAnalysis {
 	private JMenuBar menuBar;
 	private JMenu mnShowHistogram,mnCulturespecificSettings;
 	private JPanel pitchComp,waveComp;
-	private JLabel lblVolume,lblRecordStatus,
+	private JLabel lblVolume,lblRecordStatus,lblStatusLabel,
 		lblSaveStatus,lblShiftLabel,tonicNote,
 		makamPane,tonicHz,shiftAmount,lblMakamName,
-		lblTonicNote,lblTonicFrequency,lblNewLabel,lblStatusLabel;
+		lblTonicNote,lblTonicFrequency,lblNewLabel;
 	private JButton btnPlay,btnStop,btnStartRecording,
 		btnStopRecording,btnDetectMakam,btnPlayRecord,btnStopRecord,
 		btnPlaySynth,btnSineSynth,btnSaveRecord,btnStopSynth,
@@ -108,7 +105,6 @@ public class MakamBoxAnalysis {
 	private JButton btnSet;
 	private JButton btnAnalyze;
 	private JMenu mnSelect;
-	private final ButtonGroup grpPitchTrack = new ButtonGroup();
 
 	/**
 	 * Launch the application.
@@ -154,7 +150,7 @@ public class MakamBoxAnalysis {
 		waveComp = new JPanel();
 		waveComp.setLayout(new SpringLayout());
 		waveComp.setForeground(Color.BLACK);
-		waveComp.setLocation(6, 57);
+		waveComp.setLocation(6, 21);
 		waveComp.setBackground(Color.LIGHT_GRAY);
 		waveComp.setSize(new Dimension(713, 230));
 		waveComp.setMinimumSize(new Dimension(713, 230));
@@ -532,7 +528,7 @@ public class MakamBoxAnalysis {
 				try {
 					box.getPitchChart().createDialog();
 				} catch (Exception e1) {
-					e1.printStackTrace();
+					JOptionPane.showMessageDialog(null,"Pitch chart couldn't be created !!!");
 				}
 			}
 		});
@@ -573,13 +569,6 @@ public class MakamBoxAnalysis {
 		mnShowHistogram.add(btnShowRecordWithtemplate);
 		mnShowHistogram.add(btnShowSongWith);
 		mnShowHistogram.add(btnSongRecordTemp);
-		
-		lblStatusLabel = new JLabel("Status");
-		lblStatusLabel.setForeground(Color.WHITE);
-		lblStatusLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
-		lblStatusLabel.setBackground(Color.LIGHT_GRAY);
-		lblStatusLabel.setBounds(602, 7, 107, 26);
-		frmMakambox.getContentPane().add(lblStatusLabel);
 		
 		volumeSlide = new JSlider();
 		volumeSlide.setValueIsAdjusting(true);
@@ -911,11 +900,6 @@ public class MakamBoxAnalysis {
 		lblNewLabel.setBounds(749, 191, 89, 16);
 		frmMakambox.getContentPane().add(lblNewLabel);
 		
-		positionSlide = new JSlider();
-		positionSlide.setValue(0);
-		positionSlide.setBounds(49, 35, 631, 16);
-		frmMakambox.getContentPane().add(positionSlide);
-		
 		progressBar = new JProgressBar();
 		progressBar.setBounds(844, 295, 150, 20);
 		progressBar.setMinimum(0);
@@ -1038,51 +1022,20 @@ public class MakamBoxAnalysis {
 		JLabel label = new JLabel("Position");
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
-		label.setBounds(6, 6, 57, 29);
+		label.setBounds(6, 263, 57, 29);
 		frmMakambox.getContentPane().add(label);
 		
-		final JToggleButton toggleCent = new JToggleButton(LANG.getString("MakamBoxAnalysis.tglbtnNewToggleButton.text")); //$NON-NLS-1$
-		toggleCent.setEnabled(false);
-		toggleCent.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if(toggleCent.getText().equals("Absolute")){
-					toggleCent.setText("Interval");
-				} else {
-					toggleCent.setText("Absolute");
-				}
-			}
-		});
-		toggleCent.setBounds(236, 293, 94, 29);
+		positionSlide = new JSlider();
+		positionSlide.setValue(0);
+		positionSlide.setBounds(68, 292, 631, 16);
+		frmMakambox.getContentPane().add(positionSlide);
 		
-		
-		JRadioButton rdFrequency = new JRadioButton(LANG.getString("MakamBoxAnalysis.rdbtnFrequency.text")); //$NON-NLS-1$
-		rdFrequency.setSelected(true);
-		grpPitchTrack.add(rdFrequency);
-		rdFrequency.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				toggleCent.setEnabled(false);
-			}
-		});
-		rdFrequency.setForeground(Color.WHITE);
-		rdFrequency.setBounds(50, 295, 107, 23);
-		frmMakambox.getContentPane().add(rdFrequency);
-		
-		final JRadioButton rdCent = new JRadioButton(LANG.getString("MakamBoxAnalysis.rdCent.text")); //$NON-NLS-1$
-		grpPitchTrack.add(rdCent);
-		rdCent.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				toggleCent.setEnabled(true);
-			}
-		});
-		rdCent.setForeground(Color.WHITE);
-		rdCent.setBounds(158, 295, 73, 23);
-		frmMakambox.getContentPane().add(rdCent);
-		
-		
-		frmMakambox.getContentPane().add(toggleCent);
+		lblStatusLabel = new JLabel("Status");
+		lblStatusLabel.setForeground(Color.WHITE);
+		lblStatusLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
+		lblStatusLabel.setBackground(Color.LIGHT_GRAY);
+		lblStatusLabel.setBounds(602, 264, 107, 26);
+		frmMakambox.getContentPane().add(lblStatusLabel);
 	}
 	public void setMakamList(TreeMap<String,Makam> makams){
 		if(!(makams==null)){
