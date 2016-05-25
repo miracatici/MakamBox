@@ -37,6 +37,8 @@ import org.jfree.chart.plot.dial.StandardDialFrame;
 import org.jfree.chart.plot.dial.StandardDialScale;
 import org.jfree.data.general.DefaultValueDataset;
 
+
+
 public class DialChart extends JPanel {
 
   /**
