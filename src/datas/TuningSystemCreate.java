@@ -35,14 +35,14 @@ public class TuningSystemCreate {
 		fr.getContentPane().add(pane);
 		fr.pack();
 		
-		SelectCulture.setCulture(Culture.deserialize("TurkishCultureFull.ser"));
+		SelectCulture.setCulture(Culture.deserialize("settings/TurkishExtended.ser"));
 
 		TuningSystem karadeniz_41 = new TuningSystem(new File("makams/theoreticalData/Karadeniz_41.txt"));
 		TuningSystem yarman_21 = new TuningSystem(new File("makams/theoreticalData/Yarman_21.txt"));
 		TuningSystem yarman_24 = new TuningSystem(new File("makams/theoreticalData/Yarman_24.txt"));
 		TuningSystem yarman_79 = new TuningSystem(new File("makams/theoreticalData/Yarman_79.txt"));
 		TuningSystem yavuzoglu_48 = new TuningSystem(new File("makams/theoreticalData/Yavuzoglu_48.txt"));
-		TuningSystem arel = new TuningSystem(new File("makams/theoreticalData/Arel_Ezgi_Uzdilek.txt"));
+		TuningSystem arel = new TuningSystem(new File("makams/theoreticalData/AEUIntervals2.txt"));
 		
 		karadeniz_41.writeSystemToFile("karadeniz.txt");
 		yarman_21.writeSystemToFile("yarman21.txt");
@@ -62,8 +62,8 @@ public class TuningSystemCreate {
 		
 		MakamBox rec=null;
 		try {
-			rec = new MakamBox("test.mp3",null);
-			rec.createMakam("Pencgah");
+			rec = new MakamBox("04Track4_huseyni.wav",null);
+			rec.createMakam("Huseyni");
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
