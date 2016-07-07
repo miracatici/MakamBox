@@ -592,7 +592,7 @@ public class MakamBoxAnalysis {
 		lblVolume.setForeground(Color.BLACK);
 		lblVolume.setBackground(Color.WHITE);
 		
-		mnSelect = new JMenu(LANG.getString("MakamBoxAnalysis.mntmSelectFile.text")); //$NON-NLS-1$
+		mnSelect = new JMenu(LANG.getString("MakamBoxAnalysis.mnSelect.text")); //$NON-NLS-1$
 		mnSelect.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		menuBar.add(mnSelect);
 		

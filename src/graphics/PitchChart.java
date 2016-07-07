@@ -97,13 +97,15 @@ public class PitchChart {
 	 */
 	public void createDialog() throws CloneNotSupportedException{
 		frame = new JDialog();
-		frame.getContentPane().setPreferredSize(new Dimension(640, 515));
-		frame.getContentPane().setLayout(new BorderLayout());
+//		frame.getContentPane().setPreferredSize(new Dimension(640, 515));
+		frame.setBounds(100, 100, 640, 515);
+		frame.getContentPane().setLayout(new BorderLayout(0,0));
 		
 		contentPanel = new JPanel();
-		contentPanel.setPreferredSize(new Dimension(640, 480));
-		contentPanel.setSize(640, 480);
-		contentPanel.setMinimumSize(new Dimension(640, 480));
+		contentPanel.setLayout(new BorderLayout(0,0));
+//		contentPanel.setPreferredSize(new Dimension(640, 480));
+//		contentPanel.setSize(640, 480);
+//		contentPanel.setMinimumSize(new Dimension(640, 480));
 		frame.getContentPane().add(contentPanel, BorderLayout.CENTER);
 		
 		buttonPanel = new JPanel();
@@ -144,7 +146,7 @@ public class PitchChart {
 			public void actionPerformed(ActionEvent e) {
 				if(toggleCent.getText().equals("Absolute")){
 					try {
-						createFrame2(centData,true,true);
+						createFrame2(centData,"Pitches (Cent)",true,true);
 						contentPanel.removeAll();
 						contentPanel.add(bigPanel);
 						contentPanel.repaint();
@@ -157,7 +159,7 @@ public class PitchChart {
 					toggleCent.setText("Interval");
 				} else {
 					try {
-						createFrame2(centData,true,false);
+						createFrame2(centData,"Pitches (Cent)",true,false);
 						contentPanel.removeAll();
 						contentPanel.add(bigPanel);
 						contentPanel.repaint();
@@ -183,7 +185,7 @@ public class PitchChart {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					createFrame2(centData,true,false);
+					createFrame2(centData,"Pitches (Cent)",true,false);
 					contentPanel.removeAll();
 					contentPanel.add(bigPanel);
 					contentPanel.repaint();
@@ -201,7 +203,7 @@ public class PitchChart {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					createFrame2(data,false,false);
+					createFrame2(data,"Pitches (Hertz)",false,false);
 					contentPanel.removeAll();
 					contentPanel.add(bigPanel);
 					contentPanel.repaint();
@@ -215,10 +217,11 @@ public class PitchChart {
 			}
 		});
 		try {
-			createFrame2(data,false,false);
+			createFrame2(data,"Pitches (Hertz)",false,false);
 		} catch (Exception e1) {
 			e1.printStackTrace();
-		}			
+		}		
+	
 		contentPanel.add(bigPanel);
 		contentPanel.repaint();
 		frame.setVisible(true);
@@ -308,11 +311,11 @@ public class PitchChart {
 	public XYPlot getXYPlot(){
 		return plot;
 	}
-	public void createFrame2(float [] dat, boolean isCent,boolean respectTonic) throws Exception {
+	public void createFrame2(float [] dat, String rangeLabel, boolean isCent,boolean respectTonic) throws Exception {
 		bigChart = ChartFactory.createXYLineChart(
 				"", // chart title
 				"Time (sec)", // x axis label
-				"Pitches (Cent)", // y axis label
+				rangeLabel, // y axis label
 	            createDataset2(time,dat,isCent,respectTonic), // data 
 	            PlotOrientation.VERTICAL,
 	            false, // include legend
@@ -328,7 +331,7 @@ public class PitchChart {
 	    plot.setRenderer(renderer);   	
 	    
 	    bigPanel = new ChartPanel(bigChart,true);
-	    bigPanel.setPreferredSize(new Dimension(640,480));
+//	    bigPanel.setPreferredSize(new Dimension(640,480));
 	    bigPanel.setRangeZoomable(false);
 	    bigPanel.addMouseListener(new MouseListener(){
 	    	@Override
