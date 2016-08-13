@@ -1,4 +1,4 @@
-MakamToolBox
+MakamBox
 ============
 This is an open-source Turkish Makam Music Signal Processing Project. 
 It contains some codes, implementations and algorithms which are developed by independent coders. 
