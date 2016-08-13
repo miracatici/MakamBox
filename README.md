@@ -12,7 +12,7 @@ tools that can work real-time and provide a visual feedback to the user for comp
 reference recording.
 
 
-It's still being designed,implemented and developed by Bilge Mirac ATICI; supervised by Baris BOZKURT for M,Sc. thesis on Bahcesehir University,Turkey.
+It's designed,implemented and developed by Bilge Mirac ATICI; supervised by Baris BOZKURT for M,Sc. thesis on Bahcesehir University,Turkey.
 
 	MakamBox is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
