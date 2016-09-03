@@ -4,3 +4,4 @@
 *.wav
 *.mp3
 *.class
+.DS_Store
