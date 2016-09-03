@@ -4,4 +4,8 @@
 *.wav
 *.mp3
 *.class
+<<<<<<< HEAD
 .DS_Store
+=======
+/target/
+>>>>>>> origin/master
